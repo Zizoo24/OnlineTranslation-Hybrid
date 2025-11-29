@@ -104,7 +104,33 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
     ├── logo/                     # Logo variants (from OneDrive)
     │   ├── sidebar-logo-hq.png   # High-quality sidebar logo
     │   └── onedrive-logo.png     # Source from OneDrive
-    └── icons/                    # PWA icons (72px to 512px)
+    ├── icons/                    # PWA icons (72px to 512px)
+    └── onedrive/                 # User photos from OneDrive OtLegalTranslationcom folder
+        ├── hero/                 # Hero background images
+        │   ├── city-cyber.png    # Dubai cityscape (homepage hero)
+        │   ├── cyber-smith.png   # Alternative hero
+        │   ├── medical-cyber.png # Healthcare industry hero
+        │   ├── ot-man.png        # Character illustration
+        │   ├── technical-translation.png  # Technical docs hero
+        │   └── vis-translation.png        # Visualization hero
+        ├── locations/            # Location-specific images
+        │   ├── palm-jumeirah.png # Palm Jumeirah hero
+        │   └── sharjah.png       # Sharjah/expo image
+        ├── tiles/                # Service category tiles
+        │   ├── tile-corporate.png    # Corporate services
+        │   ├── tile-courts.png       # Legal/courts services
+        │   └── tile-immigration.png  # Immigration/visa services
+        ├── services/             # Service photos from iCloud
+        │   ├── services-1.jpg through services-6.jpg
+        ├── contact-office.png    # Contact page background
+        ├── contact-dxb.png       # Dubai contact image
+        ├── stamped-hardcopy.png  # Certified document example
+        ├── stamped-hardcopy-2.png
+        ├── steps-quote.png       # Process step images
+        ├── steps-upload.png
+        ├── whatsapp-translation.png  # WhatsApp workflow
+        ├── emblem.png            # Logo emblem
+        └── logo-combo.png        # Combined logo
 ```
 
 ### 4-Silo Architecture (SEO Optimized)
@@ -184,3 +210,11 @@ Static site ready for deployment:
 - No banned words in any content
 - WhatsApp as primary CTA on all devices
 - Use user's own photos from OneDrive instead of stock images
+
+## Integrations
+- **OneDrive**: Connected via Replit integration. Used to access OtLegalTranslationcom folder with user's images.
+- **GitHub**: Connected for version control.
+- **Google Docs**: User declined integration setup. To access Google Docs content, user needs to either:
+  1. Set up the Google Docs integration when prompted
+  2. Share the document content directly in chat
+  3. Provide document links for manual content extraction

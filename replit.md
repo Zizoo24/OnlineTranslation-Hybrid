@@ -76,10 +76,12 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 4. **PWA Support**: Installable, offline-capable
 5. **SEO Optimized**: Schema.org, sitemap, Open Graph, breadcrumbs
 
-### Design System
-- **Primary Color**: #1a2b5f (Deep Navy)
-- **Accent Color**: #e84e36 (Coral/Red)
+### Design System (Divi Exodus Palette)
+- **Primary Color**: #0a1f44 (Deep Navy Blue)
+- **Accent Color**: #e31e24 (Vivid Red)
 - **Gold Highlight**: #d4a54c
+- **Text Dark**: #000000 (Pure Black)
+- **Background**: #ffffff (White)
 - **Fonts**: Poppins (headings), Roboto (body)
 - **Breakpoint**: 992px for desktop/mobile switch
 - **Effects**: Smooth hover transitions (0.4s cubic-bezier)

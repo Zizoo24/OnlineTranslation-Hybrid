@@ -98,6 +98,10 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - Access: http://0.0.0.0:5000
 
 ## Recent Changes (Nov 2024)
+- **Brand Name Display**: Added "OnlineTranslation.ae" brand text consistently across all pages
+  - Desktop header: Brand name next to logo image
+  - Mobile header: Full brand name instead of "OT.ae"
+  - Sidebar header: Replaced "Menu" title with clickable brand link
 - **Unified Navigation**: Replaced traditional desktop dropdown menu with hamburger menu + sidebar navigation
   - Desktop now uses same sidebar navigation as mobile for consistent UX
   - Menu toggle button (`.menu-toggle-btn`) in header-actions container

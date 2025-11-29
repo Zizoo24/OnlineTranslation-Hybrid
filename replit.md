@@ -48,3 +48,6 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **OneDrive**: Used for accessing user's images and brand assets from the `OtLegalTranslationcom` folder.
 - **GitHub**: Connected for version control.
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
+
+## Documentation
+- **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.

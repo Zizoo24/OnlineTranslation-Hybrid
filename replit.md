@@ -22,63 +22,91 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - **Apple Messages for Business**: VIP clients
 - **Corporate Email**: Trust and formal communication
 
-## Project Architecture
+## Project Architecture (4-Silo SEO Structure)
 
 ### Directory Structure
 ```
 /
 ├── index.html                    # Homepage with schema markup
-├── services.html                 # All services overview
-├── golden-visa-translation.html  # Golden Visa document packages
-├── attestation.html              # Attestation & MOFAIC services
-├── certificate-translation.html  # Birth, marriage, degree certificates
-├── corporate-translation.html    # DMCC, Mainland business documents
-├── palm-jumeirah-translation.html # Property translation for investors
-├── legal-translation.html        # General legal translation
-├── pricing.html                  # Transparent pricing tables
 ├── contact.html                  # Contact page with form
-├── faq.html                      # FAQ with accordion
 ├── privacy.html                  # Privacy policy
 ├── terms.html                    # Terms of service
 ├── server.py                     # Python static file server
 ├── manifest.webmanifest          # PWA manifest
 ├── service-worker.js             # Service worker for offline
-├── sitemap.xml                   # SEO sitemap (13 pages)
+├── sitemap.xml                   # SEO sitemap (4-silo structure)
 ├── robots.txt                    # Search engine directives
 ├── vercel.json                   # Vercel deployment config
+│
+├── services/                     # SILO 1: Services
+│   ├── index.html                # Services landing page
+│   ├── legal-translation/
+│   │   └── index.html            # Legal translation service
+│   ├── golden-visa-translation/
+│   │   └── index.html            # Golden Visa packages
+│   ├── attestation/
+│   │   └── index.html            # Attestation & MOFAIC
+│   ├── certificate-translation/
+│   │   └── index.html            # Birth, marriage, degrees
+│   └── corporate-translation/
+│       └── index.html            # DMCC, Mainland business
+│
+├── locations/                    # SILO 2: Locations
+│   ├── index.html                # Locations landing page
+│   ├── dubai/
+│   │   ├── palm-jumeirah/
+│   │   │   └── index.html        # Palm Jumeirah translation
+│   │   ├── jlt/                  # JLT (coming soon)
+│   │   ├── difc/                 # DIFC (coming soon)
+│   │   └── business-bay/         # Business Bay (coming soon)
+│   ├── abu-dhabi/                # Abu Dhabi (coming soon)
+│   └── sharjah/                  # Sharjah (coming soon)
+│
+├── industries/                   # SILO 3: Industries
+│   ├── index.html                # Industries landing page
+│   ├── legal/                    # Legal industry (coming soon)
+│   ├── healthcare/               # Healthcare (coming soon)
+│   ├── real-estate/              # Real Estate (coming soon)
+│   └── e-commerce/               # E-commerce (coming soon)
+│
+├── resources/                    # SILO 4: Resources
+│   ├── index.html                # Resources landing page
+│   ├── pricing-guide/
+│   │   └── index.html            # Pricing information
+│   └── faq/
+│       └── index.html            # FAQ page
+│
 ├── styles/
 │   ├── porto-desktop.css         # Desktop styles + page components
 │   ├── sticky-mobile.css         # Mobile PWA styles
-│   ├── mobile-ios.css            # iOS-specific styles (SF Pro fonts, blur effects)
+│   ├── mobile-ios.css            # iOS-specific styles
 │   ├── mobile-android.css        # Android Material Design styles
-│   ├── desktop-macos.css         # macOS-specific styles (backdrop blur, SF fonts)
+│   ├── desktop-macos.css         # macOS-specific styles
 │   ├── dark-mode.css             # Comprehensive dark mode theme
 │   └── main.css                  # Utilities and animations
+│
 ├── scripts/
-│   └── main.js                   # Interactive functionality
+│   ├── main.js                   # Interactive functionality
+│   └── os-detect.js              # OS/device detection
+│
 └── images/
-    ├── logo/
-    │   ├── logo-transparent.png  # Logo (no background)
-    │   └── logo-glow.png         # Logo with glow effect
+    ├── logo/                     # Logo variants
     └── icons/                    # PWA icons (72px to 512px)
 ```
 
-### Page Architecture (Topical Silos)
-1. **Pillar Page**: services.html
-2. **Cluster Pages**:
-   - Golden Visa Translation (high priority)
-   - Attestation & MOFAIC
-   - Certificate Translation
-   - Corporate Translation
-   - Palm Jumeirah Property (SEO focus for HNW)
-   - Legal Translation
+### 4-Silo Architecture (SEO Optimized)
+1. **Services Silo** (`/services/`): All translation service pages
+2. **Locations Silo** (`/locations/`): Geographic targeting pages (Dubai, Abu Dhabi, etc.)
+3. **Industries Silo** (`/industries/`): Industry-specific pages (Legal, Healthcare, etc.)
+4. **Resources Silo** (`/resources/`): FAQ, Pricing, Guides
 
 ### Key Features
 1. **Unified Navigation**: Single hamburger menu + slide-out sidebar for both desktop and mobile
 2. **Desktop (>992px)**: Divi-inspired design, shrink header, hamburger menu toggle, animated cards
 3. **Mobile (<992px)**: Sticky bottom navigation, slide-out sidebar
 4. **PWA Support**: Installable, offline-capable
-5. **SEO Optimized**: Schema.org, sitemap, Open Graph, breadcrumbs
+5. **SEO Optimized**: Schema.org, 4-silo sitemap, Open Graph, breadcrumbs
+6. **OS Detection**: iOS, Android, macOS-specific styling
 
 ### Design System (Divi Exodus Palette)
 - **Primary Color**: #0a1f44 (Deep Navy Blue)
@@ -88,7 +116,7 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - **Background**: #ffffff (White)
 - **Fonts**: Poppins (headings), Roboto (body)
 - **Breakpoint**: 992px for desktop/mobile switch
-- **Effects**: Smooth hover transitions (0.4s cubic-bezier)
+- **Effects**: Smooth hover transitions (0.2s)
 
 ## Content
 - **Brand**: OnlineTranslation.ae (short: OT.ae)
@@ -102,26 +130,17 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - Access: http://0.0.0.0:5000
 
 ## Recent Changes (Nov 2024)
+- **4-Silo SEO Restructure**: Implemented complete 4-silo architecture per Gemini guidelines
+  - Created /services/, /locations/, /industries/, /resources/ silos
+  - Moved all service pages to /services/ subfolder structure
+  - Created silo landing pages for each category
+  - Updated all internal navigation links
+  - Updated sitemap.xml with new silo URLs
 - **Brand Name Display**: Added "OnlineTranslation.ae" brand text consistently across all pages
-  - Desktop header: Brand name next to logo image
-  - Mobile header: Full brand name instead of "OT.ae"
-  - Sidebar header: Replaced "Menu" title with clickable brand link
-- **Unified Navigation**: Replaced traditional desktop dropdown menu with hamburger menu + sidebar navigation
-  - Desktop now uses same sidebar navigation as mobile for consistent UX
-  - Menu toggle button (`.menu-toggle-btn`) in header-actions container
-  - Removed old header-nav dropdown navigation from all 13 pages
-- Created comprehensive service pages for each persona
-- Added Golden Visa Translation page with Equivalency Pack
-- Added Palm Jumeirah Property Translation for remote investors
-- Added Corporate/DMCC Translation page
-- Added Certificate Translation page
-- Added Attestation & MOFAIC page with chain visualization
-- Created Pricing page with transparent rates
-- Added Privacy Policy and Terms of Service pages
-- Integrated logo images into header and footer
-- Extended CSS with new page component styles
-- Updated sitemap.xml with all 13 pages
-- Enhanced brand voice alignment across all content
+- **Unified Navigation**: Hamburger menu + sidebar for both desktop and mobile
+- **OS-Specific Styling**: Device detection for iOS, Android, macOS
+- **Performance Optimized**: Reduced transition times (0.4s → 0.2s), removed heavy animations
+- **Dark Mode**: Comprehensive dark theme with improved contrast
 
 ## Deployment
 Static site ready for deployment:
@@ -136,3 +155,4 @@ Static site ready for deployment:
 - Coral accent for CTAs
 - Palm Jumeirah focus for SEO (signals High Net Worth)
 - No banned words in any content
+- WhatsApp as primary CTA on all devices

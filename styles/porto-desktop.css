@@ -1033,14 +1033,68 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ============================================
    MOBILE RESPONSIVE - EXODUS DIVI STYLE
+   Matching: https://immigration-visa-consultancy-layout.divi-marketplace.com/
    ============================================ */
 
 @media (max-width: 992px) {
-    /* Mobile Hero - Exodus Style */
+    /* ========== MOBILE HEADER - Exodus Clean ========== */
+    .exodus-header {
+        padding: 12px 20px;
+    }
+    
+    .exodus-header .header-nav,
+    .exodus-header .social-icons {
+        display: none !important;
+    }
+    
+    .exodus-header .header-logo {
+        display: flex;
+        align-items: center;
+    }
+    
+    .exodus-header .header-logo img {
+        height: 45px;
+    }
+    
+    .exodus-header .brand-text {
+        display: none;
+    }
+    
+    /* Hamburger Menu Button - 3 Lines Exodus Style */
+    .menu-toggle-btn.mobile-only {
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        width: 44px;
+        height: 44px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+    }
+    
+    .menu-toggle-btn.mobile-only .hamburger-line {
+        width: 24px;
+        height: 2px;
+        background: #fff;
+        border-radius: 2px;
+        transition: all 0.3s ease;
+    }
+    
+    /* Top Bar Hidden on Mobile */
+    .announcement-bar {
+        display: none !important;
+    }
+    
+    /* ========== HERO SECTION - Exodus Centered ========== */
     .hero-section.exodus-hero {
-        min-height: 70vh;
+        min-height: 60vh;
         padding-top: 80px;
-        padding-bottom: 60px;
+        padding-bottom: 80px;
+        display: flex;
+        align-items: center;
     }
     
     .hero-content.exodus-content {
@@ -1051,49 +1105,61 @@ h1, h2, h3, h4, h5, h6 {
     
     .hero-title.exodus-title {
         margin-bottom: 20px;
+        text-align: center;
     }
     
     .hero-title.exodus-title .title-line {
-        font-size: clamp(28px, 7vw, 42px);
-        line-height: 1.2;
-        letter-spacing: 0;
+        font-size: 28px;
+        line-height: 1.3;
+        letter-spacing: 1px;
+        display: block;
+        text-align: center;
     }
     
     .hero-description.exodus-desc {
-        font-size: 16px;
-        line-height: 1.6;
+        font-size: 15px;
+        line-height: 1.7;
         max-width: 100%;
-        margin: 0 auto 30px;
+        margin: 0 auto 25px;
+        text-align: center;
+        padding: 0 10px;
     }
     
+    /* CTA Button - Exodus Red Full Width */
     .hero-cta.exodus-cta {
-        display: block;
-        width: 100%;
-        max-width: 280px;
+        display: inline-block;
+        width: auto;
+        min-width: 200px;
         margin: 0 auto;
         text-align: center;
-        padding: 16px 30px;
+        padding: 15px 35px;
+        font-size: 14px;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 1px;
     }
     
-    /* Mobile Overlap Cards - Exodus Stacked Style */
+    /* ========== OVERLAP CARDS - Exodus Stacked ========== */
     .overlap-cards-section {
-        margin-top: -60px;
-        padding-bottom: 40px;
+        margin-top: -50px;
+        padding-bottom: 50px;
     }
     
     .overlap-wrapper {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
         gap: 0;
-        margin: 0 15px;
-        border-radius: 16px;
+        margin: 0 20px;
+        border-radius: 12px;
         overflow: hidden;
+        box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
     }
     
     .overlap-card {
-        padding: 40px 30px;
+        padding: 40px 25px;
         text-align: center;
         border-right: none;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
     
     .overlap-card:last-child {
@@ -1101,154 +1167,11 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .overlap-icon {
-        width: 80px;
-        height: 80px;
-        margin: 0 auto 20px;
-        background: rgba(255, 255, 255, 0.15);
-    }
-    
-    .overlap-icon i {
-        font-size: 32px;
-    }
-    
-    .overlap-card h4 {
-        font-size: 18px;
-        margin-bottom: 12px;
-    }
-    
-    .overlap-card p {
-        font-size: 14px;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-    
-    .overlap-card:hover {
-        transform: none;
-        box-shadow: none;
-    }
-}
-
-@media (max-width: 768px) {
-    /* Mobile Header - Exodus Clean Style */
-    .exodus-header {
-        padding: 12px 15px;
-    }
-    
-    .exodus-header .header-logo img {
-        height: 40px;
-    }
-    
-    .exodus-header .brand-text {
-        display: none;
-    }
-    
-    /* Top Bar Hidden on Mobile */
-    .announcement-bar {
-        display: none;
-    }
-    
-    /* Hero Adjustments */
-    .hero-section.exodus-hero {
-        min-height: 65vh;
-        padding-top: 70px;
-    }
-    
-    .hero-title.exodus-title .title-line {
-        font-size: clamp(24px, 8vw, 36px);
-    }
-    
-    .hero-description.exodus-desc {
-        font-size: 15px;
-        padding: 0 10px;
-    }
-    
-    /* Team Section Mobile */
-    .team-section {
-        padding: 60px 0;
-    }
-    
-    .team-grid {
-        grid-template-columns: 1fr;
-        gap: 30px;
-        margin-top: 30px;
-    }
-    
-    .team-member-content {
-        padding: 25px 20px;
-    }
-    
-    .team-cta-wrapper {
-        margin-top: 30px;
-    }
-    
-    .team-tagline {
-        font-size: 16px;
-        padding: 0 15px;
-    }
-    
-    /* About Section Mobile */
-    .about-section.exodus-about {
-        padding: 60px 0;
-    }
-    
-    .about-content.exodus-about-content {
-        text-align: center;
-    }
-    
-    .exodus-features-list {
-        justify-content: center;
-    }
-    
-    .about-cta.exodus-cta-btn {
-        display: block;
-        width: 100%;
-        max-width: 280px;
-        margin: 0 auto;
-        text-align: center;
-    }
-    
-    /* Services Section Mobile */
-    .services-section.exodus-services {
-        padding: 60px 0;
-    }
-    
-    .section-header.exodus-header-center {
-        padding: 0 15px;
-    }
-    
-    .section-title.exodus-section-title {
-        font-size: 26px;
-    }
-    
-    /* Languages Section Mobile */
-    .languages-section.exodus-languages {
-        padding: 60px 0;
-    }
-    
-    .languages-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
-    }
-    
-    .language-item {
-        font-size: 13px;
-        padding: 12px 15px;
-    }
-}
-
-@media (max-width: 480px) {
-    /* Extra Small Devices */
-    .hero-title.exodus-title .title-line {
-        font-size: 26px;
-    }
-    
-    .overlap-card {
-        padding: 35px 25px;
-    }
-    
-    .overlap-icon {
         width: 70px;
         height: 70px;
+        margin: 0 auto 20px;
+        background: rgba(255, 255, 255, 0.15);
+        border: 2px solid rgba(255, 255, 255, 0.3);
     }
     
     .overlap-icon i {
@@ -1257,6 +1180,303 @@ h1, h2, h3, h4, h5, h6 {
     
     .overlap-card h4 {
         font-size: 16px;
+        font-weight: 700;
+        margin-bottom: 12px;
+        letter-spacing: 0.5px;
+    }
+    
+    .overlap-card p {
+        font-size: 14px;
+        line-height: 1.6;
+        max-width: 280px;
+        margin: 0 auto;
+        color: rgba(255, 255, 255, 0.85);
+    }
+    
+    .overlap-card:hover {
+        transform: none;
+        box-shadow: none;
+    }
+    
+    /* ========== TEAM SECTION - Single Column ========== */
+    .team-section {
+        padding: 60px 0;
+    }
+    
+    .team-section .section-header {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin-top: 30px;
+        padding: 0 20px;
+    }
+    
+    .team-member {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .team-member-image {
+        height: 220px;
+    }
+    
+    .team-member-content {
+        padding: 25px 20px;
+        text-align: center;
+    }
+    
+    .team-member-content h3 {
+        font-size: 20px;
+    }
+    
+    .team-credentials {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .team-cta-wrapper {
+        margin-top: 30px;
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .team-tagline {
+        font-size: 15px;
+        text-align: center;
+        padding: 0;
+    }
+    
+    .team-cta {
+        display: inline-block;
+        width: auto;
+        min-width: 200px;
+    }
+    
+    /* ========== ABOUT SECTION - Exodus Mobile ========== */
+    .about-section.exodus-about {
+        padding: 60px 0;
+    }
+    
+    .about-grid.exodus-about-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 0 20px;
+    }
+    
+    .about-image.exodus-about-image {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .about-content.exodus-about-content {
+        text-align: center;
+    }
+    
+    .about-content.exodus-about-content p {
+        text-align: center;
+    }
+    
+    .exodus-features-list {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .exodus-feature-item {
+        justify-content: center;
+    }
+    
+    .about-cta.exodus-cta-btn {
+        display: inline-block;
+        width: auto;
+        min-width: 200px;
+        margin: 20px auto 0;
+        text-align: center;
+    }
+    
+    /* ========== SERVICES SECTION - Single Column ========== */
+    .services-section.exodus-services {
+        padding: 60px 0;
+    }
+    
+    .services-section .section-header {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .section-header.exodus-header-center {
+        padding: 0 20px;
+    }
+    
+    .section-title.exodus-section-title {
+        font-size: 24px;
+        line-height: 1.3;
+    }
+    
+    .section-subtitle.exodus-subtitle {
+        font-size: 14px;
+    }
+    
+    .services-grid.exodus-services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .service-card.exodus-service-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    /* ========== LANGUAGES SECTION - 2 Column Grid ========== */
+    .languages-section.exodus-languages {
+        padding: 60px 0;
+    }
+    
+    .languages-section .section-header {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        padding: 0 20px;
+    }
+    
+    .language-item {
+        font-size: 12px;
+        padding: 12px 10px;
+        text-align: center;
+    }
+    
+    .language-item i {
+        font-size: 14px;
+    }
+    
+    /* ========== PROCESS SECTION ========== */
+    .process-section {
+        padding: 60px 0;
+    }
+    
+    .process-section .section-header {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .process-steps {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    
+    .process-step {
+        text-align: center;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    
+    .process-connector {
+        display: none;
+    }
+    
+    /* ========== CTA SECTION ========== */
+    .cta-section {
+        padding: 60px 0;
+    }
+    
+    .cta-section .container {
+        text-align: center;
+        padding: 0 20px;
+    }
+    
+    .cta-section h2 {
+        font-size: 24px;
+        text-align: center;
+    }
+    
+    .cta-section p {
+        text-align: center;
+    }
+    
+    .cta-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    
+    .cta-buttons a {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+    }
+    
+    /* ========== FOOTER ========== */
+    .footer-section {
+        padding: 50px 0 30px;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-links {
+        justify-content: center;
+    }
+    
+    /* ========== iOS FEATURE CARDS ========== */
+    .feature-cards-section.os-ios-only .feature-cards {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 0 20px;
+    }
+    
+    .feature-cards-section.os-ios-only .feature-card {
+        text-align: center;
+        max-width: 350px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 576px) {
+    /* ========== EXTRA SMALL - Phone Portrait ========== */
+    .hero-title.exodus-title .title-line {
+        font-size: 24px;
+    }
+    
+    .hero-description.exodus-desc {
+        font-size: 14px;
+    }
+    
+    .hero-cta.exodus-cta {
+        width: 100%;
+        max-width: 260px;
+    }
+    
+    .overlap-wrapper {
+        margin: 0 15px;
+    }
+    
+    .overlap-card {
+        padding: 35px 20px;
+    }
+    
+    .overlap-icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .overlap-icon i {
+        font-size: 24px;
+    }
+    
+    .overlap-card h4 {
+        font-size: 15px;
     }
     
     .overlap-card p {
@@ -1269,6 +1489,20 @@ h1, h2, h3, h4, h5, h6 {
     
     .team-avatar i {
         font-size: 70px;
+    }
+    
+    .section-title.exodus-section-title {
+        font-size: 22px;
+    }
+    
+    .languages-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+    
+    .language-item {
+        font-size: 11px;
+        padding: 10px 8px;
     }
 }
 

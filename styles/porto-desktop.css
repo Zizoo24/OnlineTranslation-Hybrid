@@ -361,7 +361,7 @@ h1, h2, h3, h4, h5, h6 {
     list-style: none;
     margin: 0;
     padding: 0;
-    gap: 8px;
+    gap: 4px;
 }
 
 .nav-item {
@@ -371,17 +371,18 @@ h1, h2, h3, h4, h5, h6 {
 .nav-link {
     display: flex;
     align-items: center;
-    gap: 4px;
-    padding: 8px 10px;
+    gap: 3px;
+    padding: 8px 8px;
     color: var(--text-light);
     text-decoration: none;
     font-family: var(--font-primary);
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 500;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
     text-transform: uppercase;
     transition: var(--transition-fast);
     position: relative;
+    white-space: nowrap;
 }
 
 .nav-link::after {
@@ -2074,7 +2075,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .specialists-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
     margin-top: 50px;
 }
@@ -2550,6 +2551,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 @media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
     .services-grid.exodus-services-grid {
         grid-template-columns: 1fr;
     }
@@ -4472,7 +4477,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Services Grid */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 30px;
 }
 
@@ -5596,13 +5601,16 @@ h1, h2, h3, h4, h5, h6 {
     }
     
     .packages-grid,
-    .services-grid,
     .cert-grid,
     .docs-grid,
     .countries-grid,
     .zones-grid,
     .requirements-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .process-steps {
@@ -5650,7 +5658,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .related-services .services-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 25px;
 }
 

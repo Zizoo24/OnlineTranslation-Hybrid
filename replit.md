@@ -65,6 +65,9 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Stats Bar Enhancement**: Labels now use gold color for proper visual hierarchy
 - **Header Overlap Fix**: Pages without breadcrumbs require 160px top padding to clear fixed header (~120px: 50px header-top + 70px header-main)
 - **Footer Redesign**: Compact footer with 70px emblem logo (60px mobile), 50px padding, smaller typography
+- **Navigation Spacing**: Fixed nav menu to prevent overlap (11px font, 8px padding, tighter gaps)
+- **3-Column Grid**: Updated all services grids to max 3 columns (desktop), 2 columns (tablet), 1 column (mobile)
+- **Unified Global Components**: Contact, Privacy, Terms, Services hub pages updated with Exodus-style header, full sidebar nav, and emblem footer
 
 ## Documentation
 - **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.

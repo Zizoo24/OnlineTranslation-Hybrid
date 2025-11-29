@@ -1,4 +1,70 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Device Detection - iOS, iPadOS, macOS, Android
+    (function detectDevice() {
+        const ua = navigator.userAgent.toLowerCase();
+        const platform = navigator.platform;
+        const body = document.body;
+        
+        // iOS detection (iPhone, iPod)
+        const isIPhone = /iphone|ipod/.test(ua);
+        
+        // iPad detection (including iPadOS 13+ which reports as Mac)
+        const isIPad = /ipad/.test(ua) || 
+            (platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+        
+        // Combined iOS/iPadOS
+        const isIOS = isIPhone || isIPad;
+        
+        // macOS detection (Mac without touch = real Mac)
+        const isMac = /mac/.test(platform.toLowerCase()) && 
+            navigator.maxTouchPoints === 0;
+        
+        // Android detection
+        const isAndroid = /android/.test(ua);
+        
+        // Apply device classes
+        if (isIOS) {
+            body.classList.add('os-ios');
+            if (isIPhone) body.classList.add('device-iphone');
+            if (isIPad) body.classList.add('device-ipad');
+            
+            // Show iOS-specific elements
+            document.querySelectorAll('.os-ios-only').forEach(function(el) {
+                el.style.display = '';
+            });
+            // Hide Android-specific elements
+            document.querySelectorAll('.os-android-only').forEach(function(el) {
+                el.style.display = 'none';
+            });
+        } else if (isAndroid) {
+            body.classList.add('os-android');
+            
+            // Show Android-specific elements
+            document.querySelectorAll('.os-android-only').forEach(function(el) {
+                el.style.display = '';
+            });
+            // Hide iOS-specific elements
+            document.querySelectorAll('.os-ios-only').forEach(function(el) {
+                el.style.display = 'none';
+            });
+        } else if (isMac) {
+            body.classList.add('os-macos');
+        }
+        
+        // Touch device detection
+        if ('ontouchstart' in window || navigator.maxTouchPoints > 0) {
+            body.classList.add('touch-device');
+        } else {
+            body.classList.add('pointer-device');
+        }
+        
+        // Standalone PWA detection (installed as app)
+        if (window.matchMedia('(display-mode: standalone)').matches || 
+            window.navigator.standalone === true) {
+            body.classList.add('pwa-standalone');
+        }
+    })();
+
     // Preloader
     const preloader = document.getElementById('preloader');
     if (preloader) {

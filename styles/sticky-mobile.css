@@ -143,15 +143,14 @@
 }
 
 .sidebar-logo {
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--text-light);
+    display: flex;
+    align-items: center;
     text-decoration: none;
 }
 
-.sidebar-logo span {
-    color: var(--accent-color);
+.sidebar-logo img {
+    height: 40px;
+    width: auto;
 }
 
 .sidebar-close {

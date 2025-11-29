@@ -2063,6 +2063,20 @@ h1, h2, h3, h4, h5, h6 {
     gap: 30px;
 }
 
+.services-grid.exodus-services-grid.five-col {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.services-grid.five-col .service-card .service-content h3 {
+    font-size: 14px;
+}
+
+.services-grid.five-col .service-card .service-content p {
+    font-size: 13px;
+    line-height: 1.5;
+}
+
 .service-card.exodus-service-card {
     background: var(--bg-white);
     border-radius: 8px;
@@ -2249,6 +2263,10 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: repeat(2, 1fr);
     }
     
+    .services-grid.exodus-services-grid.five-col {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
     .languages-grid {
         grid-template-columns: repeat(3, 1fr);
     }
@@ -2266,6 +2284,10 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 768px) {
     .services-grid.exodus-services-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .services-grid.exodus-services-grid.five-col {
+        grid-template-columns: repeat(2, 1fr);
     }
     
     .languages-grid {

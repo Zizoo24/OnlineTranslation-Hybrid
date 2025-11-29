@@ -1123,6 +1123,11 @@ body.theme-dark .sidebar-tagline {
     color: #a8b3c2 !important;
 }
 
+body.theme-dark .sidebar-section-title {
+    color: #8b949e !important;
+    border-top-color: #30363d !important;
+}
+
 body.theme-dark .sidebar-nav ul li a {
     color: #e6edf3 !important;
     background: transparent;

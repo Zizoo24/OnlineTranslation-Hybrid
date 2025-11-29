@@ -236,15 +236,15 @@ body.theme-dark .hero-section {
 }
 
 body.theme-dark .hero-background {
-    opacity: 0.4;
+    opacity: 1;
 }
 
 body.theme-dark .hero-overlay {
-    background: linear-gradient(135deg, rgba(13, 17, 23, 0.85) 0%, rgba(22, 27, 34, 0.75) 50%, rgba(33, 38, 45, 0.7) 100%);
+    background: linear-gradient(135deg, rgba(13, 17, 23, 0.5) 0%, rgba(22, 27, 34, 0.4) 50%, rgba(33, 38, 45, 0.35) 100%);
 }
 
 body.theme-dark .hero-image {
-    filter: brightness(0.7) saturate(0.8);
+    filter: brightness(0.85) saturate(0.9);
 }
 
 body.theme-dark .hero-title,

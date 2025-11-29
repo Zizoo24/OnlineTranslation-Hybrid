@@ -3,7 +3,7 @@
     --primary-color: #0E2B48;
     --primary-dark: #071824;
     --primary-light: #1a4570;
-    --primary-overlay: rgba(14, 43, 72, 0.85);
+    --primary-overlay: rgba(14, 43, 72, 0.55);
     --accent-color: #FF1654;
     --accent-light: #ff4d7a;
     --accent-dark: #cc1143;
@@ -564,7 +564,8 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
+    z-index: 0;
 }
 
 /* Exodus Overlay - 85% Navy as per Exodus Design System */
@@ -649,33 +650,13 @@ h1, h2, h3, h4, h5, h6 {
     transition: var(--transition);
 }
 
-/* Legacy hero styles */
+/* Legacy hero styles - Disabled for team photo visibility */
 .hero-background::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(10, 31, 68, 0.92) 0%,
-        rgba(10, 31, 68, 0.85) 30%,
-        rgba(10, 31, 68, 0.75) 60%,
-        rgba(10, 31, 68, 0.65) 100%
-    );
-    z-index: 1;
+    display: none;
 }
 
 .hero-background::after {
-    content: '';
-    position: absolute;
-    top: -50%;
-    right: -30%;
-    width: 100%;
-    height: 200%;
-    background: radial-gradient(ellipse, rgba(227, 30, 36, 0.2) 0%, transparent 50%);
-    z-index: 2;
+    display: none;
 }
 
 .hero-overlay {

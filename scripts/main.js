@@ -425,4 +425,59 @@ document.addEventListener('DOMContentLoaded', function() {
     
     window.addEventListener('scroll', updateActiveNav);
     updateActiveNav();
+
+    // ============================================
+    // EXODUS SCROLL ANIMATIONS - Intersection Observer
+    // ============================================
+    (function initScrollAnimations() {
+        // Elements to animate on scroll
+        const animateElements = document.querySelectorAll(
+            '.section-header, .service-card, .feature-card, .overlap-card, ' +
+            '.team-card, .process-step, .language-card, .testimonial-card, ' +
+            '.about-content, .about-image, .cta-section, .services-grid > *, ' +
+            '.locations-grid > *, .industries-grid > *, .resources-grid > *'
+        );
+
+        // Add scroll-animate class to elements
+        animateElements.forEach(function(el, index) {
+            if (!el.classList.contains('scroll-animate')) {
+                el.classList.add('scroll-animate');
+                // Add stagger delay based on position in parent
+                const delay = (index % 6) + 1;
+                el.setAttribute('data-delay', delay);
+            }
+        });
+
+        // Intersection Observer for scroll animations
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px 0px -50px 0px',
+            threshold: 0.1
+        };
+
+        const animationObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    // Optional: unobserve after animation
+                    // animationObserver.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animate elements
+        document.querySelectorAll('.scroll-animate').forEach(function(el) {
+            animationObserver.observe(el);
+        });
+
+        // Trigger visible elements on load
+        setTimeout(function() {
+            document.querySelectorAll('.scroll-animate').forEach(function(el) {
+                const rect = el.getBoundingClientRect();
+                if (rect.top < window.innerHeight && rect.bottom > 0) {
+                    el.classList.add('is-visible');
+                }
+            });
+        }, 100);
+    })();
 });

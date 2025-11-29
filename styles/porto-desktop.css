@@ -227,9 +227,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exodus-header .header-main-row {
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    align-items: center;
+    gap: 20px;
+}
+
+.exodus-header .header-logo {
+    flex-shrink: 0;
+}
+
+.exodus-header .header-nav {
+    justify-self: center;
+    min-width: 0;
+}
+
+.exodus-header .header-actions {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    gap: 10px;
 }
 
 /* Exodus Logo - Premium Brand Lockup */

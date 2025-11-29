@@ -1,6 +1,7 @@
 :root {
     /* Exodus Premium Corporate Palette - Navy/Red/White */
     --primary-color: #0E2B48;
+    --primary: #0E2B48;
     --primary-dark: #071824;
     --primary-light: #1a4570;
     --primary-overlay: rgba(14, 43, 72, 0.55);
@@ -3503,11 +3504,21 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ========== NEW PAGE STYLES ========== */
 
-/* Page Hero */
+/* Main Content - accounts for fixed header on desktop */
+.main-content {
+    padding-top: 0;
+}
+
+/* Page Hero - extends behind fixed header */
 .page-hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
-    padding: 140px 0 60px;
+    padding: 160px 0 60px;
     color: var(--text-light);
+}
+
+/* Index pages - remove header spacing when hero is first */
+.main-content > .page-hero:first-child {
+    margin-top: 0;
 }
 
 .service-hero {

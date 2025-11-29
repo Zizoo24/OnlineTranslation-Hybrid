@@ -3523,9 +3523,73 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .form-result {
-    margin-top: 15px;
+    margin-top: 20px;
     text-align: center;
     font-size: 14px;
+}
+
+.form-result .form-success,
+.form-result .form-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+.form-result .form-success {
+    background: rgba(37, 211, 102, 0.1);
+    border: 1px solid rgba(37, 211, 102, 0.3);
+}
+
+.form-result .form-success > i {
+    font-size: 32px;
+    color: #25D366;
+}
+
+.form-result .form-success > span {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-result .form-error {
+    background: rgba(255, 107, 107, 0.1);
+    border: 1px solid rgba(255, 107, 107, 0.3);
+}
+
+.form-result .form-error > i {
+    font-size: 32px;
+    color: #ff6b6b;
+}
+
+.form-result .form-error > span {
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+.form-result .whatsapp-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 10px 20px;
+    background: #25D366;
+    color: #fff;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    transition: var(--transition);
+}
+
+.form-result .whatsapp-link:hover {
+    background: #1da851;
+    transform: translateY(-2px);
+}
+
+.form-result .whatsapp-link i {
+    font-size: 18px;
 }
 
 .form-result .success {

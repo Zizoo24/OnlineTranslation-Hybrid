@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form - Email via Web3Forms + WhatsApp
+    // Contact Form - Email via Web3Forms
     const contactForms = document.querySelectorAll('.contact-form');
     
     contactForms.forEach(function(form) {
@@ -341,10 +341,6 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault();
             
             const formData = new FormData(form);
-            const name = formData.get('name') || '';
-            const email = formData.get('email') || '';
-            const phone = formData.get('phone') || '';
-            const message = formData.get('message') || '';
             const resultDiv = form.querySelector('#formResult') || document.getElementById('formResult');
             const submitBtn = form.querySelector('button[type="submit"]');
             
@@ -354,13 +350,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 submitBtn.textContent = 'Sending...';
             }
             if (resultDiv) resultDiv.innerHTML = '';
-            
-            // Prepare WhatsApp message
-            let whatsappMessage = `Hello OnlineTranslation.ae!\n\n`;
-            if (name) whatsappMessage += `Name: ${name}\n`;
-            if (email) whatsappMessage += `Email: ${email}\n`;
-            if (phone) whatsappMessage += `Phone: ${phone}\n`;
-            if (message) whatsappMessage += `\nMessage:\n${message}`;
             
             // Send to Web3Forms
             const object = Object.fromEntries(formData);
@@ -378,26 +367,34 @@ document.addEventListener('DOMContentLoaded', function() {
                 const data = await response.json();
                 if (response.status === 200) {
                     if (resultDiv) {
-                        resultDiv.innerHTML = '<span class="success">Message sent successfully! We\'ll respond shortly.</span>';
+                        resultDiv.innerHTML = '<div class="form-success">' +
+                            '<i class="fas fa-check-circle"></i>' +
+                            '<span>Message sent successfully! We\'ll respond within 2 hours.</span>' +
+                            '<a href="https://wa.me/971508620217" target="_blank" class="whatsapp-link">' +
+                            '<i class="fab fa-whatsapp"></i> Need faster response? WhatsApp us</a>' +
+                            '</div>';
                     }
                     form.reset();
-                    // Also open WhatsApp for immediate contact
-                    window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
                 } else {
                     if (resultDiv) {
-                        resultDiv.innerHTML = '<span class="error">Failed to send. Please use WhatsApp instead.</span>';
+                        resultDiv.innerHTML = '<div class="form-error">' +
+                            '<i class="fas fa-exclamation-circle"></i>' +
+                            '<span>Unable to send. Please try WhatsApp instead.</span>' +
+                            '<a href="https://wa.me/971508620217" target="_blank" class="whatsapp-link">' +
+                            '<i class="fab fa-whatsapp"></i> Contact via WhatsApp</a>' +
+                            '</div>';
                     }
-                    // Fallback to WhatsApp only
-                    window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
                 }
             })
             .catch(function(error) {
                 if (resultDiv) {
-                    resultDiv.innerHTML = '<span class="error">Connection error. Opening WhatsApp instead...</span>';
+                    resultDiv.innerHTML = '<div class="form-error">' +
+                        '<i class="fas fa-exclamation-circle"></i>' +
+                        '<span>Connection error. Please try WhatsApp.</span>' +
+                        '<a href="https://wa.me/971508620217" target="_blank" class="whatsapp-link">' +
+                        '<i class="fab fa-whatsapp"></i> Contact via WhatsApp</a>' +
+                        '</div>';
                 }
-                // Fallback to WhatsApp
-                window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-                form.reset();
             })
             .finally(function() {
                 if (submitBtn) {

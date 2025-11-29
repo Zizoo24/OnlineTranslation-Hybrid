@@ -70,10 +70,11 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
    - Legal Translation
 
 ### Key Features
-1. **Desktop (>992px)**: Divi-inspired design, shrink header, animated cards, sticky quote sidebar
-2. **Mobile (<992px)**: Sticky bottom navigation, slide-out sidebar
-3. **PWA Support**: Installable, offline-capable
-4. **SEO Optimized**: Schema.org, sitemap, Open Graph, breadcrumbs
+1. **Unified Navigation**: Single hamburger menu + slide-out sidebar for both desktop and mobile
+2. **Desktop (>992px)**: Divi-inspired design, shrink header, hamburger menu toggle, animated cards
+3. **Mobile (<992px)**: Sticky bottom navigation, slide-out sidebar
+4. **PWA Support**: Installable, offline-capable
+5. **SEO Optimized**: Schema.org, sitemap, Open Graph, breadcrumbs
 
 ### Design System
 - **Primary Color**: #1a2b5f (Deep Navy)
@@ -95,6 +96,10 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - Access: http://0.0.0.0:5000
 
 ## Recent Changes (Nov 2024)
+- **Unified Navigation**: Replaced traditional desktop dropdown menu with hamburger menu + sidebar navigation
+  - Desktop now uses same sidebar navigation as mobile for consistent UX
+  - Menu toggle button (`.menu-toggle-btn`) in header-actions container
+  - Removed old header-nav dropdown navigation from all 13 pages
 - Created comprehensive service pages for each persona
 - Added Golden Visa Translation page with Equivalency Pack
 - Added Palm Jumeirah Property Translation for remote investors

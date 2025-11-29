@@ -53,6 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebarToggle = document.getElementById('sidebarToggle');
     const footerMenuToggle = document.getElementById('footerMenuToggle');
     const sidebarClose = document.getElementById('sidebarClose');
+    const mobileMenuToggle = document.getElementById('mobileMenuToggle');
     
     function openSidebar() {
         if (sidebarMenu) sidebarMenu.classList.add('active');
@@ -75,6 +76,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     if (footerMenuToggle) {
         footerMenuToggle.addEventListener('click', function(e) {
+            e.preventDefault();
+            openSidebar();
+        });
+    }
+    
+    // Desktop menu toggle (hamburger button)
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', function(e) {
             e.preventDefault();
             openSidebar();
         });

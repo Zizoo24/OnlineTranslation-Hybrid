@@ -1,9 +1,6 @@
 @media (min-width: 992px) {
     .header-mobile,
-    .footer-bar,
-    .sidebar-menu,
-    .sidebar-overlay,
-    .search-overlay {
+    .footer-bar {
         display: none !important;
     }
     
@@ -11,29 +8,15 @@
         display: block !important;
     }
     
-    .mobile-menu-toggle {
-        display: none !important;
+    .menu-toggle-btn {
+        display: flex !important;
     }
 }
 
 @media (max-width: 1199px) and (min-width: 992px) {
-    .nav-menu {
-        gap: 25px;
-    }
-    
-    .nav-menu > li > a {
-        font-size: 13px;
-    }
-    
     .header-cta {
         padding: 10px 20px;
         font-size: 13px;
-    }
-}
-
-@media (max-width: 991px) {
-    .mobile-menu-toggle {
-        display: block !important;
     }
 }
 

@@ -212,8 +212,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exodus-header .header-logo img {
-    height: 48px;
+    height: 44px;
     width: auto;
+    object-fit: contain;
 }
 
 .exodus-header .logo-text-block {
@@ -5360,13 +5361,14 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Logo Image */
 .logo-img {
-    height: 50px;
+    height: 44px;
     width: auto;
+    object-fit: contain;
     transition: var(--transition-fast);
 }
 
 .header-desktop.scrolled .logo-img {
-    height: 40px;
+    height: 36px;
 }
 
 /* Responsive */

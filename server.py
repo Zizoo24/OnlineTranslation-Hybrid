@@ -1,6 +1,7 @@
 import http.server
 import socketserver
 import os
+from urllib.parse import urlparse, parse_qs
 
 PORT = 5000
 DIRECTORY = "."
@@ -8,6 +9,13 @@ DIRECTORY = "."
 class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=DIRECTORY, **kwargs)
+    
+    def do_GET(self):
+        parsed = urlparse(self.path)
+        self.path = parsed.path
+        if self.path == '/':
+            self.path = '/index.html'
+        return super().do_GET()
     
     def end_headers(self):
         self.send_header('Cache-Control', 'no-cache, no-store, must-revalidate')

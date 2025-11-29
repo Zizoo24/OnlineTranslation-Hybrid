@@ -211,7 +211,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
     const body = document.body;
     
-    const savedTheme = localStorage.getItem('theme');
+    // Check URL parameter for theme (for testing: ?theme=dark)
+    const urlParams = new URLSearchParams(window.location.search);
+    const urlTheme = urlParams.get('theme');
+    
+    // Priority: URL param > localStorage > default light
+    const savedTheme = urlTheme || localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.remove('theme-light');
         body.classList.add('theme-dark');

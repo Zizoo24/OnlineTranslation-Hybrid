@@ -751,3 +751,182 @@ body.theme-dark .alert-warning {
     border: 1px solid rgba(255, 193, 7, 0.3);
     color: var(--text-body);
 }
+
+/* ============================================
+   TEAM SECTION - Dark Mode
+   ============================================ */
+body.theme-dark .team-section {
+    background: var(--bg-light);
+}
+
+body.theme-dark .team-member {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+body.theme-dark .team-member:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--border-light);
+}
+
+body.theme-dark .team-member-image {
+    background: var(--bg-elevated);
+}
+
+body.theme-dark .team-member-image img {
+    filter: brightness(0.95);
+}
+
+body.theme-dark .team-avatar {
+    background: var(--bg-elevated);
+}
+
+body.theme-dark .team-avatar i {
+    color: var(--text-muted);
+}
+
+body.theme-dark .team-badge {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+body.theme-dark .team-member-content {
+    background: var(--bg-card);
+}
+
+body.theme-dark .team-member-content h3 {
+    color: var(--text-light);
+}
+
+body.theme-dark .team-role {
+    color: var(--accent-color);
+}
+
+body.theme-dark .team-member-content p {
+    color: var(--text-muted);
+}
+
+body.theme-dark .team-credentials {
+    border-top-color: var(--border-color);
+}
+
+body.theme-dark .credential-item {
+    color: var(--text-muted);
+}
+
+body.theme-dark .credential-item i {
+    color: var(--accent-color);
+}
+
+body.theme-dark .team-tagline {
+    color: var(--text-muted);
+}
+
+body.theme-dark .team-cta {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* ============================================
+   OVERLAP CARDS - Dark Mode
+   ============================================ */
+body.theme-dark .overlap-cards-section {
+    background: transparent;
+}
+
+body.theme-dark .overlap-card {
+    background: var(--accent-color);
+}
+
+body.theme-dark .overlap-icon {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ============================================
+   ABOUT SECTION - Dark Mode Image Visibility
+   ============================================ */
+body.theme-dark .about-section.exodus-about {
+    background: var(--bg-light);
+}
+
+body.theme-dark .about-image.exodus-about-image img {
+    filter: brightness(0.9) contrast(1.05);
+    border-radius: 12px;
+}
+
+body.theme-dark .experience-badge.exodus-badge {
+    background: var(--accent-color);
+    color: var(--text-light);
+}
+
+/* ============================================
+   SERVICES SECTION - Dark Mode
+   ============================================ */
+body.theme-dark .services-section.exodus-services {
+    background: var(--bg-white);
+}
+
+body.theme-dark .service-card.exodus-service-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+body.theme-dark .service-card.exodus-service-card:hover {
+    background: var(--bg-elevated);
+}
+
+body.theme-dark .service-card.exodus-service-card img {
+    filter: brightness(0.85) contrast(1.05);
+}
+
+body.theme-dark .service-card.exodus-service-card h4 {
+    color: var(--text-light);
+}
+
+body.theme-dark .service-card.exodus-service-card p {
+    color: var(--text-muted);
+}
+
+/* ============================================
+   LANGUAGES SECTION - Dark Mode
+   ============================================ */
+body.theme-dark .languages-section.exodus-languages {
+    background: var(--bg-light);
+}
+
+body.theme-dark .language-item {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-body);
+}
+
+body.theme-dark .language-item:hover {
+    background: var(--bg-elevated);
+    border-color: var(--accent-color);
+}
+
+body.theme-dark .language-item i {
+    color: var(--accent-color);
+}
+
+/* ============================================
+   EXODUS HEADER - Dark Mode
+   ============================================ */
+body.theme-dark .announcement-bar {
+    background: var(--accent-color);
+}
+
+body.theme-dark .exodus-header .header-nav a {
+    color: var(--text-light);
+}
+
+body.theme-dark .exodus-header .social-icons a {
+    color: var(--text-light);
+    background: rgba(255, 255, 255, 0.1);
+}
+
+body.theme-dark .exodus-header .social-icons a:hover {
+    background: var(--accent-color);
+}

@@ -28,29 +28,24 @@ body.theme-dark {
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.6);
 }
 
-/* Dark Mode - Hero Images Fix */
+/* Dark Mode - Hero Images Fix - Allow team photo to show */
 body.theme-dark .hero-section .hero-image {
-    filter: brightness(0.9) contrast(1.1);
+    filter: brightness(0.75) saturate(0.85);
+    opacity: 1 !important;
 }
 
 body.theme-dark .hero-overlay.exodus-overlay {
     background: linear-gradient(
         135deg,
-        rgba(13, 17, 23, 0.92) 0%,
-        rgba(13, 17, 23, 0.8) 40%,
-        rgba(13, 17, 23, 0.6) 70%,
-        rgba(13, 17, 23, 0.4) 100%
-    );
+        rgba(13, 17, 23, 0.65) 0%,
+        rgba(13, 17, 23, 0.5) 40%,
+        rgba(13, 17, 23, 0.4) 70%,
+        rgba(13, 17, 23, 0.3) 100%
+    ) !important;
 }
 
 body.theme-dark .hero-background::before {
-    background: linear-gradient(
-        135deg,
-        rgba(13, 17, 23, 0.95) 0%,
-        rgba(13, 17, 23, 0.88) 30%,
-        rgba(13, 17, 23, 0.8) 60%,
-        rgba(13, 17, 23, 0.7) 100%
-    );
+    display: none !important;
 }
 
 /* Dark Mode - Exodus Header */
@@ -230,21 +225,23 @@ body.theme-dark .sidebar-overlay {
     background: rgba(0, 0, 0, 0.7);
 }
 
-/* Hero Section */
+/* Hero Section - Ensure team photo visibility */
 body.theme-dark .hero-section {
-    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+    background: transparent !important;
 }
 
 body.theme-dark .hero-background {
-    opacity: 1;
+    opacity: 1 !important;
+    z-index: 0 !important;
+}
+
+body.theme-dark .hero-background .hero-image {
+    opacity: 1 !important;
+    filter: brightness(0.75) saturate(0.85) !important;
 }
 
 body.theme-dark .hero-overlay {
-    background: linear-gradient(135deg, rgba(13, 17, 23, 0.5) 0%, rgba(22, 27, 34, 0.4) 50%, rgba(33, 38, 45, 0.35) 100%);
-}
-
-body.theme-dark .hero-image {
-    filter: brightness(0.85) saturate(0.9);
+    background: linear-gradient(135deg, rgba(13, 17, 23, 0.6) 0%, rgba(22, 27, 34, 0.45) 50%, rgba(33, 38, 45, 0.35) 100%) !important;
 }
 
 body.theme-dark .hero-title,

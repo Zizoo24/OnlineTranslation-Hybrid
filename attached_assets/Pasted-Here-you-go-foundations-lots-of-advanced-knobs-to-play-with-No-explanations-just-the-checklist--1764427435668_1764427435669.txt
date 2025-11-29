@@ -1,0 +1,236 @@
+Here you go—foundations + lots of advanced knobs to play with. No explanations, just the checklist.
+
+⸻
+
+SEO essentials (foundations / must-do)
+	•	Unique, descriptive <title> tag on every page
+	•	Compelling meta description on every page
+	•	One clear <h1> per page
+	•	Logical heading hierarchy (<h2>, <h3>, etc.)
+	•	Clean, human-readable URLs
+	•	Short, consistent URL slugs
+	•	Target keyword focus per page
+	•	Natural keyword use in body content
+	•	Unique, non-duplicate content per page
+	•	Meaningful, descriptive image filenames
+	•	Image alt attributes set for all images
+	•	Image dimensions defined in HTML/CSS
+	•	Simple, crawlable main navigation
+	•	Footer navigation links to key pages
+	•	Breadcrumb navigation
+	•	Mobile-responsive layout
+	•	Viewport meta tag configured correctly
+	•	Fast loading on mobile and desktop
+	•	Minified CSS files
+	•	Minified JavaScript files
+	•	Compressed images (JPEG/PNG/WebP)
+	•	Optimized favicon and app icons
+	•	HTTPS enforced across entire site
+	•	Single canonical URL per page
+	•	XML sitemap generated
+	•	XML sitemap submitted to Google Search Console
+	•	Proper robots.txt file
+	•	No accidental noindex on important pages
+	•	Correct HTTP status codes (200/301/404/410)
+	•	Custom 404 page with basic navigation
+	•	Consistent internal linking to priority pages
+	•	Descriptive anchor text (no “click here”)
+	•	Clear page hierarchy in folder structure
+	•	Meta charset set to UTF-8
+	•	HTML language attribute (<html lang="en">, etc.)
+	•	Minimal inline styles where possible
+	•	Avoid heavy, blocking scripts above the fold
+	•	No duplicate pages for trailing slash / non-slash
+	•	No duplicate www / non-www versions
+	•	No boilerplate “thin” pages with almost no content
+
+⸻
+
+Advanced / extended improvements (on-page & content)
+	•	Content hubs / topic clusters around core themes
+	•	Cornerstone content pages
+	•	Long-form, in-depth guides for primary topics
+	•	FAQ sections for common search questions
+	•	FAQPage structured data for FAQs
+	•	Consistent tone and brand voice across pages
+	•	Clear primary CTA on each important page
+	•	Skimmable content with subheadings and bullets
+	•	Semantic HTML tags (<article>, <section>, <aside>)
+	•	Use of <strong> and <em> for emphasis (not styling only)
+	•	Internal “related content” sections
+	•	Updating old posts/pages with fresh info
+	•	Pruning or merging very weak / redundant pages
+	•	Canonical consolidation of near-duplicate content
+	•	Tagging and categorizing content logically
+	•	Optimized intro paragraphs (searcher intent aligned)
+	•	Using numbered / bulleted lists for answer-style content
+	•	Unique OG title and description for shares
+	•	Custom OG images for key landing pages
+	•	Twitter Card meta tags
+	•	Structured data for Article / BlogPosting
+	•	Structured data for Service pages
+	•	Structured data for Organization / LocalBusiness
+	•	BreadcrumbList structured data
+	•	SiteNavigationElement structured data
+	•	Use of rel="nofollow" only when needed
+	•	Use of rel="ugc" and rel="sponsored" where relevant
+	•	Consistent NAP (Name, Address, Phone) where shown
+	•	Implementing hreflang for multilingual sites
+	•	Separate language URLs (not auto-translate with JS)
+	•	Avoiding doorway pages / location boilerplate spam
+	•	“Last updated” dates on important content
+
+⸻
+
+Advanced technical & performance improvements
+	•	Core Web Vitals optimization (LCP)
+	•	Core Web Vitals optimization (CLS)
+	•	Core Web Vitals optimization (INP/FID)
+	•	Critical CSS inlined for above-the-fold content
+	•	Deferring non-critical JavaScript
+	•	Async loading for external scripts where possible
+	•	HTTP/2 enabled on server
+	•	Brotli or Gzip compression enabled
+	•	Long-lived caching headers for static assets
+	•	Proper cache-busting for CSS/JS updates
+	•	Use of a CDN for static assets
+	•	DNS prefetch for key third-party domains
+	•	Preconnect for fonts and critical CDNs
+	•	Resource hints: <link rel="preload"> for key assets
+	•	Resource hints: <link rel="prefetch"> for likely next pages
+	•	Lazy-loading for images (loading="lazy")
+	•	Lazy-loading for offscreen iframes
+	•	Using modern image formats (WebP / AVIF)
+	•	Proper image srcset and sizes for responsive images
+	•	Reducing DOM size and complexity
+	•	Limiting number of web fonts
+	•	Self-hosting web fonts when possible
+	•	Avoiding render-blocking font loading
+	•	Fewer external script dependencies
+	•	Combining small CSS files where sensible
+	•	Reducing inlined JS/CSS bloat
+	•	Removing unused CSS (purge tools, etc.)
+	•	Removing unused JS libraries
+	•	Optimizing third-party widgets (chat, analytics, etc.)
+	•	Efficient 301 redirect chains (avoid hops)
+	•	Single redirect from HTTP→HTTPS or www→non-www
+	•	Proper canonical handling for uppercase/lowercase URLs
+	•	Proper canonical handling for trailing slash variants
+	•	Stable URL structure (avoid frequent changes)
+	•	Clean handling of 404s (no soft 404s)
+
+⸻
+
+Information architecture & internal linking
+	•	Clear top-level navigation matching main topics
+	•	Flat structure for important pages (few clicks deep)
+	•	Keeping key money pages within 1–2 clicks from home
+	•	Logical grouping of subpages under topic folders
+	•	HTML sitemap page for users
+	•	Limiting the number of links in main nav to essentials
+	•	Footer links to major category pages
+	•	Internal backlinks from content hubs to subpages
+	•	Internal backlinks from subpages to hub pages
+	•	Cross-linking between related articles
+	•	Links from older content to newer content
+	•	Links from high-authority pages to weaker pages
+	•	Avoiding orphan pages (no internal links)
+	•	Consistent breadcrumb trails reflecting structure
+	•	Stable slug naming for categories and tags
+	•	Removing duplicate category / tag archive bloat
+
+⸻
+
+UX, accessibility & trust signals
+	•	WCAG-friendly color contrast for text
+	•	Legible font sizes on mobile and desktop
+	•	Adequate line-height and spacing
+	•	Keyboard-navigable menus and links
+	•	Skip-to-content link for screen readers
+	•	ARIA landmarks where appropriate
+	•	Descriptive aria-labels for icons/controls
+	•	Clear focus states on interactive elements
+	•	No auto-playing audio/video with sound
+	•	No aggressive popups or overlays on entry
+	•	Cookie / consent banners that don’t block core content
+	•	Clear contact page with multiple contact options
+	•	About/Team page for trust and authority
+	•	Social proof elements (testimonials, logos)
+	•	Clear privacy policy page
+	•	Clear terms & conditions page
+	•	Refund / guarantee info where relevant
+	•	Clear legal disclaimers where needed
+	•	Consistent branding across all pages
+	•	No deceptive ads or misleading CTAs
+
+⸻
+
+Local SEO & brand presence (even for static sites)
+	•	LocalBusiness schema for physical/serviced area
+	•	Accurate NAP on site (if applicable)
+	•	Embedded Google Map (where relevant)
+	•	Structured opening hours (openingHoursSpecification)
+	•	Multiple service/area pages (non-spammy)
+	•	Driving directions / “how to reach us” content
+	•	Geo-targeted keywords in relevant pages
+	•	Localized testimonials or case studies
+	•	Outbound links to key authority sites in your niche
+
+⸻
+
+Analytics, tracking & monitoring
+	•	Google Search Console properly set up
+	•	Bing Webmaster Tools set up
+	•	Google Analytics or alternative analytics installed
+	•	Event tracking for key conversions (clicks, forms)
+	•	Separate “thank you” pages for leads/sales
+	•	Monitoring index coverage issues in GSC
+	•	Monitoring crawl stats in GSC
+	•	Monitoring Core Web Vitals reports
+	•	Monitoring mobile usability reports
+	•	Tracking 404s and broken links
+	•	Regular link-checking for external links
+	•	Regular audits for redirected or dead internal links
+	•	Version control for HTML code changes
+	•	Periodic technical SEO crawls (Screaming Frog / similar)
+
+⸻
+
+Meta, robots, and crawling nuance
+	•	meta robots directives for low-value pages
+	•	noindex for admin / test / thin pages
+	•	nofollow for specific non-trusted outbound links
+	•	Proper handling of parameterized URLs
+	•	Blocked faceted navigation (if ever added)
+	•	Avoid blocking CSS/JS needed for rendering
+	•	Clear rules in robots.txt (no over-blocking)
+	•	Separate staging domain blocked from indexing
+	•	Canonical tags on paginated content
+	•	rel="prev"/rel="next" alternatives (or strong canonical pattern)
+
+⸻
+
+Extra / experimental enhancements
+	•	JSON-LD structured data instead of microdata
+	•	Pros/Cons or Product schema when relevant
+	•	Review schema (only when genuinely applicable)
+	•	VideoObject schema for on-page videos
+	•	ImageObject schema for key images
+	•	HowTo schema for step-by-step tutorials
+	•	Speakable schema for news-style content (niche)
+	•	AMP variants (if strategically useful)
+	•	PWA components (manifest + service worker)
+	•	Offline-friendly critical content (for UX, indirect SEO)
+	•	Multilingual switcher with proper hreflang
+	•	A/B testing of titles and hero sections
+	•	A/B testing of CTAs and layouts
+	•	Heatmap/session recording tools (UX insights)
+	•	Periodic competitor SERP feature analysis
+	•	Experimenting with “People Also Ask” style sections
+	•	Creating content targeting featured snippets
+	•	Using schema to strengthen featured snippet chances
+	•	Internal UTM conventions for campaign links (analytics clarity)
+
+⸻
+
+That should give you a very long master checklist for a static HTML site—from bare-bones essentials to nerdy extras you can roll out in phases.

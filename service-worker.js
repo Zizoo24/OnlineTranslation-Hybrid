@@ -1,4 +1,4 @@
-const CACHE_NAME = 'onlinetranslation-v38';
+const CACHE_NAME = 'onlinetranslation-v39';
 const urlsToCache = [
   '/',
   '/index.html',

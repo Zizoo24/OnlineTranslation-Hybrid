@@ -17,13 +17,22 @@ OnlineTranslation.ae is a hybrid static HTML website designed to position the br
 The project employs a hybrid static HTML architecture with a 4-Silo SEO structure for content organization.
 
 ### UI/UX Decisions
-- **Design Inspiration**: Divi immigration-inspired layout.
+- **Design Inspiration**: Divi Exodus immigration-inspired layout with precise module measurements.
 - **Color Scheme**: Primary Navy (#0E2B48), Accent Coral (#FF1654), Gold Highlight (#d4a54c).
-- **Typography**: Heading fonts: Montserrat/Jost (700-800 weight, uppercase); Body fonts: Open Sans/Roboto (400 weight, 1.8 line-height).
+- **Typography**: Heading fonts: Montserrat/Jost (700-800 weight, uppercase with 0.3em letter-spacing); Body fonts: Open Sans/Roboto (400 weight, 1.8-1.9 line-height).
 - **Animations**: Smooth hover transitions (0.3s), translateY(-8px) card hover, box-shadow effects.
 - **Responsiveness**: Breakpoint at 992px for desktop/mobile switch. Mobile features a sticky bottom navigation and slide-out sidebar. Desktop includes a shrink header and animated cards.
 - **Branding**: Repositioned as "Boutique Digital Concierge" with "Guaranteed Court Acceptance."
 - **Communication Channels**: Tri-channel approach with WhatsApp (primary), Apple Messages for Business, and Corporate Email.
+
+### Exodus Module Specifications (Latest)
+- **Hero Section**: Container max-width 1180px, 110px top/140px bottom padding, title 46px with 0.3em letter-spacing, description 15px at 1.9 line-height
+- **Overlap Cards**: 320px width, -115px margin-top offset, 28px/22px padding, 60px outlined icons with 2px border
+- **Process Steps**: 260px cards, 32px padding, 22px step index (01/02/03), 66px icons with accent border
+- **Stats Bar**: #FF1654 gradient background, 36px vertical padding, 46px counter numbers, 12px uppercase labels with 0.3em letter-spacing
+- **Why Choose Us**: 280px cards, 64px medallion icons with rgba background, 16px uppercase titles
+- **Services Grid**: 360px cards, 220px image height, 24px content padding, 18px titles
+- **About Section**: 420px image column, 50px gap, 36px/24px experience badge sizing
 
 ### Technical Implementations
 - **PWA Support**: Installable and offline-capable using `manifest.webmanifest` and `service-worker.js`.

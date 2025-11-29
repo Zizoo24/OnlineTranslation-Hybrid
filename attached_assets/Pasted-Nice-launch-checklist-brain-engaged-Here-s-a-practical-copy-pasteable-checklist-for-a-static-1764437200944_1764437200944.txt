@@ -1,0 +1,142 @@
+Nice, launch-checklist brain engaged. 🧠🚀
+Here’s a practical, copy-pasteable checklist for a static HTML website to be “ready to go live”.
+
+Use it like this: go section by section and literally tick things off.
+
+⸻
+
+1️⃣ Basic sanity checks
+	•	All pages load without errors (no blank screens, no PHP stuff on static hosting).
+	•	No red errors in browser console (F12 → Console).
+	•	No obvious “Lorem ipsum”, placeholder text, or dummy images.
+	•	All visible copy has been spell-checked in your main languages.
+	•	Brand name, phone, WhatsApp, email, and domain are consistent across all pages.
+
+⸻
+
+2️⃣ Structure & HTML hygiene
+	•	Each page has a unique <title> in <head>.
+	•	Each page has a relevant <meta name="description" ...> tag.
+	•	<html lang="en"> (or appropriate lang) is set.
+	•	<meta charset="UTF-8"> is present.
+	•	<meta name="viewport" content="width=device-width, initial-scale=1.0"> is present (critical for mobile).
+	•	No duplicate <html>, <head>, or <body> tags sneaking in via partials/includes.
+	•	HTML passes at least a basic W3C validator check (no catastrophic nesting errors).
+
+⸻
+
+3️⃣ Layout & design
+	•	Layout looks correct on desktop (no overlapping blocks, cut-off sections, weird padding).
+	•	Layout looks correct on tablet widths (~768–1024px).
+	•	Layout looks correct on mobile (~360–430px wide).
+	•	No text is so light/low contrast that it’s hard to read.
+	•	Fonts load correctly (no fallback font chaos).
+	•	Favicon shows in the browser tab.
+	•	Logo is crisp (not blurry) on standard and retina screens.
+
+⸻
+
+4️⃣ Navigation & internal links
+	•	Main menu links go to the correct pages.
+	•	Footer links work as expected.
+	•	“Back to top” / scroll buttons (if any) work smoothly.
+	•	No link points to # or empty href unless it’s intentionally non-clickable.
+	•	All internal links use your final domain or relative URLs (no localhost, 127.0.0.1, or temp Netlify/Vercel dev links).
+	•	There is a custom 404 page configured (or at least a basic one from your host).
+
+⸻
+
+5️⃣ Content & CTAs
+	•	Every important page has a clear call to action (CTA):
+e.g. “WhatsApp us”, “Request a quote”, “Book a call”.
+	•	Phone numbers are clickable: tel:+971….
+	•	WhatsApp link is correct: https://wa.me/971XXXXXXXXX (no leading + in the URL).
+	•	Email links use mailto:info@yourdomain.com.
+	•	No dead “coming soon” buttons unless that page is genuinely coming soon.
+
+⸻
+
+6️⃣ Forms & interactions (even on static sites)
+
+If you have forms:
+	•	Form submits to a working endpoint (Formspree, Netlify forms, custom API, etc.).
+	•	Required fields are marked and actually required in HTML (required attribute).
+	•	Error messages appear clearly when form is incomplete.
+	•	Success message is visible and understandable.
+	•	You’ve done at least one real test submission and received the email / entry.
+	•	No form still pointing to a test email address or your personal Gmail if that’s not intended.
+
+If you have interactive bits (accordions, mobile nav, sliders):
+	•	Mobile menu opens and closes on all major breakpoints.
+	•	Accordions open/close properly.
+	•	Sliders don’t overflow the screen or cut off text/images.
+
+⸻
+
+7️⃣ Performance basics
+
+For a static site, you don’t need to go insane, but check:
+	•	Images are compressed (not 5MB raw exports from Photoshop).
+	•	You’re not loading gigantic unused JS libraries “just in case”.
+	•	CSS files are reasonably sized; any totally unused legacy CSS has been removed.
+	•	No autoplaying 4K background video on mobile (or it’s at least optimised/disabled).
+
+Optional but nice:
+	•	Run Lighthouse / PageSpeed Insights once and fix any major disasters (e.g. blocking resources, missing viewport, huge images).
+
+⸻
+
+8️⃣ SEO & discoverability
+
+Bare minimum SEO for a static site:
+	•	Every page has a unique <title> and <meta description>.
+	•	Only one <h1> per page, and it actually describes the main topic.
+	•	Subheadings use logical hierarchy: <h2>, <h3>, etc. (not everything is <h1>).
+	•	Friendly URLs (e.g. /legal-translation/ not /page1.html), when your host/CMS allows.
+	•	robots.txt exists and does not block the whole site (unless you intend that).
+	•	If needed, a sitemap.xml is generated and placed at /sitemap.xml.
+	•	Canonical URL tags are set if you have duplicate-ish content (useful on multi-URL setups).
+
+Social previews (OG tags):
+	•	<meta property="og:title">, og:description, og:image, og:url set for at least important pages.
+	•	<meta name="twitter:card" content="summary_large_image"> present if you care about social card previews.
+
+⸻
+
+9️⃣ Accessibility
+
+You don’t have to be perfect, but do these basics:
+	•	Images that convey meaning have alt text (not just blank or image123.jpg).
+	•	Buttons are actual <button>s or links styled as buttons (not random <div>s with onclick).
+	•	Text contrast is strong enough (dark text on light background, or vice versa).
+	•	You can tab through the page using keyboard and still operate menus/CTAs.
+	•	No important text baked into images only (or if you do, it’s also present as HTML somewhere).
+
+⸻
+
+🔟 Deployment & domain
+
+Before you call it “launched”:
+	•	Domain is correctly pointed to your hosting (DNS set and propagated).
+	•	Site loads with HTTPS (https://) and shows a valid padlock (SSL certificate OK).
+	•	There’s no mixed content (no http:// images or scripts on https:// pages).
+	•	If you want https://yourdomain.com only, you’ve set up:
+	•	redirect from http:// → https://
+	•	redirect from www. → bare domain (or vice versa, choose one canonical pattern)
+	•	You’ve tested on:
+	•	Chrome
+	•	Safari (especially on iPhone)
+	•	At least one Android browser (Chrome or Samsung Internet)
+	•	Time zone and any time-sensitive content (opening hours, offers, etc.) are correct.
+
+⸻
+
+1️⃣1️⃣ Analytics & monitoring (optional but smart)
+	•	Analytics/snippet installed (GA4, Plausible, etc.) if you want tracking.
+	•	Cookie / privacy notice updated if you’re doing anything more than basic analytics.
+	•	You’ve kept a local backup / zip of your final site files before launch.
+	•	Error/404 logs or host analytics checked after a few days to catch broken links.
+
+⸻
+
+If you want to be super-organised, you can literally drop this into a .md file in your project (LAUNCH-CHECKLIST.md) and tick things off each time you push a new version of the site. Static sites are pretty forgiving—once this checklist is green, you’re basically battle-ready.

@@ -930,3 +930,51 @@ body.theme-dark .exodus-header .social-icons a {
 body.theme-dark .exodus-header .social-icons a:hover {
     background: var(--accent-color);
 }
+
+/* ============================================
+   SPECIALISTS SECTION - Dark Mode
+   ============================================ */
+body.theme-dark .specialists-section {
+    background: var(--bg-light);
+}
+
+body.theme-dark .specialist-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+body.theme-dark .specialist-card:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-color);
+}
+
+body.theme-dark .specialist-card h3 {
+    color: var(--text-light);
+}
+
+body.theme-dark .specialist-card p {
+    color: var(--text-muted);
+}
+
+body.theme-dark .specialist-tags .tag {
+    background: var(--bg-elevated);
+    color: var(--text-body);
+}
+
+/* ============================================
+   UNIFIED MESSAGING CARD - Dark Mode
+   ============================================ */
+body.theme-dark .unified-messaging {
+    background: linear-gradient(135deg, #1e8e5f 0%, #0f6b4e 50%, #0056b3 100%);
+}
+
+body.theme-dark .dual-cta-buttons .whatsapp-btn {
+    background: rgba(255, 255, 255, 0.95);
+    color: #25D366;
+}
+
+body.theme-dark .dual-cta-buttons .imessage-btn {
+    background: rgba(255, 255, 255, 0.95);
+    color: #007AFF;
+}

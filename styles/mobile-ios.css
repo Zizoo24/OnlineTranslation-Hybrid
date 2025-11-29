@@ -122,6 +122,98 @@
         -webkit-backdrop-filter: blur(20px);
     }
 
+    /* Unified Messaging Card - iOS */
+    .os-ios .unified-messaging {
+        background: linear-gradient(135deg, #25D366 0%, #128C7E 50%, #007AFF 100%);
+        border-radius: var(--os-radius);
+        padding: 28px 24px;
+        text-align: center;
+    }
+
+    .os-ios .card-icons-dual {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 16px;
+    }
+
+    .os-ios .card-icons-dual .card-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 28px;
+        color: white;
+    }
+
+    .os-ios .card-icons-dual .whatsapp-icon {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .os-ios .card-icons-dual .imessage-icon {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .os-ios .unified-messaging h3 {
+        color: white;
+        font-family: var(--os-font);
+        font-weight: 600;
+        font-size: 20px;
+        margin-bottom: 8px;
+    }
+
+    .os-ios .unified-messaging p {
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 14px;
+        margin-bottom: 20px;
+        line-height: 1.5;
+    }
+
+    .os-ios .dual-cta-buttons {
+        display: flex;
+        gap: 12px;
+        justify-content: center;
+    }
+
+    .os-ios .dual-cta-buttons .cta-button {
+        flex: 1;
+        max-width: 140px;
+        padding: 14px 20px;
+        border-radius: 12px;
+        font-family: var(--os-font);
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        transition: transform 0.1s ease, opacity 0.1s ease;
+    }
+
+    .os-ios .dual-cta-buttons .cta-button:active {
+        transform: scale(0.97);
+        opacity: 0.9;
+    }
+
+    .os-ios .whatsapp-btn {
+        background: white;
+        color: #25D366;
+    }
+
+    .os-ios .imessage-btn {
+        background: white;
+        color: #007AFF;
+    }
+
+    .os-ios .ios-unified-channel {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
     .os-ios .section-header h2 {
         font-family: var(--os-font);
         font-weight: 700;

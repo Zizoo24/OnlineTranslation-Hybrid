@@ -1,7 +1,7 @@
 # OnlineTranslation.ae Website
 
 ## Overview
-OnlineTranslation.ae is a hybrid static HTML website designed to position the brand as a "Boutique Digital Concierge" for Ministry of Justice certified legal translation services in Dubai. It targets high-net-worth individuals and businesses, including Golden Visa applicants, property investors, and corporate clients, offering audit-ready assurance and compliance-grade legal translation. The site features a Divi immigration-inspired design with a modern navy/coral color scheme and smooth animations, aiming for a professional yet accessible online presence.
+OnlineTranslation.ae is a hybrid static HTML website designed to position the brand as a "Boutique Digital Concierge" for Ministry of Justice certified legal translation services in Dubai. It targets high-net-worth individuals and businesses, including Golden Visa applicants, property investors, and corporate clients, offering guaranteed court acceptance and professional legal translation. The site features a Divi immigration-inspired design with a modern navy/coral color scheme and smooth animations, aiming for a professional yet accessible online presence.
 
 ## User Preferences
 - Desktop: Corporate professional feel
@@ -22,7 +22,7 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Typography**: Heading fonts: Montserrat/Jost (700-800 weight, uppercase); Body fonts: Open Sans/Roboto (400 weight, 1.8 line-height).
 - **Animations**: Smooth hover transitions (0.3s), translateY(-8px) card hover, box-shadow effects.
 - **Responsiveness**: Breakpoint at 992px for desktop/mobile switch. Mobile features a sticky bottom navigation and slide-out sidebar. Desktop includes a shrink header and animated cards.
-- **Branding**: Repositioned as "Boutique Digital Concierge" with "Audit-Ready Assurance."
+- **Branding**: Repositioned as "Boutique Digital Concierge" with "Guaranteed Court Acceptance."
 - **Communication Channels**: Tri-channel approach with WhatsApp (primary), Apple Messages for Business, and Corporate Email.
 
 ### Technical Implementations

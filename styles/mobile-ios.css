@@ -201,3 +201,65 @@
         margin: 8px auto;
     }
 }
+
+.os-ios .imessage-cta {
+    background: linear-gradient(135deg, #34C759, #30D158) !important;
+    border: none !important;
+}
+
+.os-ios .imessage-cta:hover {
+    background: linear-gradient(135deg, #30D158, #34C759) !important;
+}
+
+.os-ios .hero-cta-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 15px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 14px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.os-ios .hero-cta-secondary:hover {
+    color: #fff;
+}
+
+.os-ios .hero-cta-secondary i {
+    color: #25D366;
+}
+
+.os-ios .imessage-card {
+    border: 2px solid rgba(52, 199, 89, 0.3) !important;
+    background: linear-gradient(135deg, rgba(52, 199, 89, 0.05), rgba(255, 255, 255, 0.9)) !important;
+}
+
+.os-ios .imessage-icon {
+    background: linear-gradient(135deg, #34C759, #30D158) !important;
+}
+
+.os-ios .imessage-card .card-link {
+    color: #34C759 !important;
+}
+
+.os-ios .hero-cta-group {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+@media (max-width: 991px) {
+    .os-ios .hero-cta-group {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .os-ios .hero-cta-secondary {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}
+

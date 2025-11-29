@@ -333,7 +333,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Contact Form - WhatsApp Redirect
+    // Contact Form - Email via Web3Forms + WhatsApp
     const contactForms = document.querySelectorAll('.contact-form');
     
     contactForms.forEach(function(form) {
@@ -345,15 +345,66 @@ document.addEventListener('DOMContentLoaded', function() {
             const email = formData.get('email') || '';
             const phone = formData.get('phone') || '';
             const message = formData.get('message') || '';
+            const resultDiv = form.querySelector('#formResult') || document.getElementById('formResult');
+            const submitBtn = form.querySelector('button[type="submit"]');
             
+            // Show loading state
+            if (submitBtn) {
+                submitBtn.disabled = true;
+                submitBtn.textContent = 'Sending...';
+            }
+            if (resultDiv) resultDiv.innerHTML = '';
+            
+            // Prepare WhatsApp message
             let whatsappMessage = `Hello OnlineTranslation.ae!\n\n`;
             if (name) whatsappMessage += `Name: ${name}\n`;
             if (email) whatsappMessage += `Email: ${email}\n`;
             if (phone) whatsappMessage += `Phone: ${phone}\n`;
             if (message) whatsappMessage += `\nMessage:\n${message}`;
             
-            window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
-            form.reset();
+            // Send to Web3Forms
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            
+            fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json'
+                },
+                body: json
+            })
+            .then(async function(response) {
+                const data = await response.json();
+                if (response.status === 200) {
+                    if (resultDiv) {
+                        resultDiv.innerHTML = '<span class="success">Message sent successfully! We\'ll respond shortly.</span>';
+                    }
+                    form.reset();
+                    // Also open WhatsApp for immediate contact
+                    window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                } else {
+                    if (resultDiv) {
+                        resultDiv.innerHTML = '<span class="error">Failed to send. Please use WhatsApp instead.</span>';
+                    }
+                    // Fallback to WhatsApp only
+                    window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                }
+            })
+            .catch(function(error) {
+                if (resultDiv) {
+                    resultDiv.innerHTML = '<span class="error">Connection error. Opening WhatsApp instead...</span>';
+                }
+                // Fallback to WhatsApp
+                window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+                form.reset();
+            })
+            .finally(function() {
+                if (submitBtn) {
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Submit Request';
+                }
+            });
         });
     });
 

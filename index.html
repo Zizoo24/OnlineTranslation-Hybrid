@@ -927,7 +927,10 @@
                         <span class="section-label">Get In Touch</span>
                         <h2 class="section-title">Request a Free Quotation</h2>
                         <p class="contact-description">Share your documents. We'll confirm price and delivery time within minutes.</p>
-                        <form class="contact-form" action="#" method="POST">
+                        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
+                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                            <input type="hidden" name="subject" value="New Translation Request from OnlineTranslation.ae">
+                            <input type="hidden" name="from_name" value="OnlineTranslation.ae Contact Form">
                             <div class="form-row">
                                 <div class="form-group">
                                     <input type="text" name="name" placeholder="Your Name" required>
@@ -943,6 +946,7 @@
                                 <textarea name="message" placeholder="Describe your document(s) and requirements..." rows="5"></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Submit Request</button>
+                            <div id="formResult" class="form-result"></div>
                         </form>
                         <div class="contact-buttons">
                             <a href="https://wa.me/971508620217" class="contact-btn whatsapp">

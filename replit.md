@@ -179,7 +179,7 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - **Overlap Cards**: Three red cards (-120px margin) - MOJ-CERTIFIED TRANSLATORS, WHITE-GLOVE DIGITAL CONCIERGE, DOCUMENT TRACKING & AUDIT TRAIL
 - **Meet Our Team Section**: Features both team members to reinforce boutique team approach:
   - **Dul** - Founder & Client Relations (direct client access, project coordination)
-  - **Hozifa Abdelrahim** - Sworn Legal Translator (MOJ Licensed, Sworn Officer of the Court)
+  - **Senior Legal Translator** - Sworn Court Translator (MOJ Licensed, Sworn Officer of the Court)
 - **About Section**: Refocused on "Compliance-Grade Legal Translation" and "risk management asset" positioning
 - **Services Section**: Solution-focused cards - GOLDEN VISA PACK, DLD PROPERTY POA, DMCC CORPORATE SETUP
 - **Typography**: Montserrat/Jost headings (700-800 weight), Open Sans body (400 weight, 1.8 line-height)

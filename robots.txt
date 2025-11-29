@@ -1,0 +1,22 @@
+# Robots.txt for OnlineTranslation.ae
+# https://onlinetranslation.ae
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://onlinetranslation.ae/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
+
+# Block sensitive paths
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$
+
+# Allow important resources
+Allow: /styles/*.css
+Allow: /scripts/*.js
+Allow: /images/
+Allow: /manifest.webmanifest

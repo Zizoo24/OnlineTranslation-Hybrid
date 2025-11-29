@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Preloader
     const preloader = document.getElementById('preloader');
     if (preloader) {
         window.addEventListener('load', function() {
@@ -11,8 +12,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 
+    // Header Scroll Effect
     const header = document.querySelector('.header-desktop');
-    let lastScroll = 0;
+    const backToTop = document.getElementById('backToTop');
     
     window.addEventListener('scroll', function() {
         const currentScroll = window.pageYOffset;
@@ -25,9 +27,27 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
         
-        lastScroll = currentScroll;
+        // Back to Top Button
+        if (backToTop) {
+            if (currentScroll > 500) {
+                backToTop.classList.add('visible');
+            } else {
+                backToTop.classList.remove('visible');
+            }
+        }
     });
+    
+    // Back to Top Click
+    if (backToTop) {
+        backToTop.addEventListener('click', function() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+    }
 
+    // Sidebar Menu
     const sidebarMenu = document.getElementById('menu-sidebar');
     const sidebarOverlay = document.getElementById('sidebarOverlay');
     const sidebarToggle = document.getElementById('sidebarToggle');
@@ -35,14 +55,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidebarClose = document.getElementById('sidebarClose');
     
     function openSidebar() {
-        sidebarMenu.classList.add('active');
-        sidebarOverlay.classList.add('active');
+        if (sidebarMenu) sidebarMenu.classList.add('active');
+        if (sidebarOverlay) sidebarOverlay.classList.add('active');
         document.body.classList.add('menu-open');
     }
     
     function closeSidebar() {
-        sidebarMenu.classList.remove('active');
-        sidebarOverlay.classList.remove('active');
+        if (sidebarMenu) sidebarMenu.classList.remove('active');
+        if (sidebarOverlay) sidebarOverlay.classList.remove('active');
         document.body.classList.remove('menu-open');
     }
     
@@ -61,42 +81,42 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (sidebarClose) {
-        sidebarClose.addEventListener('click', function() {
-            closeSidebar();
-        });
+        sidebarClose.addEventListener('click', closeSidebar);
     }
     
     if (sidebarOverlay) {
-        sidebarOverlay.addEventListener('click', function() {
-            closeSidebar();
-        });
+        sidebarOverlay.addEventListener('click', closeSidebar);
     }
     
+    // Close sidebar on link click
     const sidebarLinks = document.querySelectorAll('.sidebar-nav a');
     sidebarLinks.forEach(function(link) {
-        link.addEventListener('click', function() {
-            closeSidebar();
-        });
+        link.addEventListener('click', closeSidebar);
     });
 
+    // Search Overlay
     const searchOverlay = document.getElementById('search-overlay');
     const searchToggle = document.getElementById('searchToggle');
     const searchClose = document.getElementById('searchClose');
     const searchInput = document.getElementById('searchInput');
     
     function openSearch() {
-        searchOverlay.classList.add('active');
-        document.body.classList.add('search-open');
-        if (searchInput) {
-            setTimeout(function() {
-                searchInput.focus();
-            }, 300);
+        if (searchOverlay) {
+            searchOverlay.classList.add('active');
+            document.body.classList.add('search-open');
+            if (searchInput) {
+                setTimeout(function() {
+                    searchInput.focus();
+                }, 300);
+            }
         }
     }
     
     function closeSearch() {
-        searchOverlay.classList.remove('active');
-        document.body.classList.remove('search-open');
+        if (searchOverlay) {
+            searchOverlay.classList.remove('active');
+            document.body.classList.remove('search-open');
+        }
     }
     
     if (searchToggle) {
@@ -107,11 +127,10 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     
     if (searchClose) {
-        searchClose.addEventListener('click', function() {
-            closeSearch();
-        });
+        searchClose.addEventListener('click', closeSearch);
     }
     
+    // Escape key handler
     document.addEventListener('keydown', function(e) {
         if (e.key === 'Escape') {
             closeSearch();
@@ -119,13 +138,19 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
+    // Theme Toggle
     const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle ? themeToggle.querySelector('i') : null;
     const body = document.body;
     
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         body.classList.remove('theme-light');
         body.classList.add('theme-dark');
+        if (themeIcon) {
+            themeIcon.classList.remove('fa-moon');
+            themeIcon.classList.add('fa-sun');
+        }
     }
     
     if (themeToggle) {
@@ -136,27 +161,41 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const isDark = body.classList.contains('theme-dark');
             localStorage.setItem('theme', isDark ? 'dark' : 'light');
+            
+            if (themeIcon) {
+                if (isDark) {
+                    themeIcon.classList.remove('fa-moon');
+                    themeIcon.classList.add('fa-sun');
+                } else {
+                    themeIcon.classList.remove('fa-sun');
+                    themeIcon.classList.add('fa-moon');
+                }
+            }
         });
     }
 
+    // FAQ Accordion
     const faqItems = document.querySelectorAll('.faq-item');
     
     faqItems.forEach(function(item) {
         const question = item.querySelector('.faq-question');
         
-        question.addEventListener('click', function() {
-            const isActive = item.classList.contains('active');
-            
-            faqItems.forEach(function(otherItem) {
-                otherItem.classList.remove('active');
+        if (question) {
+            question.addEventListener('click', function() {
+                const isActive = item.classList.contains('active');
+                
+                faqItems.forEach(function(otherItem) {
+                    otherItem.classList.remove('active');
+                });
+                
+                if (!isActive) {
+                    item.classList.add('active');
+                }
             });
-            
-            if (!isActive) {
-                item.classList.add('active');
-            }
-        });
+        }
     });
 
+    // Smooth Scroll for Anchor Links
     document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
         anchor.addEventListener('click', function(e) {
             const href = this.getAttribute('href');
@@ -165,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(href);
             if (target) {
                 e.preventDefault();
-                const headerHeight = window.innerWidth > 991 ? 100 : 70;
+                const headerHeight = window.innerWidth > 991 ? 100 : 75;
                 const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
                 
                 window.scrollTo({
@@ -176,73 +215,75 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    const contactForm = document.getElementById('contactForm');
+    // Contact Form - WhatsApp Redirect
+    const contactForms = document.querySelectorAll('.contact-form');
     
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
+    contactForms.forEach(function(form) {
+        form.addEventListener('submit', function(e) {
             e.preventDefault();
             
-            const formData = new FormData(contactForm);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const message = formData.get('message');
+            const formData = new FormData(form);
+            const name = formData.get('name') || '';
+            const email = formData.get('email') || '';
+            const phone = formData.get('phone') || '';
+            const message = formData.get('message') || '';
             
-            const whatsappMessage = encodeURIComponent(
-                `Hello OnlineTranslation.ae!\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-            );
+            let whatsappMessage = `Hello OnlineTranslation.ae!\n\n`;
+            if (name) whatsappMessage += `Name: ${name}\n`;
+            if (email) whatsappMessage += `Email: ${email}\n`;
+            if (phone) whatsappMessage += `Phone: ${phone}\n`;
+            if (message) whatsappMessage += `\nMessage:\n${message}`;
             
-            window.open(`https://wa.me/971508620217?text=${whatsappMessage}`, '_blank');
-            
-            contactForm.reset();
+            window.open(`https://wa.me/971508620217?text=${encodeURIComponent(whatsappMessage)}`, '_blank');
+            form.reset();
         });
-    }
+    });
 
+    // Footer Navigation Active State
     const footerItems = document.querySelectorAll('.footer-item');
     
     footerItems.forEach(function(item) {
         item.addEventListener('click', function() {
-            footerItems.forEach(function(fi) {
-                fi.classList.remove('active-nav');
-            });
-            
-            if (!this.classList.contains('external-link')) {
+            const href = this.getAttribute('href');
+            if (href && href.startsWith('#')) {
+                footerItems.forEach(function(fi) {
+                    fi.classList.remove('active-nav');
+                });
                 this.classList.add('active-nav');
             }
         });
     });
 
+    // Service Worker Registration
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function() {
             navigator.serviceWorker.register('/service-worker.js')
                 .then(function(registration) {
-                    console.log('ServiceWorker registration successful');
+                    console.log('ServiceWorker registered');
                 })
                 .catch(function(err) {
-                    console.log('ServiceWorker registration failed: ', err);
+                    console.log('ServiceWorker registration failed');
                 });
         });
     }
 
+    // PWA Install Prompt
     let deferredPrompt;
-    
     window.addEventListener('beforeinstallprompt', function(e) {
         e.preventDefault();
         deferredPrompt = e;
     });
 
-    function isMobile() {
-        return window.innerWidth <= 991;
-    }
-    
+    // Resize Handler
     function handleResize() {
-        if (!isMobile()) {
+        if (window.innerWidth > 991) {
             closeSidebar();
             closeSearch();
         }
     }
-    
     window.addEventListener('resize', handleResize);
 
+    // Intersection Observer for Animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -251,14 +292,103 @@ document.addEventListener('DOMContentLoaded', function() {
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-fade-in');
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
                 observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
     
-    document.querySelectorAll('.service-card, .feature-card, .why-card, .testimonial-card, .process-step').forEach(function(el) {
+    // Animated Elements
+    const animatedElements = document.querySelectorAll('.service-card, .feature-card, .why-card, .testimonial-card, .process-step, .stats-item');
+    animatedElements.forEach(function(el, index) {
         el.style.opacity = '0';
+        el.style.transform = 'translateY(30px)';
+        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
         observer.observe(el);
     });
+    
+    // Counter Animation
+    const counters = document.querySelectorAll('.stats-item .number');
+    
+    function animateCounter(el) {
+        const target = el.innerText;
+        const hasPlus = target.includes('+');
+        const hasPercent = target.includes('%');
+        const hasHr = target.includes('hr');
+        
+        let numericValue = parseInt(target.replace(/[^0-9]/g, ''));
+        if (isNaN(numericValue)) return;
+        
+        let current = 0;
+        const increment = numericValue / 50;
+        const duration = 2000;
+        const stepTime = duration / 50;
+        
+        function updateCounter() {
+            current += increment;
+            if (current < numericValue) {
+                let displayValue = Math.floor(current);
+                if (hasPlus) displayValue = displayValue.toLocaleString() + '+';
+                else if (hasPercent) displayValue = displayValue + '%';
+                else if (hasHr) displayValue = displayValue + '-' + (displayValue + 2) + 'hr';
+                else displayValue = displayValue.toLocaleString();
+                
+                el.innerText = displayValue;
+                setTimeout(updateCounter, stepTime);
+            } else {
+                el.innerText = target;
+            }
+        }
+        
+        updateCounter();
+    }
+    
+    const counterObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+            if (entry.isIntersecting) {
+                animateCounter(entry.target);
+                counterObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+    
+    counters.forEach(function(counter) {
+        counterObserver.observe(counter);
+    });
+    
+    // Hover Effects Enhancement
+    const cards = document.querySelectorAll('.service-card, .feature-card, .why-card');
+    cards.forEach(function(card) {
+        card.addEventListener('mouseenter', function() {
+            this.style.transform = 'translateY(-12px)';
+        });
+        card.addEventListener('mouseleave', function() {
+            this.style.transform = 'translateY(0)';
+        });
+    });
+    
+    // Active Navigation Highlight
+    function updateActiveNav() {
+        const sections = document.querySelectorAll('section[id]');
+        const scrollPos = window.scrollY + 150;
+        
+        sections.forEach(function(section) {
+            const top = section.offsetTop;
+            const height = section.offsetHeight;
+            const id = section.getAttribute('id');
+            
+            if (scrollPos >= top && scrollPos < top + height) {
+                document.querySelectorAll('.nav-menu a, .sidebar-nav a').forEach(function(link) {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === '#' + id) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }
+    
+    window.addEventListener('scroll', updateActiveNav);
+    updateActiveNav();
 });

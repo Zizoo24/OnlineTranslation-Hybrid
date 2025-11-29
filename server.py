@@ -27,6 +27,9 @@ class MyHTTPRequestHandler(http.server.SimpleHTTPRequestHandler):
             return 'image/svg+xml'
         return super().guess_type(path)
 
-with socketserver.TCPServer(("0.0.0.0", PORT), MyHTTPRequestHandler) as httpd:
+class ReuseAddrTCPServer(socketserver.TCPServer):
+    allow_reuse_address = True
+
+with ReuseAddrTCPServer(("0.0.0.0", PORT), MyHTTPRequestHandler) as httpd:
     print(f"Serving at http://0.0.0.0:{PORT}")
     httpd.serve_forever()

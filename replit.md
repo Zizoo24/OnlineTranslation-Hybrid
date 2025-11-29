@@ -58,5 +58,11 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **GitHub**: Connected for version control.
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
+## Recent Changes (November 2025)
+- **Contact Form Integration**: Web3Forms configured to send to info@onlinetranslation.ae with WhatsApp redirect fallback (awaiting access key from user)
+- **Overlap Cards Fix**: Full-width coral background using CSS `isolation: isolate` to prevent navy strip bleed
+- **Why Choose Us Redesign**: Light background with white cards, 4px coral top border, gold icon circles (rgba(212, 165, 76, 0.12))
+- **Stats Bar Enhancement**: Labels now use gold color for proper visual hierarchy
+
 ## Documentation
 - **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.

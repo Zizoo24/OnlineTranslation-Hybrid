@@ -12,7 +12,9 @@
         <priority>1.0</priority>
     </url>
     
+    <!-- ============================================ -->
     <!-- SERVICES SILO -->
+    <!-- ============================================ -->
     <url>
         <loc>https://onlinetranslation.ae/services/</loc>
         <lastmod>2024-11-29</lastmod>
@@ -55,7 +57,9 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- ============================================ -->
     <!-- LOCATIONS SILO -->
+    <!-- ============================================ -->
     <url>
         <loc>https://onlinetranslation.ae/locations/</loc>
         <lastmod>2024-11-29</lastmod>
@@ -63,6 +67,7 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Dubai Locations -->
     <url>
         <loc>https://onlinetranslation.ae/locations/dubai/palm-jumeirah/</loc>
         <lastmod>2024-11-29</lastmod>
@@ -70,15 +75,83 @@
         <priority>0.8</priority>
     </url>
     
-    <!-- INDUSTRIES SILO -->
     <url>
-        <loc>https://onlinetranslation.ae/industries/</loc>
+        <loc>https://onlinetranslation.ae/locations/dubai/jlt/</loc>
         <lastmod>2024-11-29</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://onlinetranslation.ae/locations/dubai/difc/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/locations/dubai/business-bay/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- Other Emirates -->
+    <url>
+        <loc>https://onlinetranslation.ae/locations/abu-dhabi/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/locations/sharjah/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- INDUSTRIES SILO -->
+    <!-- ============================================ -->
+    <url>
+        <loc>https://onlinetranslation.ae/industries/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/industries/legal/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/industries/healthcare/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/industries/real-estate/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/industries/e-commerce/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+    </url>
+    
+    <!-- ============================================ -->
     <!-- RESOURCES SILO -->
+    <!-- ============================================ -->
     <url>
         <loc>https://onlinetranslation.ae/resources/</loc>
         <lastmod>2024-11-29</lastmod>
@@ -100,7 +173,16 @@
         <priority>0.7</priority>
     </url>
     
+    <url>
+        <loc>https://onlinetranslation.ae/resources/document-checklist/</loc>
+        <lastmod>2024-11-29</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+    
+    <!-- ============================================ -->
     <!-- STANDALONE PAGES -->
+    <!-- ============================================ -->
     <url>
         <loc>https://onlinetranslation.ae/contact.html</loc>
         <lastmod>2024-11-29</lastmod>

@@ -177,7 +177,9 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 - **Brand Positioning**: Repositioned from generic translation service to "Boutique Digital Concierge" with "Audit-Ready Assurance"
 - **Hero Overhaul**: New H1 "AUDIT-READY ASSURANCE. MOJ-LICENSED LEGAL COMPLIANCE FOR THE UAE." with 85% Navy overlay
 - **Overlap Cards**: Three red cards (-120px margin) - MOJ-CERTIFIED TRANSLATORS, WHITE-GLOVE DIGITAL CONCIERGE, DOCUMENT TRACKING & AUDIT TRAIL
-- **Sworn Translator Section**: Added trust-building section featuring Hozifa Abdelrahim with MOJ credentials (solopreneur risk mitigation)
+- **Meet Our Team Section**: Features both team members to reinforce boutique team approach:
+  - **Dul** - Founder & Client Relations (direct client access, project coordination)
+  - **Hozifa Abdelrahim** - Sworn Legal Translator (MOJ Licensed, Sworn Officer of the Court)
 - **About Section**: Refocused on "Compliance-Grade Legal Translation" and "risk management asset" positioning
 - **Services Section**: Solution-focused cards - GOLDEN VISA PACK, DLD PROPERTY POA, DMCC CORPORATE SETUP
 - **Typography**: Montserrat/Jost headings (700-800 weight), Open Sans body (400 weight, 1.8 line-height)

@@ -1315,3 +1315,172 @@ body.theme-dark .overlap-icon {
 body.theme-dark .overlap-icon i {
     color: #ffffff !important;
 }
+
+/* ============================================
+   CONTENT PAGES - Dark Mode Fixes
+   (Document Checklist, FAQ, Pricing Guide, etc.)
+   ============================================ */
+
+/* Fix inline white backgrounds on content cards */
+body.theme-dark .content-section [style*="background: white"],
+body.theme-dark .content-section [style*="background:white"],
+body.theme-dark .main-content [style*="background: white"],
+body.theme-dark .main-content [style*="background:white"] {
+    background: #21262d !important;
+    border-color: #30363d !important;
+}
+
+/* Fix bg-alt backgrounds */
+body.theme-dark [style*="background: var(--bg-alt)"],
+body.theme-dark [style*="background:var(--bg-alt)"] {
+    background: #161b22 !important;
+}
+
+/* Fix headings with var(--primary) */
+body.theme-dark .content-section h2[style*="color: var(--primary)"],
+body.theme-dark .main-content h2[style*="color: var(--primary)"],
+body.theme-dark .content-section h3[style*="color: var(--primary)"],
+body.theme-dark .main-content h3[style*="color: var(--primary)"] {
+    color: #f0f6fc !important;
+}
+
+/* Fix list items and text in content sections */
+body.theme-dark .content-section li,
+body.theme-dark .content-section span,
+body.theme-dark .main-content li,
+body.theme-dark .main-content span:not([style*="color:"]) {
+    color: #e6edf3 !important;
+}
+
+/* Fix strong/bold text */
+body.theme-dark .content-section strong,
+body.theme-dark .main-content strong {
+    color: #ffffff !important;
+}
+
+/* Fix checkbox styling in dark mode */
+body.theme-dark input[type="checkbox"] {
+    accent-color: #ff4757;
+}
+
+/* Fix border colors */
+body.theme-dark [style*="border-bottom: 1px solid var(--border-color)"],
+body.theme-dark [style*="border: 1px solid var(--border-color)"] {
+    border-color: #30363d !important;
+}
+
+/* Fix anchor links in content */
+body.theme-dark .content-section a[style*="color: var(--accent)"],
+body.theme-dark .main-content a[style*="color: var(--accent)"] {
+    color: #ff6b7a !important;
+}
+
+/* Page hero section */
+body.theme-dark .page-hero {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%) !important;
+}
+
+/* Content section backgrounds */
+body.theme-dark .content-section {
+    background: #0d1117;
+}
+
+/* Highlight boxes in dark mode */
+body.theme-dark .highlight-box {
+    background: linear-gradient(135deg, rgba(88, 166, 255, 0.1) 0%, rgba(88, 166, 255, 0.15) 100%) !important;
+    border-left-color: #58a6ff !important;
+}
+
+body.theme-dark .highlight-box h4 {
+    color: #58a6ff !important;
+}
+
+body.theme-dark .highlight-box i {
+    color: #58a6ff !important;
+}
+
+body.theme-dark .highlight-box p {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .highlight-box.warning {
+    background: linear-gradient(135deg, rgba(255, 71, 87, 0.1) 0%, rgba(255, 71, 87, 0.15) 100%) !important;
+    border-left-color: #ff4757 !important;
+}
+
+body.theme-dark .highlight-box.warning h4,
+body.theme-dark .highlight-box.warning i {
+    color: #ff4757 !important;
+}
+
+/* Quick quote card dark mode */
+body.theme-dark .quick-quote-card {
+    background: #21262d !important;
+    border: 1px solid #30363d !important;
+}
+
+body.theme-dark .quick-quote-card h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .quick-quote-card p {
+    color: #a8b3c2 !important;
+}
+
+/* FAQ accordion dark mode */
+body.theme-dark .faq-item {
+    background: #21262d !important;
+    border-color: #30363d !important;
+}
+
+body.theme-dark .faq-question {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .faq-answer {
+    color: #e6edf3 !important;
+}
+
+/* Pricing cards dark mode */
+body.theme-dark .pricing-card {
+    background: #21262d !important;
+    border-color: #30363d !important;
+}
+
+body.theme-dark .pricing-card h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .pricing-card .price {
+    color: #ff4757 !important;
+}
+
+body.theme-dark .pricing-card li {
+    color: #e6edf3 !important;
+}
+
+/* Feature cards general dark mode */
+body.theme-dark .feature-card {
+    background: #21262d !important;
+}
+
+body.theme-dark .feature-card h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .feature-card p {
+    color: #a8b3c2 !important;
+}
+
+/* Service cards dark mode */
+body.theme-dark .service-card {
+    background: #21262d !important;
+}
+
+body.theme-dark .service-card h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .service-card p {
+    color: #a8b3c2 !important;
+}

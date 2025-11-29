@@ -211,6 +211,19 @@
     background: linear-gradient(135deg, #30D158, #34C759) !important;
 }
 
+.os-ios .whatsapp-card {
+    border: 2px solid rgba(37, 211, 102, 0.3) !important;
+    background: linear-gradient(135deg, rgba(37, 211, 102, 0.05), rgba(255, 255, 255, 0.9)) !important;
+}
+
+.os-ios .whatsapp-icon {
+    background: linear-gradient(135deg, #25D366, #128C7E) !important;
+}
+
+.os-ios .whatsapp-card .card-link {
+    color: #25D366 !important;
+}
+
 .os-ios .hero-cta-secondary {
     display: inline-flex;
     align-items: center;

@@ -1141,7 +1141,7 @@ h1, h2, h3, h4, h5, h6 {
     /* ========== OVERLAP CARDS - Exodus Stacked ========== */
     .overlap-cards-section {
         margin-top: -50px;
-        padding-bottom: 50px;
+        padding-bottom: 30px;
     }
     
     .overlap-wrapper {
@@ -1161,8 +1161,20 @@ h1, h2, h3, h4, h5, h6 {
         border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     }
     
+    /* Secondary Navy Card on Mobile */
+    .overlap-card.overlap-card--secondary {
+        background: var(--primary-color) !important;
+    }
+    
     .overlap-card:last-child {
         border-bottom: none;
+    }
+    
+    /* iOS Feature Cards Section - Fix Overlap */
+    .feature-cards-section.os-ios-only {
+        margin-top: 0;
+        padding-top: 40px;
+        padding-bottom: 40px;
     }
     
     .overlap-icon {

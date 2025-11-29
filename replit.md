@@ -63,6 +63,8 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Overlap Cards Fix**: Full-width coral background using CSS `isolation: isolate` to prevent navy strip bleed
 - **Why Choose Us Redesign**: Light background with white cards, 4px coral top border, gold icon circles (rgba(212, 165, 76, 0.12))
 - **Stats Bar Enhancement**: Labels now use gold color for proper visual hierarchy
+- **Header Overlap Fix**: Pages without breadcrumbs require 160px top padding to clear fixed header (~120px: 50px header-top + 70px header-main)
+- **Footer Redesign**: Compact footer with 70px emblem logo (60px mobile), 50px padding, smaller typography
 
 ## Documentation
 - **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.

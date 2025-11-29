@@ -752,7 +752,51 @@ body.theme-dark .sidebar-nav ul li a:active {
     
     .faq-answer p {
         padding: 20px 22px;
-        font-size: 14px;
+    }
+}
+
+/* ============================================
+   RESPONSIVE GRID FIXES - Override inline styles
+   ============================================ */
+
+/* Mobile-first responsive grid override */
+@media (max-width: 767px) {
+    /* Force all inline grids to stack on mobile */
+    [style*="grid-template-columns: repeat(4"] {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    [style*="grid-template-columns: repeat(3"] {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Crosslink grids */
+    .crosslink-grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+    
+    /* Responsive grid utility class */
+    .responsive-grid-4,
+    .responsive-grid-3 {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+@media (max-width: 575px) {
+    /* Force 4-column grids to single column on very small screens */
+    [style*="grid-template-columns: repeat(4"],
+    .crosslink-grid {
+        grid-template-columns: 1fr !important;
+    }
+    
+    /* Ensure card text fits */
+    [style*="grid-template-columns"] h4 {
+        font-size: 14px !important;
+    }
+    
+    [style*="grid-template-columns"] p {
+        font-size: 13px !important;
+        line-height: 1.5;
     }
     
     .stats-grid {

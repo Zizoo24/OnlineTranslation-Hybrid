@@ -943,6 +943,24 @@ h1, h2, h3, h4, h5, h6 {
     border-right: 1px solid rgba(255, 255, 255, 0.15);
 }
 
+/* Secondary Navy Card Treatment */
+.overlap-card--secondary {
+    background: var(--primary-color);
+}
+
+.overlap-card--secondary:hover {
+    box-shadow: 0 25px 50px rgba(14, 43, 72, 0.4);
+}
+
+.overlap-card--secondary .overlap-icon {
+    border-color: rgba(255, 255, 255, 0.3);
+}
+
+.overlap-card--secondary:hover .overlap-icon {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
 .overlap-card:last-child {
     border-right: none;
 }

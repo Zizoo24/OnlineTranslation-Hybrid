@@ -1295,6 +1295,10 @@ body.theme-dark .overlap-card {
     background: #ff4757 !important;
 }
 
+body.theme-dark .overlap-card--secondary {
+    background: #1a3a5c !important;
+}
+
 body.theme-dark .overlap-card h4 {
     color: #ffffff !important;
 }

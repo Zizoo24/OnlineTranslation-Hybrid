@@ -194,35 +194,35 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exodus-header.scrolled .header-main {
-    padding: 6px 0;
+    padding: 8px 0;
 }
 
 .exodus-header.scrolled .header-logo img {
-    height: 28px;
+    height: 40px;
 }
 
 .exodus-header.scrolled .logo-text {
-    font-size: 14px;
+    font-size: 16px;
 }
 
 .exodus-header.scrolled .logo-tagline {
-    font-size: 8px;
+    font-size: 10px;
 }
 
 .exodus-header.scrolled .nav-link {
-    padding: 6px 8px;
-    font-size: 11px;
+    padding: 6px 10px;
+    font-size: 12px;
 }
 
 .exodus-header.scrolled .social-icons a {
-    width: 26px;
-    height: 26px;
-    font-size: 11px;
+    width: 30px;
+    height: 30px;
+    font-size: 12px;
 }
 
 .exodus-header.scrolled .header-contact-btn {
-    padding: 5px 12px;
-    font-size: 10px;
+    padding: 6px 14px;
+    font-size: 11px;
     border-color: rgba(255,255,255,0.5);
 }
 

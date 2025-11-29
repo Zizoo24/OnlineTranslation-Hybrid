@@ -71,6 +71,51 @@ document.addEventListener('DOMContentLoaded', function() {
         preloader.classList.add('hidden');
     }
 
+    // Touch-Friendly Dropdown Navigation
+    // On touch devices, first tap opens dropdown, second tap follows link
+    (function initTouchDropdowns() {
+        const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+        
+        if (isTouchDevice) {
+            const dropdownItems = document.querySelectorAll('.nav-item.has-dropdown');
+            
+            dropdownItems.forEach(function(item) {
+                const link = item.querySelector('.nav-link');
+                const dropdown = item.querySelector('.dropdown-menu');
+                
+                if (link && dropdown) {
+                    link.addEventListener('click', function(e) {
+                        // Check if dropdown is already open
+                        const isOpen = item.classList.contains('dropdown-open');
+                        
+                        // Close all other dropdowns first
+                        dropdownItems.forEach(function(otherItem) {
+                            if (otherItem !== item) {
+                                otherItem.classList.remove('dropdown-open');
+                            }
+                        });
+                        
+                        if (!isOpen) {
+                            // First tap: open dropdown, prevent navigation
+                            e.preventDefault();
+                            item.classList.add('dropdown-open');
+                        }
+                        // Second tap: allow navigation (don't prevent default)
+                    });
+                }
+            });
+            
+            // Close dropdowns when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-item.has-dropdown')) {
+                    dropdownItems.forEach(function(item) {
+                        item.classList.remove('dropdown-open');
+                    });
+                }
+            });
+        }
+    })();
+
     // Header Scroll Effect
     const header = document.querySelector('.header-desktop');
     const backToTop = document.getElementById('backToTop');

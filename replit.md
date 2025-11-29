@@ -147,15 +147,18 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 5. **SEO Optimized**: Schema.org structured data, 4-silo sitemap, Open Graph, breadcrumbs
 6. **OS Detection**: iOS, Android, macOS-specific styling
 
-### Design System (Divi Exodus Palette)
-- **Primary Color**: #0a1f44 (Deep Navy Blue)
-- **Accent Color**: #e31e24 (Vivid Red)
+### Design System (Exodus Palette - Strategic Repositioning)
+- **Primary Color**: #0E2B48 (Deep Navy Blue)
+- **Accent Color**: #FF1654 (Vivid Red)
+- **Primary Overlay**: rgba(14, 43, 72, 0.85) (85% Navy)
 - **Gold Highlight**: #d4a54c
 - **Text Dark**: #000000 (Pure Black)
 - **Background**: #ffffff (White)
-- **Fonts**: Poppins (headings), Roboto (body)
+- **Heading Fonts**: Montserrat/Jost (700-800 weight, uppercase)
+- **Body Fonts**: Open Sans/Roboto (400 weight, 1.8 line-height)
 - **Breakpoint**: 992px for desktop/mobile switch
-- **Effects**: Smooth hover transitions (0.2s)
+- **Effects**: Smooth hover transitions (0.3s), translateY(-8px) card hover
+- **Overlap Cards**: margin-top: -120px, z-index: 20
 
 ## Content
 - **Brand**: OnlineTranslation.ae (short: OT.ae)
@@ -170,11 +173,21 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 
 ## Recent Changes (Nov 2024)
 
-### Divi Exodus Theme Update (Latest)
+### Strategic Repositioning - "Boutique Digital Concierge" (Latest)
+- **Brand Positioning**: Repositioned from generic translation service to "Boutique Digital Concierge" with "Audit-Ready Assurance"
+- **Hero Overhaul**: New H1 "AUDIT-READY ASSURANCE. MOJ-LICENSED LEGAL COMPLIANCE FOR THE UAE." with 85% Navy overlay
+- **Overlap Cards**: Three red cards (-120px margin) - MOJ-CERTIFIED TRANSLATORS, WHITE-GLOVE DIGITAL CONCIERGE, DOCUMENT TRACKING & AUDIT TRAIL
+- **Sworn Translator Section**: Added trust-building section featuring Hozifa Abdelrahim with MOJ credentials (solopreneur risk mitigation)
+- **About Section**: Refocused on "Compliance-Grade Legal Translation" and "risk management asset" positioning
+- **Services Section**: Solution-focused cards - GOLDEN VISA PACK, DLD PROPERTY POA, DMCC CORPORATE SETUP
+- **Typography**: Montserrat/Jost headings (700-800 weight), Open Sans body (400 weight, 1.8 line-height)
+- **Banned Words Removed**: No "Premier", "Best", "Leading", "Cheap" in any content
+- **Preferred Terms Applied**: "MOJ-Licensed", "Court-Ready", "Compliance-Grade", "Audit-Ready" throughout
+
+### Previous: Divi Exodus Theme Update
 - **Header Redesign**: Transparent overlay header with inline navigation menu (Home, Services with dropdown, Locations with dropdown, Resources with dropdown, Contact Us)
 - **Red Announcement Bar**: Added "DISCOVER YOUR PATH" bar at top like Exodus
-- **Hero Overhaul**: Changed to professional office image (contact-office.png), bold "TAILORED LEGAL & VISA SOLUTIONS" typography, red "Request a Call" CTA button
-- **Feature Cards Rebuilt**: Three red cards with white icons (Immigration & Visa, Direct Interview, Courts Supported) matching Exodus style
+- **Feature Cards Rebuilt**: Three red cards with white icons matching Exodus style
 - **Typography Updates**: Poppins 700/800 headings, proper letter-spacing, Exodus font sizing
 - **Transitions/Animations**: 0.3s ease transitions, translateY(-8px) card hover, box-shadow effects
 - **Dark Mode Fixed**: Proper image brightness/contrast filters, Exodus card colors

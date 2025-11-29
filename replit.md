@@ -66,8 +66,14 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Header Overlap Fix**: Pages without breadcrumbs require 160px top padding to clear fixed header (~120px: 50px header-top + 70px header-main)
 - **Footer Redesign**: Compact footer with 70px emblem logo (60px mobile), 50px padding, smaller typography
 - **Navigation Spacing**: Fixed nav menu to prevent overlap (11px font, 8px padding, tighter gaps)
-- **3-Column Grid**: Updated all services grids to max 3 columns (desktop), 2 columns (tablet), 1 column (mobile)
-- **Unified Global Components**: Contact, Privacy, Terms, Services hub pages updated with Exodus-style header, full sidebar nav, and emblem footer
+- **3-Column Grid**: Updated all services grids to max 3 columns (desktop), 2 columns (tablet @992px), 1 column (mobile @768px)
+- **Unified Global Components**: All 25+ pages now have consistent Exodus-style header, full sidebar navigation, search overlay, and emblem footer
+  - 5 services inner pages (legal-translation, attestation, golden-visa-translation, certificate-translation, corporate-translation)
+  - 4 resources pages (index, faq, pricing-guide, document-checklist)
+  - 5 industries pages (index, legal, healthcare, real-estate, e-commerce)
+  - 7 locations pages (index, palm-jumeirah, jlt, difc, business-bay, abu-dhabi, sharjah)
+- **Font Consistency**: All pages use Montserrat/Open Sans (replaced Poppins/Roboto)
+- **OS-detect Stylesheets**: All inner pages include mobile-ios.css, mobile-android.css, desktop-macos.css, dark-mode.css
 
 ## Documentation
 - **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.

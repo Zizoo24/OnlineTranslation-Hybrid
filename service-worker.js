@@ -1,4 +1,4 @@
-const CACHE_NAME = 'onlinetranslation-v75';
+const CACHE_NAME = 'onlinetranslation-v76';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -8,7 +8,7 @@ const urlsToCache = [
   '/scripts/main.js',
   '/manifest.webmanifest',
   '/images/icons/favicon.svg',
-  'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Roboto:wght@300;400;500;700&display=swap',
+  'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css'
 ];
 

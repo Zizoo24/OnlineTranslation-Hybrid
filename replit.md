@@ -52,6 +52,7 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 │   ├── mobile-ios.css            # iOS-specific styles (SF Pro fonts, blur effects)
 │   ├── mobile-android.css        # Android Material Design styles
 │   ├── desktop-macos.css         # macOS-specific styles (backdrop blur, SF fonts)
+│   ├── dark-mode.css             # Comprehensive dark mode theme
 │   └── main.css                  # Utilities and animations
 ├── scripts/
 │   └── main.js                   # Interactive functionality

@@ -640,6 +640,11 @@ body {
     box-shadow: 0 12px 35px rgba(227, 30, 36, 0.5);
 }
 
+/* Exodus Card Icon Transitions */
+.card-icon.exodus-icon {
+    transition: var(--transition);
+}
+
 /* Legacy hero styles */
 .hero-background::before {
     content: '';

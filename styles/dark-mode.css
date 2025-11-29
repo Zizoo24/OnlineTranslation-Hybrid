@@ -16,14 +16,72 @@ body.theme-dark {
     --border-color: #30363d;
     --border-light: #21262d;
     
-    --primary-color: #58a6ff;
-    --primary-dark: #388bfd;
-    --accent-color: #ff6b6b;
-    --accent-dark: #ff4757;
+    --primary-color: #0a1f44;
+    --primary-dark: #050f22;
+    --accent-color: #e31e24;
+    --accent-dark: #b8171c;
     
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
     --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Dark Mode - Hero Images Fix */
+body.theme-dark .hero-section .hero-image {
+    filter: brightness(0.9) contrast(1.1);
+}
+
+body.theme-dark .hero-overlay.exodus-overlay {
+    background: linear-gradient(
+        135deg,
+        rgba(13, 17, 23, 0.92) 0%,
+        rgba(13, 17, 23, 0.8) 40%,
+        rgba(13, 17, 23, 0.6) 70%,
+        rgba(13, 17, 23, 0.4) 100%
+    );
+}
+
+body.theme-dark .hero-background::before {
+    background: linear-gradient(
+        135deg,
+        rgba(13, 17, 23, 0.95) 0%,
+        rgba(13, 17, 23, 0.88) 30%,
+        rgba(13, 17, 23, 0.8) 60%,
+        rgba(13, 17, 23, 0.7) 100%
+    );
+}
+
+/* Dark Mode - Exodus Header */
+body.theme-dark .exodus-header {
+    background: transparent;
+}
+
+body.theme-dark .exodus-header.scrolled {
+    background: rgba(13, 17, 23, 0.98);
+}
+
+body.theme-dark .header-announcement {
+    background: var(--accent-color);
+}
+
+/* Dark Mode - Exodus Cards */
+body.theme-dark .feature-card.exodus-red-card {
+    background: #8b1a1f;
+}
+
+body.theme-dark .feature-card.exodus-red-card:hover {
+    background: #a01f25;
+}
+
+/* Dark Mode - About Section Images */
+body.theme-dark .about-image img {
+    filter: brightness(0.9);
+}
+
+/* Dark Mode - Service Cards Images */
+body.theme-dark .service-card img,
+body.theme-dark .services-section img {
+    filter: brightness(0.85);
 }
 
 /* Base body */

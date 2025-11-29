@@ -35,16 +35,17 @@
     <meta name="format-detection" content="telephone=yes">
     <link rel="manifest" href="manifest.webmanifest">
     
-    <!-- Favicons - All Platforms -->
-    <link rel="icon" type="image/svg+xml" href="images/icons/favicon.svg">
-    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/icon-72.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/icon-72.png">
+    <!-- Favicons - All Platforms (Using Emblem) -->
+    <link rel="icon" type="image/png" sizes="64x64" href="images/icons/favicon-64.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="images/icons/favicon-48.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/icons/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/icons/favicon-16.png">
     
     <!-- Apple Touch Icons -->
-    <link rel="apple-touch-icon" href="images/icons/icon-192.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="images/icons/icon-152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/icon-192.png">
-    <link rel="apple-touch-icon" sizes="167x167" href="images/icons/icon-192.png">
+    <link rel="apple-touch-icon" href="images/onedrive/emblem.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/onedrive/emblem.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/onedrive/emblem.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="images/onedrive/emblem.png">
     
     <!-- Windows/MS Tiles -->
     <meta name="msapplication-TileColor" content="#0a1f44">
@@ -224,44 +225,69 @@
     </div>
 
     <div id="page">
-        <!-- Desktop Header -->
-        <header id="header" class="header-desktop">
-            <div class="header-top">
+        <!-- Desktop Header - Exodus Style -->
+        <header id="header" class="header-desktop exodus-header">
+            <!-- Top Announcement Bar -->
+            <div class="header-announcement">
                 <div class="container">
-                    <div class="header-top-row">
-                        <div class="header-contact">
-                            <a href="https://wa.me/971508620217" class="contact-item">
-                                <i class="fab fa-whatsapp"></i>
-                                <span>+971 50 862 0217</span>
-                            </a>
-                            <a href="mailto:info@onlinetranslation.ae" class="contact-item">
-                                <i class="fas fa-envelope"></i>
-                                <span>info@onlinetranslation.ae</span>
-                            </a>
-                        </div>
-                        <div class="header-info">
-                            <span class="location-text"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah, Dubai</span>
-                            <div class="social-icons">
-                                <a href="https://wa.me/971508620217" target="_blank" rel="noopener" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                                <a href="https://www.instagram.com/onlinetranslation.ae" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
-                                <a href="https://www.linkedin.com/company/online-translation-agency-dubai/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="https://wa.me/971508620217" class="announcement-cta">DISCOVER YOUR PATH <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
+            <!-- Main Header - Transparent Overlay -->
             <div class="header-main">
                 <div class="container">
                     <div class="header-main-row">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img src="images/logo/optimized/logo-header-hq.png" alt="OnlineTranslation.ae" class="logo-img">
-                                <span class="logo-text">OnlineTranslation<span class="logo-suffix">.ae</span></span>
+                                <img src="images/onedrive/emblem.png" alt="OnlineTranslation.ae" class="logo-img">
+                                <span class="logo-text">ONLINE<span class="logo-suffix">TRANSLATION</span></span>
                             </a>
                         </div>
+                        <nav class="header-nav" id="desktopNav">
+                            <ul class="nav-menu">
+                                <li class="nav-item has-dropdown">
+                                    <a href="index.html" class="nav-link active">Home</a>
+                                </li>
+                                <li class="nav-item has-dropdown">
+                                    <a href="services/" class="nav-link">Services <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="services/legal-translation/">Legal Translation</a></li>
+                                        <li><a href="services/golden-visa-translation/">Golden Visa</a></li>
+                                        <li><a href="services/attestation/">Attestation & MOFAIC</a></li>
+                                        <li><a href="services/certificate-translation/">Certificate Translation</a></li>
+                                        <li><a href="services/corporate-translation/">Corporate Translation</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-dropdown">
+                                    <a href="locations/" class="nav-link">Locations <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="locations/dubai/palm-jumeirah/">Palm Jumeirah</a></li>
+                                        <li><a href="locations/dubai/jlt/">JLT & DMCC</a></li>
+                                        <li><a href="locations/dubai/difc/">DIFC</a></li>
+                                        <li><a href="locations/abu-dhabi/">Abu Dhabi</a></li>
+                                        <li><a href="locations/sharjah/">Sharjah</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-dropdown">
+                                    <a href="resources/" class="nav-link">Resources <i class="fas fa-chevron-down"></i></a>
+                                    <ul class="dropdown-menu">
+                                        <li><a href="resources/faq/">FAQ</a></li>
+                                        <li><a href="resources/pricing-guide/">Pricing Guide</a></li>
+                                        <li><a href="resources/document-checklist/">Document Checklist</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact Us</a>
+                                </li>
+                            </ul>
+                        </nav>
                         <div class="header-actions">
-                            <a href="#" class="menu-toggle-btn" id="mobileMenuToggle" role="button" aria-label="Open menu" title="Menu"><i class="fas fa-bars"></i></a>
-                            <a href="https://wa.me/971508620217" class="header-cta"><i class="fab fa-whatsapp"></i> Get Quote</a>
+                            <div class="social-icons">
+                                <a href="https://www.facebook.com" target="_blank" rel="noopener" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.instagram.com/onlinetranslation.ae" target="_blank" rel="noopener" title="Instagram"><i class="fab fa-instagram"></i></a>
+                                <a href="https://www.youtube.com" target="_blank" rel="noopener" title="YouTube"><i class="fab fa-youtube"></i></a>
+                            </div>
+                            <a href="#" class="menu-toggle-btn mobile-only" id="mobileMenuToggle" role="button" aria-label="Open menu" title="Menu"><i class="fas fa-bars"></i></a>
                         </div>
                     </div>
                 </div>
@@ -364,75 +390,54 @@
 
         <main class="main-content">
             <!-- Hero Section - Divi Exodus Style -->
-            <section id="home" class="hero-section">
+            <section id="home" class="hero-section exodus-hero">
                 <div class="hero-background">
-                    <img src="images/onedrive/hero/city-cyber.png" alt="Dubai City Skyline" class="hero-image" loading="eager">
-                    <div class="hero-overlay"></div>
+                    <img src="images/onedrive/contact-office.png" alt="Professional Translation Office Dubai" class="hero-image" loading="eager">
+                    <div class="hero-overlay exodus-overlay"></div>
                 </div>
-                                <div class="container">
+                <div class="container">
                     <div class="hero-content">
                         <div class="hero-text">
-                            <h1 class="hero-title">
-                                <span class="title-bg">LEGAL TRANSLATION</span>
+                            <h1 class="hero-title exodus-title">
+                                <span class="title-line">TAILORED LEGAL</span>
+                                <span class="title-line">&amp; VISA SOLUTIONS !</span>
                             </h1>
-                            <p class="hero-subtitle">MOJ Certified Legal Translation - <span class="highlight">100% Online</span></p>
-                            <p class="hero-description">Send your documents via WhatsApp, iMessage, or email. Get court-ready Arabic ↔ English translations accepted by all UAE authorities. Real people, real attention.</p>
+                            <p class="hero-description exodus-desc">Explore the world of opportunities with our comprehensive legal translation and visa services</p>
                             
-                            <div class="hero-cta-group os-default">
-                                <a href="https://wa.me/971508620217" class="hero-cta">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp Us Now
-                                </a>
-                            </div>
-                            
-                            <div class="hero-cta-group os-ios-only" style="display: none;">
-                                <a href="https://wa.me/971508620217" class="hero-cta">
-                                    <i class="fab fa-whatsapp"></i> WhatsApp Us Now
-                                </a>
-                                <a href="sms:+971508620217&body=Hi, I need a translation quote for my documents" class="hero-cta-secondary imessage-cta">
-                                    <i class="fab fa-apple"></i> or iMessage
+                            <div class="hero-cta-group">
+                                <a href="https://wa.me/971508620217" class="hero-cta exodus-cta">
+                                    Request a Call
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-shape-divider">
-                    <svg viewBox="0 0 1920 212" preserveAspectRatio="xMinYMin">
-                        <polygon fill="#f8f9fc" points="0,75 479,161 1357,28 1701,56 1920,26 1920,213 0,212"/>
-                        <polygon fill="#FFFFFF" points="0,91 481,177 1358,44 1702,72 1920,42 1920,212 0,212"/>
-                    </svg>
-                </div>
             </section>
 
-            <!-- Feature Cards - Default -->
-            <section class="feature-cards-section os-default">
+            <!-- Feature Cards Strip - Exodus Style Red Cards -->
+            <section class="feature-cards-section exodus-cards">
                 <div class="container">
-                    <div class="feature-cards">
-                        <article class="feature-card">
-                            <div class="card-icon">
-                                <i class="fab fa-whatsapp"></i>
+                    <div class="feature-cards exodus-strip">
+                        <article class="feature-card exodus-red-card">
+                            <div class="card-icon exodus-icon">
+                                <i class="fas fa-passport"></i>
                             </div>
-                            <div class="card-divider"></div>
-                            <h3>Translator in Pocket</h3>
-                            <p>Send PDFs or photos via WhatsApp and get a written quotation within minutes. No apps, no signup.</p>
-                            <a href="https://wa.me/971508620217" class="card-link">Start Now <i class="fas fa-arrow-right"></i></a>
+                            <h4>IMMIGRATION &amp; VISA</h4>
+                            <p>Complete Golden Visa translation packages for professionals and investors</p>
                         </article>
-                        <article class="feature-card">
-                            <div class="card-icon">
-                                <i class="fas fa-bolt"></i>
+                        <article class="feature-card exodus-red-card">
+                            <div class="card-icon exodus-icon">
+                                <i class="fas fa-comments"></i>
                             </div>
-                            <div class="card-divider"></div>
-                            <h3>XoneHour Express</h3>
-                            <p>Ultra-urgent translation options for critical court and immigration deadlines. Same-day delivery available.</p>
-                            <a href="https://wa.me/971508620217" class="card-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                            <h4>DIRECT INTERVIEW</h4>
+                            <p>Consult with our MOJ-certified legal translators for complex cases</p>
                         </article>
-                        <article class="feature-card">
-                            <div class="card-icon">
-                                <i class="fas fa-certificate"></i>
+                        <article class="feature-card exodus-red-card">
+                            <div class="card-icon exodus-icon">
+                                <i class="fas fa-globe-asia"></i>
                             </div>
-                            <div class="card-divider"></div>
-                            <h3>MOJ Certified</h3>
-                            <p>Ministry-approved legal translators. Accepted by Dubai Courts, DIFC, ADGM, and all UAE authorities.</p>
-                            <a href="#about" class="card-link">View More <i class="fas fa-arrow-right"></i></a>
+                            <h4>COURTS SUPPORTED</h4>
+                            <p>Dubai Courts, DIFC, ADGM, and all UAE government entities</p>
                         </article>
                     </div>
                 </div>

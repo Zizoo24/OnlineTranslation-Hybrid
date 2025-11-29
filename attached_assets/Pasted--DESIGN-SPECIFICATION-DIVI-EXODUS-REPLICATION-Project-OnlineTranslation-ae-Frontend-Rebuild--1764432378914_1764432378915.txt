@@ -1,0 +1,119 @@
+# DESIGN SPECIFICATION: DIVI EXODUS REPLICATION
+**Project:** OnlineTranslation.ae Frontend Rebuild
+**Target Design:** Divi Exodus Immigration Layout
+**Date:** November 2025
+
+---
+
+## 1. GLOBAL DESIGN SYSTEM
+These settings must be applied globally (e.g., in `globals.css` or `tailwind.config.js`) before building individual sections.
+
+### 1.1 Color Palette
+* **Primary Navy (Backgrounds/Overlays):** `#0E2B48`
+* **Accent Red (Buttons/Highlights/Icons):** `#FF1654`
+* **Text Dark (Headings):** `#0E2B48`
+* **Text Grey (Body):** `#54595F`
+* **White:** `#FFFFFF`
+
+### 1.2 Typography
+* **Headings (H1-H6):**
+    * Font Family: `Montserrat` or `Jost` (Google Fonts).
+    * Weight: Bold (700) or ExtraBold (800).
+    * Style: Uppercase (Standard for this theme).
+* **Body Text:**
+    * Font Family: `Open Sans` or `Roboto`.
+    * Weight: Regular (400).
+    * Line-Height: 1.8.
+
+---
+
+## 2. MODULE IMPLEMENTATION GUIDE
+
+### Module A: The Header Stack
+**Structure:** Fixed-top navigation with a top-bar strip.
+
+1.  **Top Bar (Strip):**
+    * Height: `45px`.
+    * Background: `#FF1654` (Accent Red).
+    * Content: "Discover Your Path" (White, Uppercase, 12px) aligned Right.
+2.  **Navbar (Menu):**
+    * Position: `Fixed` (Sticky).
+    * Initial Background: `Transparent`.
+    * Scrolled Background: `#0E2B48` (Navy) - *Trigger this change via JS on scroll > 50px*.
+    * Links: White, Uppercase, 14px, Bold.
+    * CTA Button (Right): None in nav (use social icons), or a small `#FF1654` button if needed.
+
+### Module B: The Hero Section
+**Structure:** Full-width background image with heavy blue overlay and centered text.
+
+* **Height:** `min-height: 85vh` (Must accommodate the negative margin of Module C).
+* **Background Image:** High-res corporate/office image (`bg-cover`, `bg-center`).
+* **Overlay:** `background-color: rgba(14, 43, 72, 0.85);` (Navy @ 85% Opacity).
+    * *Note: This specific color/opacity combo is the key to the "Exodus" look.*
+* **Content:**
+    * **H1:** White, 3.5rem (approx 56px), 800 weight, Uppercase.
+    * **Subtext:** White (0.9 opacity), 18px.
+    * **Button:** `#FF1654` Background, White Text, Rectangular (3px radius).
+
+### Module C: The Overlap Cards (Signature Feature)
+**Structure:** Three cards in a grid that sit *on top* of the bottom edge of the Hero Section.
+
+* **Container Positioning:**
+    * `margin-top: -120px` (Pulls the section UP).
+    * `position: relative`.
+    * `z-index: 20` (Ensures it sits above the hero overlay).
+* **Grid Layout:** 3 Columns.
+* **Card Style:**
+    * Background: `#FF1654` (Accent Red).
+    * Text: White.
+    * Padding: `40px 30px`.
+    * Border Radius: `10px` (or 20px for softer look).
+    * **Hover Effect:** `transform: translateY(-10px)` (Lift up).
+
+### Module D: Services Grid (Icon Boxes)
+**Structure:** Standard grid of service options.
+
+* **Background:** Light Grey (`#F4F6F9`).
+* **Card Style:**
+    * Background: White.
+    * Icon Color: `#FF1654`.
+    * Border: `1px solid #EAEAEA`.
+* **Hover Interaction:**
+    * Card Background changes to `#0E2B48` (Navy).
+    * Text changes to White.
+    * Icon changes to White.
+
+### Module E: Footer
+**Structure:** Multi-column standard footer.
+
+* **Background:** `#0E2B48` (Navy).
+* **Text:** White.
+* **Headers:** Uppercase, Bold.
+
+---
+
+## 3. CSS ANIMATIONS & INTERACTIONS
+To achieve the premium feel, implement the following CSS classes.
+
+### 3.1 Fade In Up (On Load)
+Apply to Hero H1 and Overlap Cards.
+
+```css
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translate3d(0, 40px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.hero-content, .overlap-card {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Stagger Delays */
+.overlap-card:nth-child(2) { animation-delay: 0.2s; }
+.overlap-card:nth-child(3) { animation-delay: 0.4s; }

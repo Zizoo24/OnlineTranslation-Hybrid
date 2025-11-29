@@ -1,6 +1,6 @@
 /* Dark Mode - Comprehensive Styles */
 
-/* Dark mode variables */
+/* Dark mode variables - HIGH CONTRAST */
 body.theme-dark {
     --bg-white: #0d1117;
     --bg-light: #161b22;
@@ -10,16 +10,18 @@ body.theme-dark {
     
     --text-dark: #f0f6fc;
     --text-body: #e6edf3;
-    --text-muted: #8b949e;
+    --text-muted: #a8b3c2;
     --text-light: #ffffff;
     
     --border-color: #30363d;
     --border-light: #21262d;
     
-    --primary-color: #0a1f44;
-    --primary-dark: #050f22;
-    --accent-color: #e31e24;
-    --accent-dark: #b8171c;
+    /* CRITICAL: Use light blue for primary in dark mode - NOT dark navy */
+    --primary-color: #58a6ff;
+    --primary-dark: #1f6feb;
+    --primary-heading: #f0f6fc;
+    --accent-color: #ff4757;
+    --accent-dark: #e31e24;
     
     --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
     --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
@@ -977,4 +979,333 @@ body.theme-dark .dual-cta-buttons .whatsapp-btn {
 body.theme-dark .dual-cta-buttons .imessage-btn {
     background: rgba(255, 255, 255, 0.95);
     color: #007AFF;
+}
+
+/* ============================================
+   HIGH CONTRAST FIXES - CRITICAL READABILITY
+   ============================================ */
+
+/* All section titles and headings - MUST be white/light */
+body.theme-dark h1,
+body.theme-dark h2,
+body.theme-dark h3,
+body.theme-dark h4,
+body.theme-dark h5,
+body.theme-dark h6 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .section-title,
+body.theme-dark .exodus-section-title {
+    color: #ffffff !important;
+}
+
+body.theme-dark .section-label,
+body.theme-dark .exodus-label {
+    color: #ff4757 !important;
+}
+
+/* Card links and icons */
+body.theme-dark .card-link {
+    color: #58a6ff !important;
+}
+
+body.theme-dark .card-link:hover {
+    color: #79b8ff !important;
+}
+
+body.theme-dark .card-icon {
+    color: #ffffff;
+}
+
+body.theme-dark .card-icon i {
+    color: #ffffff;
+}
+
+/* Service cards */
+body.theme-dark .service-card h4,
+body.theme-dark .service-card.exodus-service-card h4 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .service-card p {
+    color: #a8b3c2 !important;
+}
+
+body.theme-dark .service-link,
+body.theme-dark .service-card a {
+    color: #58a6ff !important;
+}
+
+/* About section */
+body.theme-dark .about-content h2,
+body.theme-dark .exodus-about-content h2 {
+    color: #ffffff !important;
+}
+
+body.theme-dark .about-content p,
+body.theme-dark .exodus-about-content p {
+    color: #c9d1d9 !important;
+}
+
+body.theme-dark .exodus-feature-item {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .exodus-feature-item i {
+    color: #ff4757 !important;
+}
+
+/* Specialist cards */
+body.theme-dark .specialist-card h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .specialist-card p {
+    color: #a8b3c2 !important;
+}
+
+body.theme-dark .specialist-icon i {
+    color: #ffffff !important;
+}
+
+/* Languages section */
+body.theme-dark .language-item {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .language-item i {
+    color: #ff4757 !important;
+}
+
+/* Quick quote section */
+body.theme-dark .quick-quote-title,
+body.theme-dark .quick-quote h3 {
+    color: #f0f6fc !important;
+}
+
+body.theme-dark .quick-quote p {
+    color: #a8b3c2 !important;
+}
+
+/* Buttons - secondary/outline */
+body.theme-dark .btn-outline,
+body.theme-dark .hero-cta-secondary {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+body.theme-dark .btn-outline:hover,
+body.theme-dark .hero-cta-secondary:hover {
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* ============================================
+   SIDEBAR - HIGH CONTRAST FIX
+   ============================================ */
+body.theme-dark .sidebar-menu {
+    background: #161b22 !important;
+}
+
+body.theme-dark .sidebar-header {
+    background: linear-gradient(135deg, #21262d 0%, #30363d 100%) !important;
+}
+
+body.theme-dark .sidebar-brand-name {
+    color: #ffffff !important;
+}
+
+body.theme-dark .sidebar-brand-name .brand-suffix {
+    color: #ff4757 !important;
+}
+
+body.theme-dark .sidebar-tagline {
+    color: #a8b3c2 !important;
+}
+
+body.theme-dark .sidebar-nav ul li a {
+    color: #e6edf3 !important;
+    background: transparent;
+}
+
+body.theme-dark .sidebar-nav ul li a:hover,
+body.theme-dark .sidebar-nav ul li a:active {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+body.theme-dark .sidebar-nav ul li a i {
+    color: #a8b3c2 !important;
+}
+
+body.theme-dark .sidebar-nav ul li a:hover i {
+    color: #58a6ff !important;
+}
+
+body.theme-dark .sidebar-cta {
+    background: #ff4757 !important;
+    color: #ffffff !important;
+}
+
+body.theme-dark .sidebar-cta:hover {
+    background: #e31e24 !important;
+}
+
+body.theme-dark .quick-links a {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .quick-links a:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    color: #ffffff !important;
+}
+
+/* ============================================
+   FOOTER - HIGH CONTRAST FIX
+   ============================================ */
+body.theme-dark .footer-section {
+    background: #0d1117 !important;
+}
+
+body.theme-dark .footer-section h4 {
+    color: #ffffff !important;
+}
+
+body.theme-dark .footer-section p,
+body.theme-dark .footer-section li,
+body.theme-dark .footer-section a {
+    color: #a8b3c2 !important;
+}
+
+body.theme-dark .footer-section a:hover {
+    color: #58a6ff !important;
+}
+
+body.theme-dark .footer-bottom {
+    background: #010409 !important;
+    border-top: 1px solid #30363d !important;
+}
+
+body.theme-dark .footer-bottom p,
+body.theme-dark .footer-bottom a {
+    color: #8b949e !important;
+}
+
+/* ============================================
+   CONTACT FORM - HIGH CONTRAST
+   ============================================ */
+body.theme-dark input,
+body.theme-dark textarea,
+body.theme-dark select {
+    background: #21262d !important;
+    color: #e6edf3 !important;
+    border: 1px solid #30363d !important;
+}
+
+body.theme-dark input::placeholder,
+body.theme-dark textarea::placeholder {
+    color: #6e7681 !important;
+}
+
+body.theme-dark input:focus,
+body.theme-dark textarea:focus,
+body.theme-dark select:focus {
+    border-color: #58a6ff !important;
+    outline: none;
+}
+
+body.theme-dark label {
+    color: #e6edf3 !important;
+}
+
+/* ============================================
+   MOBILE HEADER - HIGH CONTRAST
+   ============================================ */
+body.theme-dark .header-mobile {
+    background: #161b22 !important;
+    border-bottom: 1px solid #30363d !important;
+}
+
+body.theme-dark .header-mobile .header-title {
+    color: #ffffff !important;
+}
+
+body.theme-dark .header-mobile .header-title span {
+    color: #ff4757 !important;
+}
+
+body.theme-dark .header-mobile .header-icon {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .header-mobile .header-icon:hover {
+    color: #ffffff !important;
+}
+
+/* ============================================
+   FOOTER BAR (Mobile) - HIGH CONTRAST
+   ============================================ */
+body.theme-dark .footer-bar {
+    background: #161b22 !important;
+    border-top: 1px solid #30363d !important;
+}
+
+body.theme-dark .footer-item {
+    color: #8b949e !important;
+}
+
+body.theme-dark .footer-item span {
+    color: #8b949e !important;
+}
+
+body.theme-dark .footer-item.active-nav,
+body.theme-dark .footer-item:hover {
+    color: #ff4757 !important;
+}
+
+body.theme-dark .footer-item.active-nav span,
+body.theme-dark .footer-item:hover span {
+    color: #ff4757 !important;
+}
+
+/* ============================================
+   DROPDOWN MENUS - HIGH CONTRAST
+   ============================================ */
+body.theme-dark .dropdown-menu {
+    background: #21262d !important;
+    border: 1px solid #30363d !important;
+}
+
+body.theme-dark .dropdown-menu li a {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .dropdown-menu li a:hover {
+    background: #30363d !important;
+    color: #ffffff !important;
+}
+
+/* ============================================
+   OVERLAP CARDS - HIGH CONTRAST
+   ============================================ */
+body.theme-dark .overlap-card {
+    background: #ff4757 !important;
+}
+
+body.theme-dark .overlap-card h4 {
+    color: #ffffff !important;
+}
+
+body.theme-dark .overlap-card p {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+body.theme-dark .overlap-icon {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: rgba(255, 255, 255, 0.3) !important;
+}
+
+body.theme-dark .overlap-icon i {
+    color: #ffffff !important;
 }

@@ -170,7 +170,17 @@ A hybrid static HTML website for OnlineTranslation.ae featuring a Divi immigrati
 
 ## Recent Changes (Nov 2024)
 
-### SEO Content Expansion (Latest)
+### Divi Exodus Theme Update (Latest)
+- **Header Redesign**: Transparent overlay header with inline navigation menu (Home, Services with dropdown, Locations with dropdown, Resources with dropdown, Contact Us)
+- **Red Announcement Bar**: Added "DISCOVER YOUR PATH" bar at top like Exodus
+- **Hero Overhaul**: Changed to professional office image (contact-office.png), bold "TAILORED LEGAL & VISA SOLUTIONS" typography, red "Request a Call" CTA button
+- **Feature Cards Rebuilt**: Three red cards with white icons (Immigration & Visa, Direct Interview, Courts Supported) matching Exodus style
+- **Typography Updates**: Poppins 700/800 headings, proper letter-spacing, Exodus font sizing
+- **Transitions/Animations**: 0.3s ease transitions, translateY(-8px) card hover, box-shadow effects
+- **Dark Mode Fixed**: Proper image brightness/contrast filters, Exodus card colors
+- **Logo Enhancement**: Bigger logo (55px height), white text on transparent header
+
+### SEO Content Expansion
 - **Industries Silo Complete**: Created full SEO-optimized pages for:
   - `/industries/legal/` - Law firms, DIFC Courts, litigation support
   - `/industries/healthcare/` - Medical translation, DHA/MOH compliance

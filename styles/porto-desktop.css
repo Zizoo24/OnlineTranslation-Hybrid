@@ -1121,28 +1121,22 @@ h1, h2, h3, h4, h5, h6 {
 .overlap-cards-section {
     position: relative;
     z-index: 20;
-    margin-top: -115px;
-    padding-bottom: 80px;
-    background: transparent;
-    overflow: hidden;
+    margin-top: -100px;
+    padding-bottom: 0;
+    background: var(--accent-color);
+    isolation: isolate;
 }
 
 .overlap-cards-section .container {
     max-width: 100%;
-    padding: 0 20px;
+    padding: 0;
 }
 
 .overlap-wrapper {
     display: grid;
-    grid-template-columns: repeat(3, minmax(280px, 320px));
-    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
     gap: 0;
-    background: rgba(14, 43, 72, 0.95);
-    backdrop-filter: blur(10px);
-    border-radius: 8px;
-    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
-    max-width: 100%;
-    overflow: hidden;
+    background: var(--accent-color);
 }
 
 .overlap-card {

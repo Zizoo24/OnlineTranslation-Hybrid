@@ -1,18 +1,20 @@
 :root {
-    /* Divi Exodus Immigration Color Palette - Red/Blue/White/Black */
-    --primary-color: #0a1f44;
-    --primary-dark: #050f22;
-    --primary-light: #1a3366;
-    --accent-color: #e31e24;
-    --accent-light: #ff3b3b;
-    --accent-dark: #b8171c;
+    /* Exodus Premium Corporate Palette - Navy/Red/White */
+    --primary-color: #0E2B48;
+    --primary-dark: #071824;
+    --primary-light: #1a4570;
+    --primary-overlay: rgba(14, 43, 72, 0.85);
+    --accent-color: #FF1654;
+    --accent-light: #ff4d7a;
+    --accent-dark: #cc1143;
     --gold-color: #d4a54c;
-    --text-dark: #000000;
-    --text-muted: #444444;
+    --text-dark: #1a1a1a;
+    --text-muted: #555555;
     --text-light: #ffffff;
-    --bg-light: #f5f5f5;
+    --bg-light: #f8f9fa;
     --bg-white: #ffffff;
-    --border-color: #dddddd;
+    --bg-alt: #f0f2f5;
+    --border-color: #e0e0e0;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);
     --shadow-lg: 0 16px 48px rgba(0, 0, 0, 0.16);
@@ -20,8 +22,9 @@
     --transition: all 0.3s ease;
     --transition-fast: all 0.2s ease;
     --transition-slow: all 0.4s ease;
-    --font-primary: 'Poppins', sans-serif;
-    --font-secondary: 'Roboto', sans-serif;
+    --font-heading: 'Montserrat', 'Jost', sans-serif;
+    --font-primary: 'Montserrat', sans-serif;
+    --font-secondary: 'Open Sans', 'Roboto', sans-serif;
 }
 
 * {
@@ -37,10 +40,17 @@ html {
 body {
     font-family: var(--font-secondary);
     font-size: 16px;
-    line-height: 1.7;
+    line-height: 1.8;
     color: var(--text-dark);
     background-color: var(--bg-white);
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 .container {
@@ -557,20 +567,14 @@ body {
     object-position: center;
 }
 
-/* Exodus Overlay - Diagonal Navy Gradient */
+/* Exodus Overlay - 85% Navy as per Exodus Design System */
 .hero-overlay.exodus-overlay {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(10, 31, 68, 0.88) 0%,
-        rgba(10, 31, 68, 0.75) 40%,
-        rgba(10, 31, 68, 0.5) 70%,
-        rgba(10, 31, 68, 0.3) 100%
-    );
+    background: var(--primary-overlay);
     z-index: 1;
 }
 
@@ -927,6 +931,237 @@ body {
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.6;
     margin: 0;
+}
+
+/* ============================================
+   OVERLAP CARDS - Signature Feature (Three Pillars)
+   ============================================ */
+
+.overlap-cards-section {
+    position: relative;
+    z-index: 20;
+    margin-top: -120px;
+    padding-bottom: 80px;
+    background: transparent;
+}
+
+.overlap-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+}
+
+.overlap-card {
+    background: var(--accent-color);
+    padding: 50px 40px;
+    text-align: left;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+    border-right: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.overlap-card:last-child {
+    border-right: none;
+}
+
+.overlap-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.15) 100%);
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.overlap-card:hover::before {
+    opacity: 1;
+}
+
+.overlap-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 50px rgba(255, 22, 84, 0.4);
+}
+
+.overlap-icon {
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    margin-bottom: 25px;
+    transition: var(--transition);
+}
+
+.overlap-icon i {
+    font-size: 28px;
+    color: var(--text-light);
+}
+
+.overlap-card:hover .overlap-icon {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.overlap-card h4 {
+    font-family: var(--font-heading);
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--text-light);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.overlap-card p {
+    font-family: var(--font-secondary);
+    font-size: 15px;
+    font-weight: 400;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.7;
+    margin: 0;
+}
+
+/* ============================================
+   SWORN TRANSLATOR SECTION - Trust Building
+   ============================================ */
+
+.translator-section {
+    padding: 100px 0;
+    background: var(--bg-alt);
+}
+
+.translator-grid {
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.translator-image {
+    position: relative;
+}
+
+.translator-image img {
+    width: 100%;
+    border-radius: 12px;
+    box-shadow: var(--shadow-lg);
+}
+
+.translator-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--primary-color);
+    color: var(--text-light);
+    padding: 20px 25px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(14, 43, 72, 0.4);
+}
+
+.translator-badge i {
+    font-size: 28px;
+    margin-bottom: 8px;
+    display: block;
+}
+
+.translator-badge span {
+    font-family: var(--font-heading);
+    font-size: 12px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.translator-content h2 {
+    font-family: var(--font-heading);
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.translator-content .section-label {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--accent-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.translator-content p {
+    font-size: 16px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.translator-credentials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--bg-white);
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.credential-item i {
+    color: var(--accent-color);
+    font-size: 20px;
+}
+
+.credential-item span {
+    font-family: var(--font-secondary);
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-dark);
+}
+
+.translator-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--accent-color);
+    color: var(--text-light);
+    padding: 16px 35px;
+    text-decoration: none;
+    font-family: var(--font-heading);
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 50px;
+    margin-top: 30px;
+    transition: var(--transition);
+    box-shadow: 0 6px 25px rgba(255, 22, 84, 0.3);
+}
+
+.translator-cta:hover {
+    background: var(--accent-dark);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgba(255, 22, 84, 0.4);
 }
 
 /* ============================================

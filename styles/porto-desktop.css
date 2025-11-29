@@ -2475,7 +2475,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-secondary);
     font-size: 12px;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
+    color: var(--gold);
     text-transform: uppercase;
     letter-spacing: 0.3em;
 }
@@ -2997,68 +2997,53 @@ h1, h2, h3, h4, h5, h6 {
     transform: translateX(5px);
 }
 
-/* Why Choose Us Section */
+/* Why Choose Us Section - Exodus Divi Style */
 .why-section {
-    padding: 120px 0;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
-    color: var(--text-light);
+    padding: 100px 0;
+    background: var(--bg-alt);
     position: relative;
-    overflow: hidden;
-}
-
-.why-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffffff' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
 }
 
 .why-section .section-label {
-    color: rgba(255,255,255,0.8);
-    padding-left: 0;
-}
-
-.why-section .section-label::before {
-    display: none;
+    color: var(--accent-color);
 }
 
 .why-section .section-title {
-    color: var(--text-light);
+    color: var(--text-dark);
 }
 
 .section-divider {
     width: 80px;
     height: 4px;
     background: var(--accent-color);
-    margin: 35px auto 0;
+    margin: 25px auto 0;
     border-radius: 2px;
 }
 
 .why-grid {
     display: grid;
-    grid-template-columns: repeat(4, 280px);
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
     gap: 24px;
     margin-top: 50px;
+    max-width: 1180px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .why-card {
     text-align: center;
-    padding: 30px;
-    background: rgba(255,255,255,0.08);
-    border-radius: 12px;
+    padding: 40px 28px 35px;
+    background: var(--bg-white);
+    border-radius: 8px;
     transition: var(--transition);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255,255,255,0.1);
+    border-top: 4px solid var(--accent-color);
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    position: relative;
 }
 
 .why-card:hover {
-    background: rgba(255,255,255,0.12);
-    transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0,0,0,0.12);
 }
 
 .why-card i {
@@ -3067,17 +3052,18 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 28px;
-    margin: 0 auto 20px;
-    color: var(--accent-color);
-    background: rgba(255,255,255,0.1);
+    font-size: 26px;
+    margin: 0 auto 22px;
+    color: var(--gold);
+    background: rgba(212, 165, 76, 0.12);
     border-radius: 50%;
     transition: var(--transition);
 }
 
 .why-card:hover i {
     transform: scale(1.1);
-    background: rgba(255,255,255,0.15);
+    background: rgba(212, 165, 76, 0.18);
+    color: var(--gold);
 }
 
 .why-card h3 {
@@ -3085,14 +3071,15 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.08em;
     margin-bottom: 12px;
+    color: var(--primary-color);
 }
 
 .why-card p {
     font-size: 14px;
-    line-height: 1.85;
-    opacity: 0.9;
+    line-height: 1.75;
+    color: var(--text-muted);
 }
 
 /* Process Section */

@@ -65,17 +65,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     })();
 
-    // Preloader
+    // Preloader - instant hide
     const preloader = document.getElementById('preloader');
     if (preloader) {
-        window.addEventListener('load', function() {
-            setTimeout(function() {
-                preloader.classList.add('hidden');
-            }, 500);
-        });
-        setTimeout(function() {
-            preloader.classList.add('hidden');
-        }, 3000);
+        preloader.classList.add('hidden');
     }
 
     // Header Scroll Effect
@@ -358,90 +351,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
     window.addEventListener('resize', handleResize);
 
-    // Intersection Observer for Animations
-    const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    };
-    
-    const observer = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-    
-    // Animated Elements
-    const animatedElements = document.querySelectorAll('.service-card, .feature-card, .why-card, .testimonial-card, .process-step, .stats-item');
-    animatedElements.forEach(function(el, index) {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
-        el.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
-        observer.observe(el);
-    });
-    
-    // Counter Animation
-    const counters = document.querySelectorAll('.stats-item .number');
-    
-    function animateCounter(el) {
-        const target = el.innerText;
-        const hasPlus = target.includes('+');
-        const hasPercent = target.includes('%');
-        const hasHr = target.includes('hr');
-        
-        let numericValue = parseInt(target.replace(/[^0-9]/g, ''));
-        if (isNaN(numericValue)) return;
-        
-        let current = 0;
-        const increment = numericValue / 50;
-        const duration = 2000;
-        const stepTime = duration / 50;
-        
-        function updateCounter() {
-            current += increment;
-            if (current < numericValue) {
-                let displayValue = Math.floor(current);
-                if (hasPlus) displayValue = displayValue.toLocaleString() + '+';
-                else if (hasPercent) displayValue = displayValue + '%';
-                else if (hasHr) displayValue = displayValue + '-' + (displayValue + 2) + 'hr';
-                else displayValue = displayValue.toLocaleString();
-                
-                el.innerText = displayValue;
-                setTimeout(updateCounter, stepTime);
-            } else {
-                el.innerText = target;
-            }
-        }
-        
-        updateCounter();
-    }
-    
-    const counterObserver = new IntersectionObserver(function(entries) {
-        entries.forEach(function(entry) {
-            if (entry.isIntersecting) {
-                animateCounter(entry.target);
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.5 });
-    
-    counters.forEach(function(counter) {
-        counterObserver.observe(counter);
-    });
-    
-    // Hover Effects Enhancement
-    const cards = document.querySelectorAll('.service-card, .feature-card, .why-card');
-    cards.forEach(function(card) {
-        card.addEventListener('mouseenter', function() {
-            this.style.transform = 'translateY(-12px)';
-        });
-        card.addEventListener('mouseleave', function() {
-            this.style.transform = 'translateY(0)';
-        });
-    });
     
     // Active Navigation Highlight
     function updateActiveNav() {

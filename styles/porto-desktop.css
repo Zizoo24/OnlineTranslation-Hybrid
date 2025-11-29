@@ -117,9 +117,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header-announcement .container {
-    max-width: calc(100% - 40px);
-    padding: 0 20px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    padding: 0 clamp(15px, 2vw, 30px);
     box-sizing: border-box;
 }
 
@@ -245,17 +245,17 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .exodus-header .header-main .container {
-    max-width: calc(100% - 40px);
-    padding: 0 20px;
-    margin: 0 auto;
+    width: 100%;
+    max-width: none;
+    padding: 0 clamp(15px, 2vw, 30px);
     box-sizing: border-box;
 }
 
 .exodus-header .header-main-row {
     display: grid;
-    grid-template-columns: max-content 1fr max-content max-content;
+    grid-template-columns: max-content minmax(0, 1fr) max-content max-content;
     align-items: center;
-    column-gap: 32px;
+    column-gap: clamp(12px, 2vw, 24px);
     width: 100%;
 }
 
@@ -266,7 +266,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .exodus-header .header-nav {
     justify-self: start;
-    margin-left: 20px;
+    margin-left: clamp(8px, 1.5vw, 16px);
+    min-width: 0;
 }
 
 .exodus-header .header-actions {

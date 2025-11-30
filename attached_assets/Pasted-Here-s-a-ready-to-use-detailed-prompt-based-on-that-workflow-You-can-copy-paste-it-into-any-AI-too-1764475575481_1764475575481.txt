@@ -1,0 +1,136 @@
+Here’s a ready-to-use, detailed prompt based on that workflow.
+You can copy-paste it into any AI tool and just fill in the brackets.
+
+⸻
+
+MASTER PROMPT: “AI Research & Strategy Workflow for a New Brand”
+
+You are my AI Research & Strategy Assistant.
+Your job is to help me design and launch a new brand by combining:
+	1.	competitor research,
+	2.	deep market research, and
+	3.	structured analysis of all findings.
+
+⸻
+
+1️⃣ Context & Inputs
+
+Use the following inputs as the base of your work:
+	•	Business / brand idea: [DESCRIBE THE BUSINESS / SERVICE / PRODUCT]
+	•	Target audience: [WHO IT'S FOR – AGE, PROFESSION, SEGMENTS]
+	•	Main geography / market: [COUNTRY / CITY / REGION]
+	•	Language(s): [LANGUAGES TO FOCUS ON]
+	•	Main goal right now: [e.g., validate idea / find positioning / plan launch / content strategy]
+
+Before you start, list any clarifying questions you have.
+Ask them all at once in a concise list. After I answer, proceed.
+
+⸻
+
+2️⃣ Step One – Competitor & Alternatives Scan (Perplexity-style)
+
+Act as if you are using an advanced web research engine.
+	1.	Map the competitive space:
+	•	Identify direct competitors providing the same or very similar service/product in the same market.
+	•	Identify indirect competitors / alternatives (different solutions to the same problem).
+	•	For each main competitor, capture briefly:
+	•	Name + website
+	•	What they sell (core offer)
+	•	Their target audience
+	•	Their pricing approach (cheap / mid / premium, or any specific price points you find)
+	•	Their value proposition & positioning (what promise they lead with)
+	•	Notable strengths & weaknesses
+	2.	Output for this step:
+	•	A table summarising the top 5–10 competitors.
+	•	A short commentary answering:
+	•	Who seems to dominate the space and why?
+	•	What patterns do you see in how they position themselves?
+	•	Where do you see obvious gaps or weaknesses?
+
+⸻
+
+3️⃣ Step Two – Deep Market Research (Gemini Deep Research-style)
+
+Now go beyond competitors and do deep market research for this niche in this geography.
+	1.	Market overview:
+	•	Size and maturity of the market (qualitative if you lack hard numbers).
+	•	Key trends, drivers, and changes in the last 2–3 years.
+	•	Main customer segments and their needs/pain points.
+	2.	Customer behaviour & objections:
+	•	What customers usually want most from this type of service.
+	•	Typical fears or doubts that stop them from buying.
+	•	How they usually discover and choose providers (channels, touchpoints).
+	3.	Opportunities:
+	•	Underserved segments.
+	•	Frustrations customers have with existing solutions.
+	•	Openings for differentiation (speed, quality, guarantees, niche focus, language, UX, etc.).
+	4.	Output for this step:
+	•	A structured report with headings:
+	•	Market Overview
+	•	Customer Segments & Jobs-to-Be-Done
+	•	Pain Points & Objections
+	•	Trends & Opportunities
+	•	Bullet points, not walls of text.
+
+⸻
+
+4️⃣ Step Three – Build a “Research Notebook” (NotebookLM-style)
+
+Act as if you’re loading everything from Steps 2 and 3 into one research notebook.
+	1.	Unify the knowledge:
+	•	Combine competitor insights and market insights into a single coherent knowledge base.
+	•	Highlight key recurring themes and contradictions.
+	2.	Internal questioning (simulate me asking you):
+	•	Ask yourself 8–12 smart questions that a founder should ask here, such as:
+	•	What is the sharpest, most defensible positioning for this brand?
+	•	What should we avoid copying from existing players?
+	•	What promise would immediately stand out as credible and attractive?
+	•	Answer each question using only the research you’ve already gathered. If something is uncertain, say so explicitly.
+	3.	Output for this step:
+	•	Section titled “Notebook Q&A – Strategic Findings”
+	•	Each Q followed by a concise, insight-dense answer.
+
+⸻
+
+5️⃣ Step Four – Brand Direction & Strategy Blueprint
+
+Now turn all of this into a practical strategy for the new brand.
+
+Create the following sections:
+	1.	Brand Core
+	•	Suggested brand positioning statement (1–2 sentences).
+	•	Tagline options (3–5 short options).
+	•	Clear “who we are for” and “who we are NOT for”.
+	2.	Value Proposition & Offers
+	•	The main value proposition in plain language.
+	•	2–4 core offers / packages (what’s included, who each is for, rough pricing tier: entry / standard / premium).
+	3.	Differentiation Map
+	•	Bullet-point list: “How we are different from typical competitors.”
+	•	3–5 key differentiators ranked by impact.
+	4.	Go-to-Market Outline
+	•	Main channels to focus on (e.g., LinkedIn, Google Search, local partnerships, etc.) and why.
+	•	5–10 content ideas tailored to the target market that show expertise and build trust.
+	•	Suggested first 3–5 actions to take in the next 30 days.
+	5.	Risks & Assumptions
+	•	List of the most important assumptions we are making.
+	•	The top 3–5 things we must validate quickly and how to test them (simple experiments or signals to look for).
+
+⸻
+
+6️⃣ Style & Constraints
+	•	Use clear, simple business English.
+	•	Be specific and practical, avoid vague advice.
+	•	If data is uncertain or based on weak sources, clearly label it as estimate / assumption.
+	•	Wherever useful, format results as:
+	•	Bullet lists
+	•	Short paragraphs
+	•	Tables for comparison
+
+At the end, give me a one-page executive summary that a busy founder could read in 3–5 minutes and immediately understand:
+	•	Where the opportunity is,
+	•	How this brand should position itself, and
+	•	What we should do next.
+
+⸻
+
+Use this entire workflow in one go.

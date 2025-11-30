@@ -99,3 +99,4 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 
 ## Documentation
 - **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.
+- **`docs/OnlineTranslation-Strategy-Research.md`**: Comprehensive SEO strategy and competitive research including top 10 Dubai competitors, high-intent keywords, backlink opportunities, content gaps, Golden Visa market insights, and prioritized action items for NotebookLM upload.

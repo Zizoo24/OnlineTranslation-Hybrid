@@ -70,8 +70,9 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
   - Attestation pricing: 3 cols max (was 4 columns)
   - Extras grid: 3 cols max (was 6 columns)
   - Footer grid: 3 cols max (was 4 columns)
+- **Sidebar Brand Update**: Added brand title "OnlineTranslation.ae" and tagline "Boutique Legal Translation" to mobile sidebar header across all 25+ pages
 - **Footer Dark Mode Fix**: Improved readability with higher contrast text (#c9d1d9 on #161b22), coral icons, and proper hover states
-- **Service Worker Cache**: Updated to v80
+- **Service Worker Cache**: Updated to v81
 
 ## Earlier Changes (November 2025)
 - **Contact Form Integration**: Web3Forms configured to send to info@onlinetranslation.ae with WhatsApp redirect fallback (awaiting access key from user)

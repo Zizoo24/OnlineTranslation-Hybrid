@@ -157,9 +157,37 @@
 }
 
 .sidebar-logo img.sidebar-emblem {
-    height: 64px;
+    height: 56px;
     width: auto;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+}
+
+.sidebar-brand {
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+}
+
+.sidebar-brand-name {
+    font-family: var(--font-primary);
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.sidebar-brand-name .brand-suffix {
+    color: var(--accent-color);
+}
+
+.sidebar-tagline {
+    font-family: var(--font-secondary);
+    font-size: 11px;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 2px;
 }
 
 .sidebar-close {

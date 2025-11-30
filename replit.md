@@ -59,6 +59,7 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Arkan Website Links**: Added clickable links to arkanlegaltranslation.ae wherever partner is mentioned (homepage partnership section, footer, Legal Translation page, Attestation page) with gold underline styling
 - **Site Search Functionality**: Implemented working client-side search:
   - Created `scripts/search-index.js` with 22-page search index
   - Search results display with category tags and hover states

@@ -81,4 +81,4 @@ externalPort = 6000
 
 [nix]
 channel = "stable-25_05"
-packages = ["imagemagick"]
+packages = ["imagemagick", "pandoc"]

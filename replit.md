@@ -59,6 +59,11 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Mobile Responsive Grid Fix**: Fixed industry, location, and services pages that were cutting off content on mobile:
+  - Added responsive CSS classes: `.industry-layout`, `.industry-cards-2`, `.industry-cards-4` in main.css
+  - Replaced all inline grid styles with responsive classes across 15+ pages
+  - Grid breakpoints: 4 cols desktop → 2 cols tablet (@991px) → 1 col mobile (@767px)
+  - Service Worker Cache: Updated to v89
 - **Arkan Website Links**: Added clickable links to arkanlegaltranslation.ae wherever partner is mentioned (homepage partnership section, footer, Legal Translation page, Attestation page) with gold underline styling
 - **Site Search Functionality**: Implemented working client-side search:
   - Created `scripts/search-index.js` with 22-page search index

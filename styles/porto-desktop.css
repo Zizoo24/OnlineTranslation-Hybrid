@@ -5846,3 +5846,173 @@ a, button, .card, .service-card, .feature-card {
         animation: none;
     }
 }
+
+/* ============================================
+   PARTNERSHIP TRUST SECTION
+   ============================================ */
+
+.partnership-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+}
+
+.partnership-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.partnership-badge {
+    display: flex;
+    align-items: flex-start;
+    gap: 30px;
+    background: var(--bg-white);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: var(--shadow-md);
+    border-left: 5px solid var(--gold-color);
+}
+
+.partnership-icon {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--gold-color) 0%, #c4943c 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partnership-icon i {
+    font-size: 36px;
+    color: white;
+}
+
+.partnership-content {
+    flex: 1;
+}
+
+.partnership-label {
+    display: inline-block;
+    background: rgba(212, 165, 76, 0.15);
+    color: var(--gold-color);
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+}
+
+.partnership-title {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    text-transform: none;
+    letter-spacing: 0;
+}
+
+.partnership-desc {
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--text-muted);
+    margin-bottom: 20px;
+}
+
+.partnership-desc strong {
+    color: var(--primary-color);
+}
+
+.partnership-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.trust-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--primary-color);
+    color: white;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 6px;
+}
+
+.trust-badge i {
+    color: var(--gold-color);
+}
+
+@media (max-width: 768px) {
+    .partnership-badge {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 20px;
+    }
+    
+    .partnership-icon {
+        margin: 0 auto;
+    }
+    
+    .partnership-badges {
+        justify-content: center;
+    }
+    
+    .partnership-title {
+        font-size: 18px;
+    }
+}
+
+/* Partnership Disclosure Notice (for service pages) */
+.fulfillment-notice {
+    background: linear-gradient(135deg, rgba(212, 165, 76, 0.1) 0%, rgba(212, 165, 76, 0.05) 100%);
+    border: 1px solid rgba(212, 165, 76, 0.3);
+    border-radius: 12px;
+    padding: 20px 25px;
+    margin: 30px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fulfillment-notice i {
+    font-size: 24px;
+    color: var(--gold-color);
+    flex-shrink: 0;
+}
+
+.fulfillment-notice p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--text-muted);
+}
+
+.fulfillment-notice strong {
+    color: var(--primary-color);
+}
+
+/* Footer Partnership Text */
+.footer-partnership {
+    font-size: 12px;
+    color: var(--text-light);
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    opacity: 0.9;
+}
+
+.footer-partnership i {
+    color: var(--gold-color);
+}
+
+.footer-partnership strong {
+    color: var(--gold-color);
+    font-weight: 600;
+}

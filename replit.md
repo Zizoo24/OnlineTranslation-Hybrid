@@ -59,6 +59,14 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Arkan Legal Translation Partnership**: Strategic partnership implementation for MOJ certification fulfillment:
+  - Partnership trust badge section added to homepage (after stats, before testimonials)
+  - "Fulfilled by Arkan Legal Translation" disclosure notices on Legal Translation and Attestation service pages
+  - Footer updated with partnership mention (gold highlight on partner name)
+  - Partnership materials document created: `docs/arkan-partnership-materials.md` with PR release, content for Arkan's website (with dofollow backlink request), social media copy, and email template
+  - Service Worker Cache: Updated to v84
+- **Comprehensive SEO Audit**: Updated strategy document with top 10 Dubai competitors, high-intent keywords, backlink opportunities
+- **Image Alt Text Audit**: All 27+ pages verified - no issues found
 - **Linkable Content Pages**: Created two SEO-optimized resource guides for backlink acquisition:
   - `/resources/golden-visa-checklist/` - Complete 2025 Golden Visa document checklist for all categories (Investor, Entrepreneur, Specialist Talent) with translation/attestation tables, FAQ schema
   - `/resources/attestation-guide/` - Step-by-step MOFA attestation chain visual guide, Hague vs non-Hague requirements, HowTo schema markup

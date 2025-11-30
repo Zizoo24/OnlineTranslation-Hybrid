@@ -1,10 +1,9 @@
-const CACHE_NAME = 'onlinetranslation-v93';
+const CACHE_NAME = 'onlinetranslation-v94';
 const urlsToCache = [
   '/',
   '/index.html',
   '/styles/porto-desktop.css',
   '/styles/sticky-mobile.css',
-  '/styles/main.css',
   '/scripts/main.js',
   '/manifest.webmanifest',
   '/images/icons/favicon.svg',

@@ -116,12 +116,13 @@
 }
 
 /* WhatsApp Button - Green with Neon Pulse */
-.footer-item[href*="wa.me"] {
-    color: #25D366;
+.footer-whatsapp,
+.footer-whatsapp span {
+    color: #25D366 !important;
 }
 
-.footer-item[href*="wa.me"] i {
-    color: #25D366;
+.footer-whatsapp i {
+    color: #25D366 !important;
     animation: whatsappPulse 3s ease-in-out infinite;
 }
 
@@ -144,12 +145,13 @@
     }
 }
 
-.footer-item[href*="wa.me"]:active {
-    color: #128C7E;
+.footer-whatsapp:active,
+.footer-whatsapp:active span {
+    color: #128C7E !important;
 }
 
-.footer-item[href*="wa.me"]:active i {
-    color: #128C7E;
+.footer-whatsapp:active i {
+    color: #128C7E !important;
 }
 
 /* Sidebar Menu */

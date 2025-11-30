@@ -6,15 +6,18 @@
     --primary-light: #1a4570;
     --primary-overlay: rgba(14, 43, 72, 0.92);
     --accent-color: #FF1654;
+    --accent: #FF1654;
     --accent-light: #ff4d7a;
     --accent-dark: #cc1143;
     --gold-color: #d4a54c;
+    --gold: #d4a54c;
     --text-dark: #1a1a1a;
     --text-muted: #555555;
     --text-light: #ffffff;
     --bg-light: #f8f9fa;
     --bg-white: #ffffff;
     --bg-alt: #f0f2f5;
+    --bg-card: #ffffff;
     --border-color: #e0e0e0;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.08);
     --shadow-md: 0 8px 24px rgba(0, 0, 0, 0.12);

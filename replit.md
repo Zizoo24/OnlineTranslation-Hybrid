@@ -59,6 +59,11 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **CSS Duplicate Fix**: Removed conflicting duplicate `.service-card` definition that was causing white-on-white card rendering:
+  - Removed duplicate block at lines 4550-4607 in porto-desktop.css
+  - Primary definition at lines 2980-3103 now properly applies `.accent` variant with navy gradient
+  - Added list (ul/li) styles back to primary definition
+  - Service Worker Cache: Updated to v97
 - **Dubai Hub Page**: Created `/locations/dubai/` index page for breadcrumb navigation:
   - New page lists all 4 Dubai sub-locations (Palm Jumeirah, DIFC, JLT, Business Bay)
   - Updated navigation dropdown across all 29 pages to include "Dubai (All Areas)"

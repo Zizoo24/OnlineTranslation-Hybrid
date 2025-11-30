@@ -3074,6 +3074,18 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
+.service-card ul {
+    list-style: none;
+    margin-bottom: 15px;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card ul li {
+    padding: 6px 0;
+    color: var(--text-dark);
+}
+
 .service-link {
     display: inline-flex;
     align-items: center;
@@ -4545,59 +4557,6 @@ h1, h2, h3, h4, h5, h6 {
 .doc-item p {
     font-size: 14px;
     color: var(--text-muted);
-}
-
-/* Services Grid */
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.service-card {
-    background: var(--bg-white);
-    padding: 30px;
-    border-radius: 16px;
-    box-shadow: var(--shadow-sm);
-    transition: var(--transition);
-}
-
-.service-card:hover {
-    box-shadow: var(--shadow-md);
-}
-
-.service-card .service-icon {
-    width: 60px;
-    height: 60px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
-    border-radius: 12px;
-    margin-bottom: 20px;
-}
-
-.service-card .service-icon i {
-    font-size: 24px;
-    color: var(--text-light);
-}
-
-.service-card h3 {
-    font-family: var(--font-primary);
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--primary-color);
-    margin-bottom: 15px;
-}
-
-.service-card ul {
-    list-style: none;
-    margin-bottom: 15px;
-}
-
-.service-card ul li {
-    padding: 6px 0;
-    color: var(--text-dark);
 }
 
 .service-note {

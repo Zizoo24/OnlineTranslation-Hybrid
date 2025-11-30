@@ -59,8 +59,14 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **CSS Architecture Consolidation**: Merged main.css into porto-desktop.css to eliminate responsive breakpoint conflicts:
+  - Single source of truth for all layout/responsive styles (~7000 lines total)
+  - Eliminated overlapping media queries that caused footer alignment issues
+  - Removed main.css reference from all 28 HTML pages
+  - CSS file structure now: porto-desktop.css (core), sticky-mobile.css, dark-mode.css, OS-specific files
+  - Service Worker Cache: Updated to v94
 - **Exodus Divi Inner Page Styling**: Implemented consistent Exodus styling across inner pages:
-  - Added CSS classes in main.css: `.exodus-inner-hero`, `.exodus-breadcrumb`, `.exodus-highlights`, `.highlights-grid`, `.highlight-card`, `.exodus-section`, `.exodus-cards-grid`, `.exodus-quote-card`, `.exodus-cta-section`
+  - Added CSS classes: `.exodus-inner-hero`, `.exodus-breadcrumb`, `.exodus-highlights`, `.highlights-grid`, `.highlight-card`, `.exodus-section`, `.exodus-cards-grid`, `.exodus-quote-card`, `.exodus-cta-section`
   - Updated Legal Translation service page with full Exodus styling (hero, coral highlights strip, stats bar, CTA)
   - Updated all 4 Industry pages with Exodus styling: E-Commerce, Legal, Healthcare, Real Estate
   - Each inner page now has: navy hero with breadcrumb, coral highlights section (3 cards), consistent typography

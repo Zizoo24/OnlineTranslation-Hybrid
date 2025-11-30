@@ -59,6 +59,12 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Exodus Divi Inner Page Styling**: Implemented consistent Exodus styling across inner pages:
+  - Added CSS classes in main.css: `.exodus-inner-hero`, `.exodus-breadcrumb`, `.exodus-highlights`, `.highlights-grid`, `.highlight-card`, `.exodus-section`, `.exodus-cards-grid`, `.exodus-quote-card`, `.exodus-cta-section`
+  - Updated Legal Translation service page with full Exodus styling (hero, coral highlights strip, stats bar, CTA)
+  - Updated all 4 Industry pages with Exodus styling: E-Commerce, Legal, Healthcare, Real Estate
+  - Each inner page now has: navy hero with breadcrumb, coral highlights section (3 cards), consistent typography
+  - Service Worker Cache: Updated to v91
 - **Mobile Responsive Grid Fix**: Fixed industry, location, and services pages that were cutting off content on mobile:
   - Added responsive CSS classes: `.industry-layout`, `.industry-cards-2`, `.industry-cards-4` in main.css
   - Replaced all inline grid styles with responsive classes across 15+ pages

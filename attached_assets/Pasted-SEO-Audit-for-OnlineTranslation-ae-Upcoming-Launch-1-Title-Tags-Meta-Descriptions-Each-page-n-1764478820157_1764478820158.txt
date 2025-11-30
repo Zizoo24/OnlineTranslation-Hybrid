@@ -1,0 +1,35 @@
+SEO Audit for OnlineTranslation.ae (Upcoming Launch)
+
+1. Title Tags & Meta Descriptions
+
+Each page needs a clear, unique title tag and meta description that reflects its content and target keywords ￼ ￼. For example, the homepage should include phrases like “Dubai Certified Translation Services” or “Legal Translation Dubai” near the start of the title, rather than only the brand name. Keep titles under ~60 characters to avoid truncation ￼. Likewise, write unique meta descriptions (under ~120 characters) for each page that include relevant keywords and a call-to-action. The meta description isn’t a direct ranking factor, but a well-written one can boost click-through rate ￼.
+
+2. Heading Structure (H1, H2, etc.)
+
+Use a logical hierarchy of headings to organize content. Each page should have one H1 that clearly describes its main topic ￼ ￼. For example, a Services page might use <h1>Translation Services in Dubai with the primary keyword. Subsequent sections should use H2/H3 tags for subtopics. Good headings help visitors scan pages and help search engines understand page structure ￼. Avoid multiple H1s per page and ensure headings include relevant terms (e.g. “Certified Legal Translations,” “Medical Document Translation”) without keyword stuffing ￼ ￼.
+
+3. URL & Navigation Structure
+
+Ensure URLs are clean and descriptive ￼. For example, a certificate translation page might use …/services/certificate-translation-dubai rather than a long or auto-generated slug. Use hyphens to separate words and include a primary keyword in the URL path ￼. The main navigation should use concise menu labels (e.g. “Services,” “About Us,” “Contact”) and breadcrumb links where appropriate. This helps search engines and users quickly grasp the site’s structure. If URLs or page paths change, set up 301 redirects to preserve link equity ￼.
+
+4. On-Page Content Quality
+
+The site already has in-depth service descriptions, which is good for SEO. Ensure each page’s content is unique and keyword-focused. For example, pages targeting terms like “Legal translation Dubai,” “Arabic translation UAE,” or “MOJ certified translation” should naturally use those phrases in headings and body text. Keep paragraphs concise (3–5 sentences) and avoid jargon. Use bullet lists or numbered lists (as above) for readability. Also, include a clear call-to-action (e.g. “Contact us for a certified quote”) and client-oriented language to encourage engagement. Every page should have at least a few hundred words of relevant content; avoid thin or duplicate content across pages ￼ ￼. Remember, quality content that answers user intent will rank better than keyword-stuffed text.
+
+5. Images & Media Optimization
+
+Optimize all images for SEO and performance. Every image (especially header banners or infographics) should have an alt attribute that descriptively explains the image (e.g. alt="Translator certifying document in Dubai"). Alt text “strengthens the message of your pages” for both search engines and visually impaired users ￼ ￼. Compressed, web-friendly image formats (JPEG/WebP) help pages load faster. Include relevant keywords in file names if possible. Remove any purely decorative images or mark them appropriately so they don’t confuse screen readers. Consider lazy-loading large images and minifying CSS/JS to improve Core Web Vitals (see next point).
+
+6. Mobile-Friendly & Performance
+
+The site must be mobile-responsive and fast. Google’s Core Web Vitals are ranking factors: fast loading (LCP), smooth display (CLS), and quick interactivity (INP) ￼. A slower site can hurt crawl budget and visibility ￼. Test speed with tools like Lighthouse or PageSpeed Insights and aim for LCP under ~2.5s, CLS <0.1, and INP responsiveness. On Vercel/Next.js, ensure server-side rendering or caching is configured, and optimize scripts. A mobile-first design is critical (most searches are mobile) and will keep users engaged. Remember: better UX through speed and stability leads to higher rankings ￼.
+
+7. Local SEO & Structured Data
+
+Since this business serves Dubai/HNW clients, reinforce local signals. The footer already lists Dubai addresses and phone. Ensure consistent NAP (Name, Address, Phone) across all pages and Google Business Profile ￼. Use schema.org markup (e.g. LocalBusiness or ProfessionalService) on the Contact or Homepage to mark up the address, phone, and business type ￼. This structured data helps Google display location info (address, hours, reviews) in search results. Also create dedicated location/landing pages if targeting specific areas (e.g. “Dubai Translation Services – Palm Jumeirah office”) with unique content and local keywords on each ￼. Include location-specific terms naturally (e.g. Palm Jumeirah, Business Bay) in titles and content to capture “near me” searches ￼.
+
+8. Off-Page Ideas (Local Signals & Reviews)
+
+Plan to claim and optimize your Google Business Profile using the high-end address. Encourage past clients to leave detailed Google reviews – “Google reviews are a critical part of your local SEO strategy,” boosting trust and visibility ￼. High-quality, photo-rich reviews help your profile appear more often in local results ￼. Ensure your name, address, and phone are also listed consistently on reputable local directories (e.g. UAE yellow pages, legal directories) ￼. Gather citations on legal/translation listings to strengthen authority. Although off-page, consider content marketing or partnerships (guest posts on law/legal blogs) and social profiles to build authoritative backlinks over time.
+
+Sources: SEO best practices from industry guides and recent studies ￼ ￼ ￼ ￼ ￼. Each recommendation above is grounded in these SEO principles to maximize OnlineTranslation.ae’s on-page performance and visibility.

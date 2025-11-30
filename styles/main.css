@@ -38,7 +38,38 @@
     }
     
     .footer-grid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+    
+    .footer-links,
+    .footer-services,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-links h4,
+    .footer-services h4,
+    .footer-contact h4 {
+        display: inline-block;
+    }
+    
+    .footer-links h4::after,
+    .footer-services h4::after,
+    .footer-contact h4::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links ul,
+    .footer-services ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
     }
 }
 
@@ -849,6 +880,64 @@ body.search-open {
     .exodus-cta-btn {
         padding: 16px 30px;
         font-size: 13px;
+    }
+    
+    /* Footer Mobile Alignment */
+    .footer-grid {
+        grid-template-columns: 1fr !important;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-brand,
+    .footer-links,
+    .footer-services,
+    .footer-contact {
+        text-align: center;
+    }
+    
+    .footer-links h4,
+    .footer-services h4,
+    .footer-contact h4 {
+        display: inline-block;
+        position: relative;
+    }
+    
+    .footer-links h4::after,
+    .footer-services h4::after,
+    .footer-contact h4::after {
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+    
+    .footer-links ul,
+    .footer-services ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .footer-links ul li,
+    .footer-services ul li {
+        text-align: center;
+    }
+    
+    .footer-social {
+        justify-content: center;
+    }
+    
+    .footer-contact ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .footer-contact ul li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
     }
 }
 

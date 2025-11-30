@@ -115,6 +115,43 @@
     transform: scale(0.95);
 }
 
+/* WhatsApp Button - Green with Neon Pulse */
+.footer-item[href*="wa.me"] {
+    color: #25D366;
+}
+
+.footer-item[href*="wa.me"] i {
+    color: #25D366;
+    animation: whatsappPulse 3s ease-in-out infinite;
+}
+
+@keyframes whatsappPulse {
+    0%, 70%, 100% {
+        text-shadow: none;
+        transform: scale(1);
+    }
+    75% {
+        text-shadow: 0 0 8px #25D366, 0 0 16px #25D366, 0 0 24px #25D366;
+        transform: scale(1.1);
+    }
+    80% {
+        text-shadow: 0 0 4px #25D366, 0 0 10px #25D366;
+        transform: scale(1.05);
+    }
+    85% {
+        text-shadow: none;
+        transform: scale(1);
+    }
+}
+
+.footer-item[href*="wa.me"]:active {
+    color: #128C7E;
+}
+
+.footer-item[href*="wa.me"]:active i {
+    color: #128C7E;
+}
+
 /* Sidebar Menu */
 .sidebar-menu {
     position: fixed;

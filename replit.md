@@ -59,6 +59,12 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **CSS Variable Fix**: Added missing light mode CSS variables that caused white-on-white rendering:
+  - Added `--bg-card: #ffffff` - Cards now have proper white background in light mode
+  - Added `--accent: #FF1654` - Alias for accent-color used in inline styles
+  - Added `--gold: #d4a54c` - Alias for gold-color used in inline styles
+  - Fixed 15 pages with card rendering issues: locations, services, resources, industries indexes
+  - Service Worker Cache: Updated to v95
 - **CSS Architecture Consolidation**: Merged main.css into porto-desktop.css to eliminate responsive breakpoint conflicts:
   - Single source of truth for all layout/responsive styles (~7000 lines total)
   - Eliminated overlapping media queries that caused footer alignment issues

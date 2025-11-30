@@ -50,7 +50,7 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
     1.  `/services/`: Legal, Golden Visa, Attestation, Certificate, Corporate Translation.
     2.  `/locations/`: Geographic targeting (Dubai - Palm Jumeirah, JLT, DIFC, Business Bay; Abu Dhabi; Sharjah).
     3.  `/industries/`: Industry-specific (Legal, Healthcare, Real Estate, E-commerce).
-    4.  `/resources/`: Pricing Guide, FAQ, Document Checklist.
+    4.  `/resources/`: Pricing Guide, FAQ, Document Checklist, Golden Visa Checklist 2025, Attestation Chain Guide.
 - **Deployment**: Configured for Vercel with `vercel.json`, also compatible with Netlify/GitHub Pages.
 
 ## External Dependencies
@@ -59,6 +59,12 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Linkable Content Pages**: Created two SEO-optimized resource guides for backlink acquisition:
+  - `/resources/golden-visa-checklist/` - Complete 2025 Golden Visa document checklist for all categories (Investor, Entrepreneur, Specialist Talent) with translation/attestation tables, FAQ schema
+  - `/resources/attestation-guide/` - Step-by-step MOFA attestation chain visual guide, Hague vs non-Hague requirements, HowTo schema markup
+- **Sitemap Updated**: Added new resource pages with priority 0.9 and 0.8 respectively
+- **Resources Hub**: Updated index to showcase both new guides
+- **Service Worker Cache**: Updated to v83
 - **3-Column Grid Enforcement**: All grids now capped at maximum 3 columns on desktop, 2 columns on tablet (@992px), 1 column on mobile (@768px)
   - Services grids (five-col, exodus-services-grid): 3 cols max
   - Languages grid: 3 cols max (was 6 columns)

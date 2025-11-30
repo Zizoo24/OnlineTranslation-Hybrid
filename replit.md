@@ -58,7 +58,21 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **GitHub**: Connected for version control.
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
-## Recent Changes (November 2025)
+## Recent Changes (November 30, 2025)
+- **3-Column Grid Enforcement**: All grids now capped at maximum 3 columns on desktop, 2 columns on tablet (@992px), 1 column on mobile (@768px)
+  - Services grids (five-col, exodus-services-grid): 3 cols max
+  - Languages grid: 3 cols max (was 6 columns)
+  - Stats grid: 3 cols max (was 4 columns)
+  - Why grid: 3 cols max (was 4 columns)
+  - Process steps: 3 cols max (was 4 columns)
+  - Reasons grid: 3 cols max (was 4 columns)
+  - Package grid: 3 cols max (was 4 columns)
+  - Attestation pricing: 3 cols max (was 4 columns)
+  - Extras grid: 3 cols max (was 6 columns)
+  - Footer grid: 3 cols max (was 4 columns)
+- **Service Worker Cache**: Updated to v79
+
+## Earlier Changes (November 2025)
 - **Contact Form Integration**: Web3Forms configured to send to info@onlinetranslation.ae with WhatsApp redirect fallback (awaiting access key from user)
 - **Overlap Cards Fix**: Full-width coral background using CSS `isolation: isolate` to prevent navy strip bleed
 - **Why Choose Us Redesign**: Light background with white cards, 4px coral top border, gold icon circles (rgba(212, 165, 76, 0.12))

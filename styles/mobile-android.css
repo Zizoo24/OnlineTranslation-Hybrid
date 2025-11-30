@@ -130,11 +130,18 @@
         height: 300px;
     }
 
-    .os-android .service-card,
+    .os-android .service-card:not(.accent),
     .os-android .channel-card,
     .os-android .stat-card {
         border-radius: var(--os-radius);
         background: #ffffff;
+        border: none;
+        box-shadow: var(--md-elevation-1);
+        transition: box-shadow 0.2s ease, transform 0.2s ease;
+    }
+
+    .os-android .service-card.accent {
+        border-radius: var(--os-radius);
         border: none;
         box-shadow: var(--md-elevation-1);
         transition: box-shadow 0.2s ease, transform 0.2s ease;

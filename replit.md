@@ -59,6 +59,11 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Mobile CSS Fix**: Fixed iOS/Android CSS overriding `.service-card.accent` background:
+  - iOS CSS was setting `background: rgba(255, 255, 255, 0.8)` on all service cards
+  - Android CSS was setting `background: #ffffff` on all service cards
+  - Both now use `:not(.accent)` selector to preserve navy gradient on accent cards
+  - Service Worker Cache: Updated to v98
 - **CSS Duplicate Fix**: Removed conflicting duplicate `.service-card` definition that was causing white-on-white card rendering:
   - Removed duplicate block at lines 4550-4607 in porto-desktop.css
   - Primary definition at lines 2980-3103 now properly applies `.accent` variant with navy gradient

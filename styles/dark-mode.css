@@ -1166,32 +1166,95 @@ body.theme-dark .quick-links a:hover {
 /* ============================================
    FOOTER - HIGH CONTRAST FIX
    ============================================ */
+body.theme-dark .footer,
 body.theme-dark .footer-section {
-    background: #0d1117 !important;
+    background: #161b22 !important;
+    border-top: 1px solid #30363d !important;
 }
 
-body.theme-dark .footer-section h4 {
+body.theme-dark .footer h4,
+body.theme-dark .footer-section h4,
+body.theme-dark .footer-links h4,
+body.theme-dark .footer-services h4,
+body.theme-dark .footer-contact h4 {
     color: #ffffff !important;
+    font-weight: 600 !important;
+    margin-bottom: 16px !important;
 }
 
-body.theme-dark .footer-section p,
-body.theme-dark .footer-section li,
+body.theme-dark .footer p,
+body.theme-dark .footer-brand p,
+body.theme-dark .footer-section p {
+    color: #c9d1d9 !important;
+}
+
+body.theme-dark .footer li,
+body.theme-dark .footer-links li,
+body.theme-dark .footer-services li,
+body.theme-dark .footer-contact li,
+body.theme-dark .footer-section li {
+    color: #c9d1d9 !important;
+}
+
+body.theme-dark .footer a,
+body.theme-dark .footer-links a,
+body.theme-dark .footer-services a,
+body.theme-dark .footer-contact a,
 body.theme-dark .footer-section a {
-    color: #a8b3c2 !important;
+    color: #c9d1d9 !important;
+    transition: color 0.2s ease !important;
 }
 
+body.theme-dark .footer a:hover,
+body.theme-dark .footer-links a:hover,
+body.theme-dark .footer-services a:hover,
+body.theme-dark .footer-contact a:hover,
 body.theme-dark .footer-section a:hover {
     color: #58a6ff !important;
 }
 
+body.theme-dark .footer-contact span {
+    color: #c9d1d9 !important;
+}
+
+body.theme-dark .footer-contact i,
+body.theme-dark .footer li i {
+    color: #ff4757 !important;
+    opacity: 0.9;
+}
+
+body.theme-dark .footer-social a {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: #c9d1d9 !important;
+    border: 1px solid rgba(255, 255, 255, 0.15) !important;
+}
+
+body.theme-dark .footer-social a:hover {
+    background: #ff4757 !important;
+    color: #ffffff !important;
+    border-color: #ff4757 !important;
+}
+
+body.theme-dark .footer-emblem img {
+    filter: brightness(1.1) !important;
+}
+
 body.theme-dark .footer-bottom {
-    background: #010409 !important;
+    background: #0d1117 !important;
     border-top: 1px solid #30363d !important;
 }
 
 body.theme-dark .footer-bottom p,
+body.theme-dark .footer-bottom span {
+    color: #b1bac4 !important;
+}
+
 body.theme-dark .footer-bottom a {
-    color: #8b949e !important;
+    color: #58a6ff !important;
+}
+
+body.theme-dark .footer-bottom a:hover {
+    color: #79c0ff !important;
 }
 
 /* ============================================

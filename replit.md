@@ -59,6 +59,12 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Site Search Functionality**: Implemented working client-side search:
+  - Created `scripts/search-index.js` with 22-page search index
+  - Search results display with category tags and hover states
+  - Added to all 25+ pages
+  - Service Worker Cache: Updated to v85
+- **WordPress Instructions for Arkan**: Created `docs/ARKAN-WordPress-Instructions.md` with step-by-step widget/page setup guide
 - **Arkan Legal Translation Partnership**: Strategic partnership implementation for MOJ certification fulfillment:
   - Partnership trust badge section added to homepage (after stats, before testimonials)
   - "Fulfilled by Arkan Legal Translation" disclosure notices on Legal Translation and Attestation service pages

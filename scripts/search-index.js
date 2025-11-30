@@ -30,26 +30,32 @@ const searchIndex = [
         keywords: "corporate business company trade license memorandum articles association"
     },
     {
+        title: "Dubai",
+        url: "/locations/dubai/",
+        category: "Locations",
+        keywords: "dubai translation services all areas legal certified moj"
+    },
+    {
         title: "Palm Jumeirah",
-        url: "/locations/palm-jumeirah/",
+        url: "/locations/dubai/palm-jumeirah/",
         category: "Locations",
         keywords: "palm jumeirah dubai translation service hnw high net worth luxury"
     },
     {
         title: "JLT - Jumeirah Lake Towers",
-        url: "/locations/jlt/",
+        url: "/locations/dubai/jlt/",
         category: "Locations",
         keywords: "jlt jumeirah lake towers free zone dmcc translation"
     },
     {
         title: "DIFC",
-        url: "/locations/difc/",
+        url: "/locations/dubai/difc/",
         category: "Locations",
         keywords: "difc dubai international financial centre legal translation courts"
     },
     {
         title: "Business Bay",
-        url: "/locations/business-bay/",
+        url: "/locations/dubai/business-bay/",
         category: "Locations",
         keywords: "business bay dubai downtown translation corporate"
     },

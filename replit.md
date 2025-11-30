@@ -59,6 +59,11 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
 ## Recent Changes (November 30, 2025)
+- **Dubai Hub Page**: Created `/locations/dubai/` index page for breadcrumb navigation:
+  - New page lists all 4 Dubai sub-locations (Palm Jumeirah, DIFC, JLT, Business Bay)
+  - Updated navigation dropdown across all 29 pages to include "Dubai (All Areas)"
+  - Added to sitemap.xml and search-index.js
+  - Service Worker Cache: Updated to v96
 - **CSS Variable Fix**: Added missing light mode CSS variables that caused white-on-white rendering:
   - Added `--bg-card: #ffffff` - Cards now have proper white background in light mode
   - Added `--accent: #FF1654` - Alias for accent-color used in inline styles

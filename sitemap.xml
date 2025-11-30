@@ -67,6 +67,14 @@
         <priority>0.8</priority>
     </url>
     
+    <!-- Dubai Hub -->
+    <url>
+        <loc>https://onlinetranslation.ae/locations/dubai/</loc>
+        <lastmod>2024-11-30</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
     <!-- Dubai Locations -->
     <url>
         <loc>https://onlinetranslation.ae/locations/dubai/palm-jumeirah/</loc>

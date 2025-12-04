@@ -93,7 +93,7 @@ externalPort = 6000
 
 [nix]
 channel = "stable-25_05"
-packages = ["imagemagick", "pandoc"]
+packages = ["imagemagick", "pandoc", "pngquant", "jpegoptim"]
 
 [deployment]
 deploymentTarget = "static"

@@ -58,7 +58,36 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
 - **GitHub**: Connected for version control.
 - **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
 
-## Recent Changes (November 30, 2025)
+## Recent Changes (December 4, 2025)
+- **Pre-Production QA Audit**: Comprehensive audit and fixes across all 29 pages:
+  - Fixed truncated FAQ accordion JavaScript in legal-translation page
+  - Removed broken overlap-cards-fix.css reference causing 404 errors
+  - Unified navigation (header dropdowns, mobile sidebar, footer) across all 29 pages
+  - Fixed robots.txt (removed Crawl-delay:1 that was slowing Google crawl rate)
+  - Updated sitemap.xml dates to current (2025-12-04)
+  - Added Open Graph meta tags to privacy.html and terms.html
+  - Service Worker Cache: Updated to v100 with os-detect.js and search-index.js caching
+- **Image Optimization**: Compressed 24 large images (88% size reduction):
+  - Hero images reduced from ~50MB to ~5MB total
+  - Used pngquant + imagemagick for quality-preserving compression
+  - Resized oversized images to max 1920x1080
+- **CSS Architecture Note**: 6 CSS files intentionally separated for OS-specific conditional loading:
+  - porto-desktop.css (main), sticky-mobile.css, dark-mode.css
+  - mobile-ios.css, mobile-android.css, desktop-macos.css (loaded by os-detect.js)
+
+### Technical Debt: Inline Styles (1,750 occurrences)
+Most common inline style patterns for future CSS refactoring:
+| Property | Count | Recommendation |
+|----------|-------|----------------|
+| color | 1,053 | Create utility classes (.text-coral, .text-gold, etc.) |
+| padding | 556 | Standardize spacing scale in CSS variables |
+| margin-bottom | 556 | Use consistent spacing utilities |
+| font-size | 515 | Define type scale in CSS (--text-sm, --text-lg, etc.) |
+| background | 377 | Extract to component classes |
+| border-radius | 340 | Use CSS variable (--radius-sm, --radius-lg) |
+| margin | 304 | Consolidate with padding into spacing system |
+
+## Previous Changes (November 30, 2025)
 - **Mobile CSS Fix**: Fixed iOS/Android CSS overriding `.service-card.accent` background:
   - iOS CSS was setting `background: rgba(255, 255, 255, 0.8)` on all service cards
   - Android CSS was setting `background: #ffffff` on all service cards

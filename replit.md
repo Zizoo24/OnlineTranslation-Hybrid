@@ -76,7 +76,7 @@ Expanded key pages to 2,000+ words with comprehensive content:
 **Navigation Updates:**
 - Header Services dropdown now includes all 10 money pages organized by category (Personal Documents, Corporate Documents)
 - Sidebar navigation now includes Personal Documents and Corporate Documents sections with all 10 money pages
-- Service worker bumped to v103 for cache refresh
+- Service worker bumped to v104 for cache refresh
 
 ### UI/Styling Fixes (Dec 4, 2025)
 - **Hero Buttons**: Added `.hero-btn`, `.hero-btn--primary`, `.hero-btn--ghost` styles in `porto-desktop.css` with dark mode overrides

@@ -3438,7 +3438,7 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--text-muted);
 }
 
-/* FAQ Section */
+/* FAQ Section - HTML5 Native Accordions */
 .faq-section {
     padding: 120px 0;
     background: var(--bg-white);
@@ -3449,6 +3449,100 @@ h1, h2, h3, h4, h5, h6 {
     margin: 60px auto 0;
 }
 
+/* HTML5 Details Element Styling */
+.faq-details {
+    background: var(--bg-white);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.faq-details:hover {
+    box-shadow: var(--shadow-md);
+}
+
+/* Remove default marker/triangle */
+.faq-details > summary {
+    list-style: none;
+}
+
+.faq-details > summary::-webkit-details-marker {
+    display: none;
+}
+
+/* Summary Styling (The Clickable Header) */
+.faq-summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 30px;
+    background: var(--bg-white);
+    cursor: pointer;
+    font-family: var(--font-primary);
+    font-size: 17px;
+    font-weight: 600;
+    color: var(--text-dark);
+    transition: var(--transition);
+    user-select: none;
+}
+
+.faq-summary:hover {
+    background: var(--bg-light);
+}
+
+.faq-summary:focus {
+    outline: 2px solid var(--accent-color);
+    outline-offset: -2px;
+}
+
+/* Icon Styling */
+.faq-icon {
+    font-size: 14px;
+    color: var(--accent-color);
+    transition: transform 0.3s ease;
+    flex-shrink: 0;
+    margin-left: 16px;
+}
+
+/* Open State Styles */
+.faq-details[open] .faq-summary {
+    background: var(--primary-color);
+    color: var(--text-light);
+}
+
+.faq-details[open] .faq-icon {
+    color: var(--text-light);
+    transform: rotate(180deg);
+}
+
+/* Content Area */
+.faq-content {
+    padding: 25px 30px;
+    color: var(--text-muted);
+    line-height: 1.8;
+    font-size: 15px;
+    animation: fadeIn 0.3s ease;
+}
+
+.faq-content p {
+    margin: 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Legacy Compatibility - Keep old classes for other pages */
 .faq-item {
     background: var(--bg-white);
     border: 1px solid var(--border-color);

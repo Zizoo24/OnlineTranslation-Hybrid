@@ -34,6 +34,10 @@
     <meta name="theme-color" content="#0E2B48">
     <meta name="format-detection" content="telephone=yes">
     <link rel="manifest" href="manifest.webmanifest">
+
+    <!-- Supabase Configuration -->
+    <meta name="supabase-url" content="https://dlrwdmjbyhyeydrstonf.supabase.co">
+    <meta name="supabase-key" content="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImRscndkbWpieWh5ZXlkcnN0b25mIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ4NDE5MTgsImV4cCI6MjA4MDQxNzkxOH0.DJM1SwvI7-9cOZf-O9fnUT5fVi9-sMn645WtGEJBd2E">
     
     <!-- Favicons - All Platforms (Using Emblem) -->
     <link rel="icon" type="image/png" sizes="64x64" href="images/icons/favicon-64.png">
@@ -433,9 +437,9 @@
                     <div class="hero-content">
                         <div class="hero-text">
                             <h1 class="hero-title exodus-title">
-                                <span class="title-line">MOJ-LICENSED LEGAL COMPLIANCE FOR THE UAE.</span>
+                                <span class="title-line">MOJ-LICENSED LEGAL TRANSLATION FOR THE UAE.</span>
                             </h1>
-                            <p class="hero-description exodus-desc">Your boutique digital concierge for court-ready translations. We guarantee acceptance by Dubai Courts, DIFC, ADGM, and all UAE authorities. If we handle it, it gets accepted.</p>
+                            <p class="hero-description exodus-desc">We are a boutique translation concierge focused on compliance and attention to detail. Our strategic partner, Arkan Legal Translation, holds the MOJ license ensuring acceptance by Dubai Courts, DIFC, ADGM, and all UAE authorities.</p>
                             
                             <div class="hero-cta-group">
                                 <a href="https://wa.me/971508620217" class="hero-cta exodus-cta">
@@ -588,10 +592,10 @@
                             </div>
                         </div>
                         <div class="about-content exodus-about-content">
-                            <span class="section-label exodus-label">Why Choose Us</span>
-                            <h2 class="section-title exodus-section-title">GUARANTEED COURT ACCEPTANCE</h2>
-                            <p>We are a <strong>risk management asset</strong> and a guarantor of peace of mind. OnlineTranslation.ae facilitates global mobility, secures legacies, and ensures corporate continuity across the UAE.</p>
-                            <p>Our positioning is simple: if we handle it, it gets accepted. Every translation meets the exacting standards of Dubai Courts, DIFC, ADGM, and all UAE government authorities.</p>
+                            <span class="section-label exodus-label">Our Approach</span>
+                            <h2 class="section-title exodus-section-title">FOCUS ON COMPLIANCE AND SERVICE</h2>
+                            <p>Translation itself is a standardized process. There are hundreds of agencies in Dubai, many using similar software and dictionaries. What we differentiate on is <strong>service and reliability</strong>.</p>
+                            <p>We coordinate with MOJ-licensed partners, verify document completeness before quoting, and ensure formatting meets the requirements of Dubai Courts, DIFC, ADGM, and UAE government authorities. Our role is to manage the logistics so you can focus on your core work.</p>
                             <div class="exodus-features-list">
                                 <div class="exodus-feature-item">
                                     <i class="fas fa-check-circle"></i>
@@ -727,30 +731,30 @@
             <section id="why" class="why-section">
                 <div class="container">
                     <div class="section-header center">
-                        <span class="section-label">Why Choose Us?</span>
-                        <h2 class="section-title">We Provide Tailored Services<br>Based On Your Requirements</h2>
+                        <span class="section-label">Our Differentiators</span>
+                        <h2 class="section-title">What We Focus On</h2>
                         <div class="section-divider"></div>
                     </div>
                     <div class="why-grid">
                         <article class="why-card">
                             <i class="fas fa-gavel"></i>
-                            <h3>MOJ Certified</h3>
-                            <p>UAE Ministry of Justice certified legal translation accepted by all courts and government entities.</p>
+                            <h3>MOJ-Licensed Partners</h3>
+                            <p>We coordinate with Arkan Legal Translation, a UAE Ministry of Justice licensed house with over 15 years of court-accepted work.</p>
                         </article>
                         <article class="why-card">
-                            <i class="fas fa-id-card"></i>
-                            <h3>All Documents</h3>
-                            <p>Birth, marriage, education, police clearance and more, formatted for UAE authorities.</p>
+                            <i class="fas fa-shield-alt"></i>
+                            <h3>Pre-Validation</h3>
+                            <p>We check documents for required stamps and attestations before quoting. This saves you from rejections later.</p>
                         </article>
                         <article class="why-card">
-                            <i class="fas fa-building"></i>
-                            <h3>Corporate Ready</h3>
-                            <p>MOUs, contracts, shareholder docs, tenancy contracts, SPAs and DLD forms.</p>
+                            <i class="fas fa-headset"></i>
+                            <h3>Responsive Service</h3>
+                            <p>WhatsApp responses within minutes, not hours. We answer questions and provide guidance throughout the process.</p>
                         </article>
                         <article class="why-card">
-                            <i class="fas fa-bolt"></i>
-                            <h3>Fast & Online</h3>
-                            <p>WhatsApp-based workflow, same-day options and clear written quotations.</p>
+                            <i class="fas fa-file-contract"></i>
+                            <h3>Transparent Pricing</h3>
+                            <p>Clear written quotations with no hidden fees. We explain what you are paying for and why.</p>
                         </article>
                     </div>
                 </div>
@@ -881,7 +885,7 @@
                 </div>
             </section>
 
-            <!-- FAQ Section -->
+            <!-- FAQ Section - HTML5 Native Accordions -->
             <section id="faq" class="faq-section">
                 <div class="container">
                     <div class="section-header center">
@@ -889,51 +893,51 @@
                         <h2 class="section-title">Frequently Asked Questions</h2>
                     </div>
                     <div class="faq-list">
-                        <article class="faq-item">
-                            <button class="faq-question">
+                        <details name="faq-group" class="faq-details">
+                            <summary class="faq-summary">
                                 How long does translation take?
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </summary>
+                            <div class="faq-content">
                                 <p>Standard documents (birth certificates, degrees) are often completed within 2-4 hours. Complex legal contracts depend on word count and may require 24-48 hours. We provide exact timeframes in our quotation.</p>
                             </div>
-                        </article>
-                        <article class="faq-item">
-                            <button class="faq-question">
+                        </details>
+                        <details name="faq-group" class="faq-details">
+                            <summary class="faq-summary">
                                 Is your translation accepted by courts?
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes. We are fully certified by the UAE Ministry of Justice. Our translations are accepted by Dubai Courts, DIFC, ADGM, Notary Public, and all Government Ministries.</p>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>Yes. Our strategic partner Arkan Legal Translation is fully certified by the UAE Ministry of Justice. Our translations are accepted by Dubai Courts, DIFC, ADGM, Notary Public, and all Government Ministries.</p>
                             </div>
-                        </article>
-                        <article class="faq-item">
-                            <button class="faq-question">
+                        </details>
+                        <details name="faq-group" class="faq-details">
+                            <summary class="faq-summary">
                                 How do I send my documents?
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Simply WhatsApp your documents to +971 50 862 0217. You can send PDFs, photos, or scans - any format works. We'll review and send you a quotation within minutes.</p>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>Simply WhatsApp your documents to +971 50 862 0217. You can send PDFs, photos, or scans. Any format works. We review and send you a quotation within minutes.</p>
                             </div>
-                        </article>
-                        <article class="faq-item">
-                            <button class="faq-question">
+                        </details>
+                        <details name="faq-group" class="faq-details">
+                            <summary class="faq-summary">
                                 Do you offer urgent same-day service?
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p>Yes! Our XoneHour service provides ultra-urgent translation for critical court and immigration deadlines. Contact us to discuss your specific timeline and requirements.</p>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>Yes. Our express service provides urgent translation for critical court and immigration deadlines. Contact us to discuss your specific timeline and requirements.</p>
                             </div>
-                        </article>
-                        <article class="faq-item">
-                            <button class="faq-question">
+                        </details>
+                        <details name="faq-group" class="faq-details">
+                            <summary class="faq-summary">
                                 What languages do you translate?
-                                <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <div class="faq-answer">
-                                <p>We specialize in Arabic ↔ English legal translation. For other language pairs, please contact us and we can arrange certified translators as needed.</p>
+                                <i class="fas fa-chevron-down faq-icon"></i>
+                            </summary>
+                            <div class="faq-content">
+                                <p>We handle Arabic ↔ English legal translation in-house. For other language pairs, we coordinate with certified translators in 43+ languages to meet your requirements.</p>
                             </div>
-                        </article>
+                        </details>
                     </div>
                 </div>
             </section>
@@ -941,10 +945,10 @@
             <!-- CTA Banner -->
             <section class="cta-banner">
                 <div class="container">
-                    <h2>Ready to Get Your Documents Translated?</h2>
-                    <p>Our visa and legal experts are here to help. Get a free quotation within minutes.</p>
+                    <h2>Need a Document Translated?</h2>
+                    <p>Send your files via WhatsApp and receive a written quotation with clear pricing and delivery time. We typically respond within 10-15 minutes during business hours.</p>
                     <a href="https://wa.me/971508620217" class="cta-btn">
-                        <i class="fab fa-whatsapp"></i> WhatsApp Us Now
+                        <i class="fab fa-whatsapp"></i> Send Document via WhatsApp
                     </a>
                 </div>
             </section>
@@ -956,10 +960,7 @@
                         <span class="section-label">Get In Touch</span>
                         <h2 class="section-title">Request a Free Quotation</h2>
                         <p class="contact-description">Share your documents. We'll confirm price and delivery time within minutes.</p>
-                        <form class="contact-form" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-                            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
-                            <input type="hidden" name="subject" value="New Translation Request from OnlineTranslation.ae">
-                            <input type="hidden" name="from_name" value="OnlineTranslation.ae Contact Form">
+                        <form class="contact-form" id="contactForm" data-form-type="contact">
                             <div class="form-row">
                                 <div class="form-group">
                                     <input type="text" name="name" placeholder="Your Name" required>
@@ -1064,5 +1065,6 @@
 
     <script src="scripts/main.js"></script>
     <script src="scripts/search-index.js" defer></script>
+    <script type="module" src="scripts/form-handler.js"></script>
 </body>
 </html>

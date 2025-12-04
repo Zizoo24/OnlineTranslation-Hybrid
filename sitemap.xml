@@ -203,6 +203,92 @@
     </url>
     
     <!-- ============================================ -->
+    <!-- PERSONAL DOCUMENTS SILO (NEW) -->
+    <!-- ============================================ -->
+    
+    <!-- Vital Records -->
+    <url>
+        <loc>https://onlinetranslation.ae/personal/vital-records/birth/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/personal/vital-records/marriage/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- Immigration Documents -->
+    <url>
+        <loc>https://onlinetranslation.ae/personal/immigration/pcc/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/personal/immigration/bank/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/personal/immigration/license/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Academic Documents -->
+    <url>
+        <loc>https://onlinetranslation.ae/personal/academic/degree/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- LEGAL DOCUMENTS SILO (NEW) -->
+    <!-- ============================================ -->
+    
+    <!-- Contracts -->
+    <url>
+        <loc>https://onlinetranslation.ae/legal/contracts/nda/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- Corporate -->
+    <url>
+        <loc>https://onlinetranslation.ae/legal/corporate/poa/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.9</priority>
+    </url>
+    
+    <url>
+        <loc>https://onlinetranslation.ae/legal/corporate/moa/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ============================================ -->
+    <!-- SPECIALIZED TRANSLATION SILO (NEW) -->
+    <!-- ============================================ -->
+    <url>
+        <loc>https://onlinetranslation.ae/specialized/medical/</loc>
+        <lastmod>2025-12-04</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <!-- ============================================ -->
     <!-- STANDALONE PAGES -->
     <!-- ============================================ -->
     <url>

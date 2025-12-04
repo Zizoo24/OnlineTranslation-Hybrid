@@ -130,6 +130,66 @@ const searchIndex = [
         url: "/contact/",
         category: "Contact",
         keywords: "contact whatsapp email phone call quote"
+    },
+    {
+        title: "Birth Certificate Translation",
+        url: "/personal/vital-records/birth/",
+        category: "Personal Documents",
+        keywords: "birth certificate translation gdrfa sponsor child golden visa icp mofa"
+    },
+    {
+        title: "Marriage Certificate Translation",
+        url: "/personal/vital-records/marriage/",
+        category: "Personal Documents",
+        keywords: "marriage certificate translation spouse visa gdrfa sponsorship"
+    },
+    {
+        title: "Police Clearance Certificate Translation",
+        url: "/personal/immigration/pcc/",
+        category: "Personal Documents",
+        keywords: "police clearance pcc good conduct certificate fbi acro translation visa"
+    },
+    {
+        title: "Bank Statement Translation",
+        url: "/personal/immigration/bank/",
+        category: "Personal Documents",
+        keywords: "bank statement translation golden visa 6 months financial proof"
+    },
+    {
+        title: "Driving License Translation",
+        url: "/personal/immigration/license/",
+        category: "Personal Documents",
+        keywords: "driving license translation rta conversion dubai uae"
+    },
+    {
+        title: "University Degree Translation",
+        url: "/personal/academic/degree/",
+        category: "Personal Documents",
+        keywords: "degree diploma university translation attestation equivalency golden visa"
+    },
+    {
+        title: "Power of Attorney Translation",
+        url: "/legal/corporate/poa/",
+        category: "Legal Documents",
+        keywords: "power of attorney poa translation general special dld property"
+    },
+    {
+        title: "Memorandum of Association Translation",
+        url: "/legal/corporate/moa/",
+        category: "Legal Documents",
+        keywords: "moa memorandum association translation company formation freezone"
+    },
+    {
+        title: "NDA Translation",
+        url: "/legal/contracts/nda/",
+        category: "Legal Documents",
+        keywords: "nda non disclosure agreement translation confidentiality ip"
+    },
+    {
+        title: "Medical Report Translation",
+        url: "/specialized/medical/",
+        category: "Specialized",
+        keywords: "medical report translation dha moh haad healthcare hospital"
     }
 ];
 

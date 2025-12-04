@@ -62,11 +62,27 @@ Created 10 high-conversion "money pages" with 2,000+ words each:
 
 **Total Pages: 39** (up from 29)
 
+### Phase 1B In Progress (Dec 4, 2025)
+Expanded key pages to 2,000+ words with comprehensive content:
+- **Homepage (index.html)**: 4,402 words - Added "Popular Documents" section linking to 8 money pages
+- **Golden Visa (services/golden-visa-translation/)**: 4,576 words - Added compliance checklist, category requirements (4 expandable sections), aftercare guide, 8 FAQs with FAQPage schema
+- **Attestation (services/attestation/)**: 4,583 words - Added pre-validation section, document links grid (6 money pages), aftercare guide, 8 FAQs with FAQPage schema
+
+**Internal Linking Improvements:**
+- Homepage now links to 8 popular document pages in new "Popular Documents" section
+- Golden Visa links to degree, bank statement, marriage certificate, MOA
+- Attestation links to birth, marriage, degree, PCC, POA, MOA
+
+**Navigation Updates:**
+- Header Services dropdown now includes all 10 money pages organized by category (Personal Documents, Corporate Documents)
+- Sidebar navigation now includes Personal Documents and Corporate Documents sections with all 10 money pages
+- Service worker bumped to v102 for cache refresh
+
 ### Remaining Phases
-- Phase 1B: Expand existing pages to 2,000+ words
+- Phase 1B continued: Expand remaining service pages (Legal, Corporate, Certificate)
 - Phase 2: Create 4 hub pages at 3,000 words each
 - Phase 3: Complete remaining cluster pages
-- Phase 4: Final word count expansion
+- Phase 4: Final word count expansion to reach 55+ pages
 
 ## External Dependencies
 - **OneDrive**: Used for accessing user's images and brand assets from the `OtLegalTranslationcom` folder.

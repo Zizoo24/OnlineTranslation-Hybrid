@@ -1,0 +1,221 @@
+Here’s a clean “give-this-to-Bolt” brief you can paste in and then refine with repo details.
+
+---
+
+### Prompt for Bolt AI – Repo Cleanup, CSS Unification, and Vercel Cutover
+
+You are my AI front-end assistant working on a **static HTML/CSS site** that will be deployed on **Vercel** (domain currently points to WordPress/Bluehost).
+
+#### 1. Overall goals
+
+1. Refine and finalize the new static pages (HTML/CSS/JS).
+2. Clean and simplify the repo:
+
+   * **One primary CSS file** for the site (plus any truly necessary vendor files).
+   * Remove unused/duplicate CSS and old/unused pages/assets.
+3. Ensure **layout consistency** across all pages:
+
+   * Same **top bar / header / nav**, **sidebar (if present)**, and **footer**.
+   * Repeated chunks (CTAs, hero patterns, etc.) must be visually and structurally unified.
+4. Run a **basic QA pass** so there are no obvious code conflicts, broken layouts, or console errors.
+5. Prepare the repo so it’s **safe to deploy to Vercel**.
+6. Finally, help me plan the **domain shift + 301 redirects** from the old WordPress URLs to the new static URLs.
+
+---
+
+### 2. Repo audit & cleanup plan
+
+Work through the repo in this order:
+
+1. **Scan structure**
+
+   * Identify:
+
+     * All main HTML pages (e.g. `index.html`, `services.html`, `about.html`, etc.).
+     * All CSS files.
+     * Any JS files and assets folders (`/img`, `/assets`, `/js`, etc.).
+   * Tell me, in plain English, what you see as the current structure and which parts look legacy/unused.
+
+2. **Identify obviously unused files**
+
+   * Look for:
+
+     * Old template files that are never linked.
+     * CSS files not referenced by any HTML.
+   * Propose a **list of candidates** for deletion and ask for confirmation before you remove them.
+
+3. **Unify layout blocks**
+
+   * Choose a **single canonical version** for:
+
+     * Header / top bar / navigation.
+     * Sidebar (if used).
+     * Footer.
+   * Apply that canonical markup + class naming to all pages that should share that layout.
+   * Make sure internal links (menu items) are correct and consistent across pages.
+
+---
+
+### 3. CSS consolidation
+
+1. **Choose one main site CSS file**
+
+   * Pick or create a single primary stylesheet (e.g. `styles.css` or `main.css`) that will contain all core layout + typography + color styles.
+   * Keep only vendor/third-party CSS separate if absolutely needed (e.g. icons, sliders).
+
+2. **Merge styles**
+
+   * Move relevant rules from secondary CSS files into the main stylesheet.
+   * Remove duplicates and conflicting declarations.
+   * Normalize:
+
+     * Color tokens.
+     * Font stacks.
+     * Heading/body sizes.
+     * Spacing system (margin/padding scale).
+
+3. **Update HTML references**
+
+   * Ensure each HTML page only loads:
+
+     * The main site CSS.
+     * Any strictly necessary vendor CSS.
+   * Remove `<link>` tags to CSS files that you have merged or removed.
+
+4. **Delete dead CSS**
+
+   * Once styles are merged and pages tested:
+
+     * Remove unused CSS files from the repo.
+   * Confirm which files were removed.
+
+---
+
+### 4. Page refinement & QA
+
+On all main pages:
+
+1. **HTML sanity**
+
+   * Fix any obvious structural issues:
+
+     * Missing `<title>`, broken `<head>` tags, mismatched tags.
+     * Broken `<a>` links (e.g. pointing to non-existent pages).
+   * Keep HTML **semantic** where reasonable (`<header>`, `<nav>`, `<main>`, `<footer>`, `<section>`, etc.).
+
+2. **Visual consistency**
+
+   * Ensure headings, paragraphs, buttons, and cards use consistent classes and spacing.
+   * Make sure repeated components (hero sections, CTA strips, testimonials, etc.) match across pages.
+
+3. **Responsiveness**
+
+   * Check common breakpoints:
+
+     * Mobile portrait (~375–414px).
+     * Tablet (~768px).
+     * Desktop (≥ 1200px).
+   * Fix any obvious layout breaks (overflow, overlapping text, unusable nav).
+
+4. **Console & basic performance**
+
+   * Make sure there are **no JavaScript errors** in the console.
+   * Don’t add heavy libraries unnecessarily.
+   * If you see very large images, suggest more efficient sizing or formats (WebP) but don’t rewrite everything at once without asking.
+
+---
+
+### 5. Vercel readiness
+
+1. **Static hosting assumptions**
+
+   * Confirm that the site is static:
+
+     * HTML, CSS, and JS only.
+     * No server-side PHP or WordPress dependencies.
+   * If there is any build step (e.g. bundler), describe it and ensure it’s minimal.
+
+2. **Project root**
+
+   * Confirm what folder Vercel should serve:
+
+     * If it’s the repo root (HTML files in root), say so.
+     * If there’s a `dist/` or `build/` folder, specify that and ensure the build command is correct.
+
+3. **Configuration**
+
+   * If appropriate, create/update a minimal `vercel.json` for:
+
+     * Project root.
+     * Redirects (see next section).
+   * Do not introduce advanced features unless asked; keep config simple and documented in comments.
+
+---
+
+### 6. 301 redirects & domain shift (WordPress → static site on Vercel)
+
+I will provide (or we will construct together) a mapping of:
+
+* **Old WordPress URLs** → **New static URLs**
+
+Your job:
+
+1. **Create a redirect map**
+
+   * Draft a list of `{source: old_path, destination: new_path}` pairs based on:
+
+     * Likely old WP slugs.
+     * Any mapping I give you from Google Search Console / memory.
+
+2. **Implement 301s in `vercel.json`**
+
+   * Add a `redirects` block like:
+
+   ```json
+   {
+     "redirects": [
+       {
+         "source": "/old-wordpress-slug/",
+         "destination": "/new-static-page/",
+         "permanent": true
+       }
+     ]
+   }
+   ```
+
+   * Use **trailing slashes** consistently with how the new site is structured.
+
+3. **Check for conflicts**
+
+   * Make sure:
+
+     * There are no redirect loops.
+     * No two redirects fight over the same `source`.
+     * All redirected destinations actually exist as pages on the static site.
+
+4. **Post-deployment checklist (for me)**
+
+   * Remind me to:
+
+     * Update DNS so the domain points to Vercel.
+     * Verify the domain in Vercel.
+     * Test key old URLs in the browser and confirm they 301 correctly to new pages.
+
+---
+
+### 7. How I want you to work
+
+* Work in **small, clear steps**:
+
+  * First: report current structure.
+  * Then: suggest a cleanup/unification plan.
+  * Then: apply changes in batches (CSS, layout, redirects), explaining what you’re changing.
+* Avoid breaking existing working pages:
+
+  * If something is risky, propose the change and wait for confirmation.
+* When you finish a big step (CSS unification, layout unification, redirects), give me:
+
+  * A short summary of what you changed.
+  * Any follow-up checks I should run (e.g. “test these pages on mobile/desktop”).
+
+Use this plan as your roadmap to get the repo **clean, unified, and ready for Vercel**, while preserving SEO via 301 redirects from the old WordPress URLs.

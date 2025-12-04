@@ -7,9 +7,6 @@ Allow: /
 # Sitemaps
 Sitemap: https://onlinetranslation.ae/sitemap.xml
 
-# Crawl-delay
-Crawl-delay: 1
-
 # Block sensitive paths
 Disallow: /admin/
 Disallow: /private/

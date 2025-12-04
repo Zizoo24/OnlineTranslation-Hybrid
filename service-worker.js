@@ -1,10 +1,16 @@
-const CACHE_NAME = 'onlinetranslation-v98';
+const CACHE_NAME = 'onlinetranslation-v100';
 const urlsToCache = [
   '/',
   '/index.html',
   '/styles/porto-desktop.css',
   '/styles/sticky-mobile.css',
+  '/styles/mobile-ios.css',
+  '/styles/mobile-android.css',
+  '/styles/desktop-macos.css',
+  '/styles/dark-mode.css',
   '/scripts/main.js',
+  '/scripts/os-detect.js',
+  '/scripts/search-index.js',
   '/manifest.webmanifest',
   '/images/icons/favicon.svg',
   'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap',

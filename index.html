@@ -377,41 +377,59 @@
             <div class="sidebar-nav">
                 <ul>
                     <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-                    <li class="sidebar-section-title">Services</li>
-                    <li><a href="services/legal-translation/"><i class="fas fa-gavel"></i> Legal Translation</a></li>
-                    <li><a href="services/golden-visa-translation/"><i class="fas fa-passport"></i> Golden Visa</a></li>
-                    <li><a href="services/attestation/"><i class="fas fa-stamp"></i> Attestation & MOFAIC</a></li>
-                    <li><a href="services/certificate-translation/"><i class="fas fa-certificate"></i> Certificate Translation</a></li>
-                    <li><a href="services/corporate-translation/"><i class="fas fa-building"></i> Corporate Translation</a></li>
-                    <li class="sidebar-section-title">Personal Documents</li>
-                    <li><a href="personal/vital-records/birth/"><i class="fas fa-baby"></i> Birth Certificate</a></li>
-                    <li><a href="personal/vital-records/marriage/"><i class="fas fa-ring"></i> Marriage Certificate</a></li>
-                    <li><a href="personal/academic/degree/"><i class="fas fa-graduation-cap"></i> University Degree</a></li>
-                    <li><a href="personal/immigration/pcc/"><i class="fas fa-shield-alt"></i> Police Clearance</a></li>
-                    <li><a href="personal/immigration/bank/"><i class="fas fa-university"></i> Bank Statement</a></li>
-                    <li><a href="personal/immigration/license/"><i class="fas fa-id-card"></i> Driving License</a></li>
-                    <li class="sidebar-section-title">Corporate Documents</li>
-                    <li><a href="legal/corporate/poa/"><i class="fas fa-file-signature"></i> Power of Attorney</a></li>
-                    <li><a href="legal/corporate/moa/"><i class="fas fa-building"></i> Memorandum of Association</a></li>
-                    <li><a href="legal/contracts/nda/"><i class="fas fa-file-contract"></i> NDA Translation</a></li>
-                    <li><a href="specialized/medical/"><i class="fas fa-stethoscope"></i> Medical Reports</a></li>
-                    <li class="sidebar-section-title">Locations</li>
-                    <li><a href="locations/dubai/palm-jumeirah/"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</a></li>
-                    <li><a href="locations/dubai/jlt/"><i class="fas fa-map-marker-alt"></i> JLT & DMCC</a></li>
-                    <li><a href="locations/dubai/difc/"><i class="fas fa-map-marker-alt"></i> DIFC</a></li>
-                    <li><a href="locations/dubai/business-bay/"><i class="fas fa-map-marker-alt"></i> Business Bay</a></li>
-                    <li><a href="locations/abu-dhabi/"><i class="fas fa-map-marker-alt"></i> Abu Dhabi</a></li>
-                    <li><a href="locations/sharjah/"><i class="fas fa-map-marker-alt"></i> Sharjah</a></li>
-                    <li class="sidebar-section-title">Industries</li>
-                    <li><a href="industries/legal/"><i class="fas fa-balance-scale"></i> Legal & Law Firms</a></li>
-                    <li><a href="industries/healthcare/"><i class="fas fa-heartbeat"></i> Healthcare</a></li>
-                    <li><a href="industries/real-estate/"><i class="fas fa-home"></i> Real Estate</a></li>
-                    <li><a href="industries/e-commerce/"><i class="fas fa-shopping-cart"></i> E-Commerce</a></li>
-                    <li class="sidebar-section-title">Resources</li>
-                    <li><a href="resources/pricing-guide/"><i class="fas fa-tags"></i> Pricing Guide</a></li>
-                    <li><a href="resources/faq/"><i class="fas fa-question-circle"></i> FAQ</a></li>
-                    <li><a href="resources/document-checklist/"><i class="fas fa-list-check"></i> Document Checklist</a></li>
-                    <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    
+                    <li class="sidebar-section-title" data-accordion="services">Services <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-services">
+                        <li><a href="services/legal-translation/"><i class="fas fa-gavel"></i> Legal Translation</a></li>
+                        <li><a href="services/golden-visa-translation/"><i class="fas fa-passport"></i> Golden Visa</a></li>
+                        <li><a href="services/attestation/"><i class="fas fa-stamp"></i> Attestation & MOFAIC</a></li>
+                        <li><a href="services/certificate-translation/"><i class="fas fa-certificate"></i> Certificate Translation</a></li>
+                        <li><a href="services/corporate-translation/"><i class="fas fa-building"></i> Corporate Translation</a></li>
+                    </ul>
+                    
+                    <li class="sidebar-section-title" data-accordion="personal">Personal Documents <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-personal">
+                        <li><a href="personal/vital-records/birth/"><i class="fas fa-baby"></i> Birth Certificate</a></li>
+                        <li><a href="personal/vital-records/marriage/"><i class="fas fa-ring"></i> Marriage Certificate</a></li>
+                        <li><a href="personal/academic/degree/"><i class="fas fa-graduation-cap"></i> University Degree</a></li>
+                        <li><a href="personal/immigration/pcc/"><i class="fas fa-shield-alt"></i> Police Clearance</a></li>
+                        <li><a href="personal/immigration/bank/"><i class="fas fa-university"></i> Bank Statement</a></li>
+                        <li><a href="personal/immigration/license/"><i class="fas fa-id-card"></i> Driving License</a></li>
+                    </ul>
+                    
+                    <li class="sidebar-section-title" data-accordion="corporate">Corporate Documents <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-corporate">
+                        <li><a href="legal/corporate/poa/"><i class="fas fa-file-signature"></i> Power of Attorney</a></li>
+                        <li><a href="legal/corporate/moa/"><i class="fas fa-building"></i> Memorandum of Association</a></li>
+                        <li><a href="legal/contracts/nda/"><i class="fas fa-file-contract"></i> NDA Translation</a></li>
+                        <li><a href="specialized/medical/"><i class="fas fa-stethoscope"></i> Medical Reports</a></li>
+                    </ul>
+                    
+                    <li class="sidebar-section-title" data-accordion="locations">Locations <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-locations">
+                        <li><a href="locations/dubai/palm-jumeirah/"><i class="fas fa-map-marker-alt"></i> Palm Jumeirah</a></li>
+                        <li><a href="locations/dubai/jlt/"><i class="fas fa-map-marker-alt"></i> JLT & DMCC</a></li>
+                        <li><a href="locations/dubai/difc/"><i class="fas fa-map-marker-alt"></i> DIFC</a></li>
+                        <li><a href="locations/dubai/business-bay/"><i class="fas fa-map-marker-alt"></i> Business Bay</a></li>
+                        <li><a href="locations/abu-dhabi/"><i class="fas fa-map-marker-alt"></i> Abu Dhabi</a></li>
+                        <li><a href="locations/sharjah/"><i class="fas fa-map-marker-alt"></i> Sharjah</a></li>
+                    </ul>
+                    
+                    <li class="sidebar-section-title" data-accordion="industries">Industries <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-industries">
+                        <li><a href="industries/legal/"><i class="fas fa-balance-scale"></i> Legal & Law Firms</a></li>
+                        <li><a href="industries/healthcare/"><i class="fas fa-heartbeat"></i> Healthcare</a></li>
+                        <li><a href="industries/real-estate/"><i class="fas fa-home"></i> Real Estate</a></li>
+                        <li><a href="industries/e-commerce/"><i class="fas fa-shopping-cart"></i> E-Commerce</a></li>
+                    </ul>
+                    
+                    <li class="sidebar-section-title" data-accordion="resources">Resources <i class="fas fa-chevron-down accordion-icon"></i></li>
+                    <ul class="sidebar-accordion-content" id="accordion-resources">
+                        <li><a href="resources/pricing-guide/"><i class="fas fa-tags"></i> Pricing Guide</a></li>
+                        <li><a href="resources/faq/"><i class="fas fa-question-circle"></i> FAQ</a></li>
+                        <li><a href="resources/document-checklist/"><i class="fas fa-list-check"></i> Document Checklist</a></li>
+                        <li><a href="contact.html"><i class="fas fa-envelope"></i> Contact Us</a></li>
+                    </ul>
                 </ul>
             </div>
             <div class="sidebar-contact">

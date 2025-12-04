@@ -207,6 +207,45 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', closeSidebar);
     });
 
+    // Sidebar Accordion Functionality
+    const accordionHeaders = document.querySelectorAll('.sidebar-section-title[data-accordion]');
+    accordionHeaders.forEach(function(header) {
+        header.addEventListener('click', function(e) {
+            e.stopPropagation();
+            const accordionId = this.getAttribute('data-accordion');
+            const content = document.getElementById('accordion-' + accordionId);
+            
+            if (content) {
+                const isExpanded = content.classList.contains('expanded');
+                
+                if (isExpanded) {
+                    content.classList.remove('expanded');
+                    this.classList.remove('expanded');
+                } else {
+                    content.classList.add('expanded');
+                    this.classList.add('expanded');
+                }
+            }
+        });
+    });
+    
+    // Open Services accordion by default when sidebar opens
+    function initSidebarAccordions() {
+        const servicesAccordion = document.getElementById('accordion-services');
+        const servicesHeader = document.querySelector('[data-accordion="services"]');
+        if (servicesAccordion && servicesHeader) {
+            servicesAccordion.classList.add('expanded');
+            servicesHeader.classList.add('expanded');
+        }
+    }
+    
+    // Initialize accordions when sidebar opens
+    const originalOpenSidebar = openSidebar;
+    openSidebar = function() {
+        originalOpenSidebar();
+        initSidebarAccordions();
+    };
+
     // Search Overlay
     const searchOverlay = document.getElementById('search-overlay');
     const searchToggle = document.getElementById('searchToggle');

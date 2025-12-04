@@ -258,19 +258,57 @@
 }
 
 .sidebar-section-title {
-    padding: 12px 28px 8px;
-    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 28px;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    color: var(--text-muted);
-    margin-top: 10px;
-    border-top: 1px solid var(--border-color);
+    letter-spacing: 1.2px;
+    color: var(--text-muted, #6c757d);
+    margin-top: 0;
+    border-top: 1px solid var(--border-color, #e9ecef);
+    background: transparent;
+    cursor: pointer;
+    transition: var(--transition-fast);
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
 }
 
 .sidebar-section-title:first-child {
     margin-top: 0;
     border-top: none;
+}
+
+.sidebar-section-title:hover,
+.sidebar-section-title:active {
+    background: rgba(0, 0, 0, 0.03);
+    color: var(--accent-color, #ff1654);
+}
+
+.sidebar-section-title .accordion-icon {
+    font-size: 10px;
+    color: var(--text-muted, #6c757d);
+    transition: transform 0.3s ease;
+}
+
+.sidebar-section-title.expanded .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.sidebar-accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.sidebar-accordion-content.expanded {
+    max-height: 500px;
+}
+
+.sidebar-accordion-content li a {
+    padding-left: 44px !important;
 }
 
 .sidebar-nav ul li a {

@@ -1018,6 +1018,77 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 18px;
 }
 
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 28px;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 2px solid transparent;
+    min-height: 52px;
+}
+
+.hero-btn i {
+    font-size: 18px;
+}
+
+.hero-btn--primary {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 20px rgba(255, 22, 84, 0.35);
+}
+
+.hero-btn--primary:hover,
+.hero-btn--primary:active {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(255, 22, 84, 0.45);
+    color: #ffffff;
+}
+
+.hero-btn--ghost {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.hero-btn--ghost:hover,
+.hero-btn--ghost:active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    .hero-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 18px 24px;
+        font-size: 14px;
+    }
+}
+
 .hero-shape-divider {
     position: absolute;
     bottom: 0;

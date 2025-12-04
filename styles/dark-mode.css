@@ -674,12 +674,39 @@ body.theme-dark ::selection {
 }
 
 /* Links in content */
-body.theme-dark a:not(.btn-coral):not(.hero-cta):not(.header-cta):not(.sidebar-cta):not(.card-link):not(.footer-item) {
+body.theme-dark a:not(.btn-coral):not(.hero-cta):not(.header-cta):not(.sidebar-cta):not(.card-link):not(.footer-item):not(.hero-btn) {
     color: var(--primary-color);
 }
 
-body.theme-dark a:not(.btn-coral):not(.hero-cta):not(.header-cta):not(.sidebar-cta):not(.card-link):not(.footer-item):hover {
+body.theme-dark a:not(.btn-coral):not(.hero-cta):not(.header-cta):not(.sidebar-cta):not(.card-link):not(.footer-item):not(.hero-btn):hover {
     color: var(--accent-color);
+}
+
+/* Hero Buttons - Dark Mode */
+body.theme-dark .hero-btn--primary {
+    background: var(--accent-color);
+    color: #ffffff;
+    border-color: var(--accent-color);
+}
+
+body.theme-dark .hero-btn--primary:hover,
+body.theme-dark .hero-btn--primary:active {
+    background: var(--accent-dark);
+    border-color: var(--accent-dark);
+    color: #ffffff;
+}
+
+body.theme-dark .hero-btn--ghost {
+    background: transparent;
+    color: #ffffff;
+    border-color: rgba(255, 255, 255, 0.4);
+}
+
+body.theme-dark .hero-btn--ghost:hover,
+body.theme-dark .hero-btn--ghost:active {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #ffffff;
+    color: #ffffff;
 }
 
 /* Preloader */
@@ -1121,8 +1148,32 @@ body.theme-dark .sidebar-tagline {
 }
 
 body.theme-dark .sidebar-section-title {
-    color: #8b949e !important;
-    border-top-color: #30363d !important;
+    color: rgba(255, 255, 255, 0.85) !important;
+    border-top-color: rgba(255, 255, 255, 0.1) !important;
+    background: transparent !important;
+}
+
+body.theme-dark .sidebar-section-title:hover,
+body.theme-dark .sidebar-section-title:active {
+    background: rgba(255, 255, 255, 0.05) !important;
+    color: #ffffff !important;
+}
+
+body.theme-dark .sidebar-section-title .accordion-icon {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+body.theme-dark .sidebar-accordion-content {
+    background: rgba(0, 0, 0, 0.15) !important;
+}
+
+body.theme-dark .sidebar-accordion-content li a {
+    color: #e6edf3 !important;
+}
+
+body.theme-dark .sidebar-accordion-content li a:hover {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.08) !important;
 }
 
 body.theme-dark .sidebar-nav ul li a {

@@ -18,7 +18,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
     <link rel="stylesheet" href="styles/porto-desktop.css">
     <link rel="stylesheet" href="styles/sticky-mobile.css">
     
@@ -283,19 +283,20 @@
                         </div>
                         
                         <form class="contact-form">
+                            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" placeholder="Your Name" required autocomplete="name" minlength="2" maxlength="100">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
+                                    <input type="email" name="email" placeholder="Email Address" required autocomplete="email" maxlength="100">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number">
+                                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" autocomplete="tel" pattern="[0-9+\s\-()]+" maxlength="20">
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Describe your document(s) and requirements..." rows="5"></textarea>
+                                <textarea name="message" placeholder="Describe your document(s) and requirements..." rows="5" maxlength="1000"></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Send Message</button>
                         </form>

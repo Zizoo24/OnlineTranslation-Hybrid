@@ -394,10 +394,10 @@ document.addEventListener('DOMContentLoaded', function() {
         window.addEventListener('load', function() {
             navigator.serviceWorker.register('/service-worker.js')
                 .then(function(registration) {
-                    console.log('ServiceWorker registered');
+                    // ServiceWorker registered successfully
                 })
                 .catch(function(err) {
-                    console.log('ServiceWorker registration failed');
+                    // ServiceWorker registration failed
                 });
         });
     }

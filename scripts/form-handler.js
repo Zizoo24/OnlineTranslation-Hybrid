@@ -8,7 +8,7 @@ const supabaseUrl = window.SUPABASE_URL || document.querySelector('meta[name="su
 const supabaseKey = window.SUPABASE_ANON_KEY || document.querySelector('meta[name="supabase-key"]')?.content;
 
 if (!supabaseUrl || !supabaseKey) {
-    console.error('Supabase credentials not found');
+    // Supabase credentials not configured
 }
 
 const supabase = createClient(supabaseUrl, supabaseKey);
@@ -38,7 +38,6 @@ async function submitContactForm(formData) {
             data: data
         };
     } catch (error) {
-        console.error('Form submission error:', error);
         return {
             success: false,
             message: 'Unable to send message. Please try WhatsApp instead.',
@@ -75,7 +74,6 @@ async function submitDocumentRequest(formData) {
             data: data
         };
     } catch (error) {
-        console.error('Document request error:', error);
         return {
             success: false,
             message: 'Unable to submit request. Please try WhatsApp instead.',

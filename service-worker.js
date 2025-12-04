@@ -21,14 +21,13 @@ self.addEventListener('install', function(event) {
   event.waitUntil(
     caches.open(CACHE_NAME)
       .then(function(cache) {
-        console.log('Opened cache');
         return cache.addAll(urlsToCache.map(url => {
           if (url.startsWith('http')) {
             return new Request(url, { mode: 'cors' });
           }
           return url;
         })).catch(err => {
-          console.log('Cache addAll error:', err);
+          // Cache error - silent fail in production
         });
       })
   );

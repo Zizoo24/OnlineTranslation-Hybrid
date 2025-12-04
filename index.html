@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=5, viewport-fit=cover">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; img-src 'self' data: https:; connect-src 'self' https://api.web3forms.com; frame-ancestors 'none';">
+    <meta http-equiv="X-Frame-Options" content="DENY">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <title>MOJ Certified Legal Translation Dubai | Guaranteed Court Acceptance | OnlineTranslation.ae</title>
     <meta name="description" content="Professional legal translation services in Dubai with guaranteed UAE court acceptance. Ministry of Justice certified translators for documents, contracts, and attestation. Fast, secure, reliable.">
     <meta name="keywords" content="legal translation dubai, certified translation, MOJ translation, Arabic translation, document attestation UAE, court translation, MOFAIC, Dubai courts">
@@ -62,7 +65,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
     
     <!-- Stylesheets -->
     <link rel="stylesheet" href="styles/porto-desktop.css">
@@ -74,6 +77,7 @@
     <link rel="stylesheet" href="styles/mobile-android.css">
     <link rel="stylesheet" href="styles/desktop-macos.css">
     <link rel="stylesheet" href="styles/dark-mode.css">
+    <link rel="stylesheet" href="styles/print.css" media="print">
     
     <!-- OS Detection (early load for flash prevention) -->
     <script src="scripts/os-detect.js"></script>
@@ -220,13 +224,14 @@
     </script>
 </head>
 <body class="theme-light">
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <div id="preloader">
         <div class="spinner"></div>
     </div>
 
     <div id="page">
         <!-- Desktop Header - Exodus Style -->
-        <header id="header" class="header-desktop exodus-header">
+        <header id="header" class="header-desktop exodus-header" role="banner">
             <!-- Top Announcement Bar -->
             <div class="header-announcement">
                 <div class="container announcement-flex">
@@ -244,14 +249,14 @@
                     <div class="header-main-row">
                         <div class="header-logo">
                             <a href="index.html">
-                                <img src="images/logo/brand/emblem-64.png" alt="OnlineTranslation.ae" class="logo-img" loading="eager">
+                                <img src="images/logo/brand/emblem-64.png" alt="OnlineTranslation.ae" class="logo-img" loading="eager" width="64" height="64">
                                 <div class="logo-text-block">
                                     <span class="logo-text">Online<span class="logo-suffix">Translation</span><span class="logo-domain">.ae</span></span>
                                     <span class="logo-tagline">Boutique Legal Translation</span>
                                 </div>
                             </a>
                         </div>
-                        <nav class="header-nav" id="desktopNav">
+                        <nav class="header-nav" id="desktopNav" role="navigation" aria-label="Main navigation">
                             <ul class="nav-menu">
                                 <li class="nav-item has-dropdown">
                                     <a href="index.html" class="nav-link active">Home</a>
@@ -364,7 +369,7 @@
         <nav id="menu-sidebar" class="sidebar-menu" aria-label="Mobile navigation">
             <div class="sidebar-header">
                 <a href="index.html" class="sidebar-logo">
-                    <img src="images/logo/brand/emblem-256.png" alt="OnlineTranslation.ae" class="sidebar-emblem" loading="lazy">
+                    <img src="images/logo/brand/emblem-256.png" alt="OnlineTranslation.ae" class="sidebar-emblem" loading="lazy" width="256" height="256">
                     <div class="sidebar-brand">
                         <span class="sidebar-brand-name">Online<span class="brand-suffix">Translation.ae</span></span>
                         <span class="sidebar-tagline">Boutique Legal Translation</span>
@@ -443,7 +448,7 @@
         </nav>
 
         <!-- Search Overlay -->
-        <div id="search-overlay" class="search-overlay">
+        <div id="search-overlay" class="search-overlay" role="search" aria-label="Site search">
             <div class="search-container">
                 <button class="search-close" id="searchClose" aria-label="Close search">
                     <i class="fas fa-times"></i>
@@ -466,11 +471,11 @@
 
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
-        <main class="main-content">
+        <main class="main-content" id="main-content" role="main">
             <!-- Hero Section - Exodus Premium Style -->
             <section id="home" class="hero-section exodus-hero">
                 <div class="hero-background">
-                    <img src="images/onedrive/hero/office-team.png" alt="OnlineTranslation.ae Professional Team" class="hero-image" loading="eager">
+                    <img src="images/onedrive/hero/office-team.png" alt="OnlineTranslation.ae Professional Team" class="hero-image" loading="eager" width="1920" height="1080">
                     <div class="hero-overlay exodus-overlay"></div>
                 </div>
                 <div class="container">
@@ -1104,19 +1109,20 @@
                             <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
                             <input type="hidden" name="subject" value="New Translation Request from OnlineTranslation.ae">
                             <input type="hidden" name="from_name" value="OnlineTranslation.ae Contact Form">
+                            <input type="text" name="_honeypot" style="display:none" tabindex="-1" autocomplete="off">
                             <div class="form-row">
                                 <div class="form-group">
-                                    <input type="text" name="name" placeholder="Your Name" required>
+                                    <input type="text" name="name" placeholder="Your Name" required autocomplete="name" minlength="2" maxlength="100">
                                 </div>
                                 <div class="form-group">
-                                    <input type="email" name="email" placeholder="Email Address" required>
+                                    <input type="email" name="email" placeholder="Email Address" required autocomplete="email" maxlength="100">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number">
+                                <input type="tel" name="phone" placeholder="Phone / WhatsApp Number" autocomplete="tel" pattern="[0-9+\s\-()]+" maxlength="20">
                             </div>
                             <div class="form-group">
-                                <textarea name="message" placeholder="Describe your document(s) and requirements..." rows="5"></textarea>
+                                <textarea name="message" placeholder="Describe your document(s) and requirements..." rows="5" maxlength="1000"></textarea>
                             </div>
                             <button type="submit" class="submit-btn">Submit Request</button>
                             <div id="formResult" class="form-result"></div>
@@ -1135,7 +1141,7 @@
         </main>
 
         <!-- Footer -->
-        <footer class="footer">
+        <footer class="footer" role="contentinfo">
             <div class="container">
                 <div class="footer-grid">
                     <div class="footer-brand">

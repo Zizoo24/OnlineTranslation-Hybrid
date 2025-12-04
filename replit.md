@@ -1,7 +1,7 @@
 # OnlineTranslation.ae Website
 
 ## Overview
-OnlineTranslation.ae is a hybrid static HTML website designed to position the brand as a "Boutique Digital Concierge" for Ministry of Justice certified legal translation services in Dubai. It targets high-net-worth individuals and businesses, including Golden Visa applicants, property investors, and corporate clients, offering guaranteed court acceptance and professional legal translation. The site features a Divi immigration-inspired design with a modern navy/coral color scheme and smooth animations, aiming for a professional yet accessible online presence.
+OnlineTranslation.ae is a hybrid static HTML website positioning itself as a "Boutique Digital Concierge" for Ministry of Justice certified legal translation services in Dubai. It targets high-net-worth individuals and businesses (Golden Visa applicants, property investors, corporate clients) with guaranteed court acceptance. The site features a Divi immigration-inspired design, a modern navy/coral color scheme, and smooth animations, aiming for a professional yet accessible online presence. The business vision is to provide specialized, high-quality legal translation services, leveraging Dubai's market potential for international residents and businesses.
 
 ## User Preferences
 - Desktop: Corporate professional feel
@@ -14,35 +14,26 @@ OnlineTranslation.ae is a hybrid static HTML website designed to position the br
 - Use user's own photos from OneDrive instead of stock images
 
 ## System Architecture
-The project employs a hybrid static HTML architecture with a 4-Silo SEO structure for content organization.
+The project uses a hybrid static HTML architecture with a 4-Silo SEO structure for content organization.
 
 ### UI/UX Decisions
-- **Design Inspiration**: Divi Exodus immigration-inspired layout with precise module measurements.
+- **Design Inspiration**: Divi Exodus immigration-inspired layout.
 - **Color Scheme**: Primary Navy (#0E2B48), Accent Coral (#FF1654), Gold Highlight (#d4a54c).
-- **Typography**: Heading fonts: Montserrat/Jost (700-800 weight, uppercase with 0.3em letter-spacing); Body fonts: Open Sans/Roboto (400 weight, 1.8-1.9 line-height).
+- **Typography**: Heading fonts (Montserrat/Jost, 700-800 weight, uppercase, 0.3em letter-spacing); Body fonts (Open Sans/Roboto, 400 weight, 1.8-1.9 line-height).
 - **Animations**: Smooth hover transitions (0.3s), translateY(-8px) card hover, box-shadow effects.
-- **Responsiveness**: Breakpoint at 992px for desktop/mobile switch. Mobile features a sticky bottom navigation and slide-out sidebar. Desktop includes a shrink header and animated cards.
-- **Branding**: Repositioned as "Boutique Digital Concierge" with "Guaranteed Court Acceptance."
+- **Responsiveness**: Breakpoint at 992px; mobile features sticky bottom navigation and slide-out sidebar; desktop includes shrink header and animated cards.
+- **Branding**: "Boutique Digital Concierge" with "Guaranteed Court Acceptance."
 - **Communication Channels**: Tri-channel approach with WhatsApp (primary), Apple Messages for Business, and Corporate Email.
-
-### Exodus Module Specifications (Latest)
-- **Hero Section**: Container max-width 1180px, 110px top/140px bottom padding, title 46px with 0.3em letter-spacing, description 15px at 1.9 line-height
-- **Overlap Cards**: 320px width, -115px margin-top offset, 28px/22px padding, 60px outlined icons with 2px border
-- **Process Steps**: 260px cards, 32px padding, 22px step index (01/02/03), 66px icons with accent border
-- **Stats Bar**: #FF1654 gradient background, 36px vertical padding, 46px counter numbers, 12px uppercase labels with 0.3em letter-spacing
-- **Why Choose Us**: 280px cards, 64px medallion icons with rgba background, 16px uppercase titles
-- **Services Grid**: 360px cards, 220px image height, 24px content padding, 18px titles
-- **About Section**: 420px image column, 50px gap, 36px/24px experience badge sizing
 
 ### Technical Implementations
 - **PWA Support**: Installable and offline-capable using `manifest.webmanifest` and `service-worker.js`.
 - **SEO Optimization**: Schema.org structured data (BreadcrumbList, Service, LocalBusiness), `sitemap.xml` with 4-silo structure, `robots.txt`, Open Graph.
-- **OS Detection**: `os-detect.js` for iOS, Android, and macOS-specific styling.
+- **OS Detection**: `os-detect.js` for OS-specific styling.
 - **Static File Server**: `server.py` for local development.
 
 ### Feature Specifications
 - **Unified Navigation**: Single hamburger menu and slide-out sidebar for both desktop and mobile.
-- **Key Features**: MOJ-Certified Translators, White-Glove Digital Concierge, Document Tracking & Audit Trail emphasized.
+- **Key Features**: MOJ-Certified Translators, White-Glove Digital Concierge, Document Tracking & Audit Trail.
 - **Content Focus**: Solutions-focused services like Golden Visa Pack, DLD Property POA, DMCC Corporate Setup.
 
 ### System Design Choices
@@ -52,133 +43,10 @@ The project employs a hybrid static HTML architecture with a 4-Silo SEO structur
     3.  `/industries/`: Industry-specific (Legal, Healthcare, Real Estate, E-commerce).
     4.  `/resources/`: Pricing Guide, FAQ, Document Checklist, Golden Visa Checklist 2025, Attestation Chain Guide.
 - **Deployment**: Configured for Vercel with `vercel.json`, also compatible with Netlify/GitHub Pages.
+- **CSS Architecture**: 6 CSS files separated for OS-specific conditional loading: `porto-desktop.css` (main), `sticky-mobile.css`, `dark-mode.css`, `mobile-ios.css`, `mobile-android.css`, `desktop-macos.css`.
 
 ## External Dependencies
 - **OneDrive**: Used for accessing user's images and brand assets from the `OtLegalTranslationcom` folder.
 - **GitHub**: Connected for version control.
-- **Google Docs**: User declined direct integration; content access requires manual sharing or document links.
-
-## Recent Changes (December 4, 2025)
-- **Pre-Production QA Audit**: Comprehensive audit and fixes across all 29 pages:
-  - Fixed truncated FAQ accordion JavaScript in legal-translation page
-  - Removed broken overlap-cards-fix.css reference causing 404 errors
-  - Unified navigation (header dropdowns, mobile sidebar, footer) across all 29 pages
-  - Fixed robots.txt (removed Crawl-delay:1 that was slowing Google crawl rate)
-  - Updated sitemap.xml dates to current (2025-12-04)
-  - Added Open Graph meta tags to privacy.html and terms.html
-  - Service Worker Cache: Updated to v100 with os-detect.js and search-index.js caching
-- **Image Optimization**: Compressed 24 large images (88% size reduction):
-  - Hero images reduced from ~50MB to ~5MB total
-  - Used pngquant + imagemagick for quality-preserving compression
-  - Resized oversized images to max 1920x1080
-- **CSS Architecture Note**: 6 CSS files intentionally separated for OS-specific conditional loading:
-  - porto-desktop.css (main), sticky-mobile.css, dark-mode.css
-  - mobile-ios.css, mobile-android.css, desktop-macos.css (loaded by os-detect.js)
-
-### Technical Debt: Inline Styles (1,750 occurrences)
-Most common inline style patterns for future CSS refactoring:
-| Property | Count | Recommendation |
-|----------|-------|----------------|
-| color | 1,053 | Create utility classes (.text-coral, .text-gold, etc.) |
-| padding | 556 | Standardize spacing scale in CSS variables |
-| margin-bottom | 556 | Use consistent spacing utilities |
-| font-size | 515 | Define type scale in CSS (--text-sm, --text-lg, etc.) |
-| background | 377 | Extract to component classes |
-| border-radius | 340 | Use CSS variable (--radius-sm, --radius-lg) |
-| margin | 304 | Consolidate with padding into spacing system |
-
-## Previous Changes (November 30, 2025)
-- **Mobile CSS Fix**: Fixed iOS/Android CSS overriding `.service-card.accent` background:
-  - iOS CSS was setting `background: rgba(255, 255, 255, 0.8)` on all service cards
-  - Android CSS was setting `background: #ffffff` on all service cards
-  - Both now use `:not(.accent)` selector to preserve navy gradient on accent cards
-  - Service Worker Cache: Updated to v98
-- **CSS Duplicate Fix**: Removed conflicting duplicate `.service-card` definition that was causing white-on-white card rendering:
-  - Removed duplicate block at lines 4550-4607 in porto-desktop.css
-  - Primary definition at lines 2980-3103 now properly applies `.accent` variant with navy gradient
-  - Added list (ul/li) styles back to primary definition
-  - Service Worker Cache: Updated to v97
-- **Dubai Hub Page**: Created `/locations/dubai/` index page for breadcrumb navigation:
-  - New page lists all 4 Dubai sub-locations (Palm Jumeirah, DIFC, JLT, Business Bay)
-  - Updated navigation dropdown across all 29 pages to include "Dubai (All Areas)"
-  - Added to sitemap.xml and search-index.js
-  - Service Worker Cache: Updated to v96
-- **CSS Variable Fix**: Added missing light mode CSS variables that caused white-on-white rendering:
-  - Added `--bg-card: #ffffff` - Cards now have proper white background in light mode
-  - Added `--accent: #FF1654` - Alias for accent-color used in inline styles
-  - Added `--gold: #d4a54c` - Alias for gold-color used in inline styles
-  - Fixed 15 pages with card rendering issues: locations, services, resources, industries indexes
-  - Service Worker Cache: Updated to v95
-- **CSS Architecture Consolidation**: Merged main.css into porto-desktop.css to eliminate responsive breakpoint conflicts:
-  - Single source of truth for all layout/responsive styles (~7000 lines total)
-  - Eliminated overlapping media queries that caused footer alignment issues
-  - Removed main.css reference from all 28 HTML pages
-  - CSS file structure now: porto-desktop.css (core), sticky-mobile.css, dark-mode.css, OS-specific files
-  - Service Worker Cache: Updated to v94
-- **Exodus Divi Inner Page Styling**: Implemented consistent Exodus styling across inner pages:
-  - Added CSS classes: `.exodus-inner-hero`, `.exodus-breadcrumb`, `.exodus-highlights`, `.highlights-grid`, `.highlight-card`, `.exodus-section`, `.exodus-cards-grid`, `.exodus-quote-card`, `.exodus-cta-section`
-  - Updated Legal Translation service page with full Exodus styling (hero, coral highlights strip, stats bar, CTA)
-  - Updated all 4 Industry pages with Exodus styling: E-Commerce, Legal, Healthcare, Real Estate
-  - Each inner page now has: navy hero with breadcrumb, coral highlights section (3 cards), consistent typography
-  - Service Worker Cache: Updated to v91
-- **Mobile Responsive Grid Fix**: Fixed industry, location, and services pages that were cutting off content on mobile:
-  - Added responsive CSS classes: `.industry-layout`, `.industry-cards-2`, `.industry-cards-4` in main.css
-  - Replaced all inline grid styles with responsive classes across 15+ pages
-  - Grid breakpoints: 4 cols desktop → 2 cols tablet (@991px) → 1 col mobile (@767px)
-  - Service Worker Cache: Updated to v89
-- **Arkan Website Links**: Added clickable links to arkanlegaltranslation.ae wherever partner is mentioned (homepage partnership section, footer, Legal Translation page, Attestation page) with gold underline styling
-- **Site Search Functionality**: Implemented working client-side search:
-  - Created `scripts/search-index.js` with 22-page search index
-  - Search results display with category tags and hover states
-  - Added to all 25+ pages
-  - Service Worker Cache: Updated to v85
-- **WordPress Instructions for Arkan**: Created `docs/ARKAN-WordPress-Instructions.md` with step-by-step widget/page setup guide
-- **Arkan Legal Translation Partnership**: Strategic partnership implementation for MOJ certification fulfillment:
-  - Partnership trust badge section added to homepage (after stats, before testimonials)
-  - "Fulfilled by Arkan Legal Translation" disclosure notices on Legal Translation and Attestation service pages
-  - Footer updated with partnership mention (gold highlight on partner name)
-  - Partnership materials document created: `docs/arkan-partnership-materials.md` with PR release, content for Arkan's website (with dofollow backlink request), social media copy, and email template
-  - Service Worker Cache: Updated to v84
-- **Comprehensive SEO Audit**: Updated strategy document with top 10 Dubai competitors, high-intent keywords, backlink opportunities
-- **Image Alt Text Audit**: All 27+ pages verified - no issues found
-- **Linkable Content Pages**: Created two SEO-optimized resource guides for backlink acquisition:
-  - `/resources/golden-visa-checklist/` - Complete 2025 Golden Visa document checklist for all categories (Investor, Entrepreneur, Specialist Talent) with translation/attestation tables, FAQ schema
-  - `/resources/attestation-guide/` - Step-by-step MOFA attestation chain visual guide, Hague vs non-Hague requirements, HowTo schema markup
-- **Sitemap Updated**: Added new resource pages with priority 0.9 and 0.8 respectively
-- **Resources Hub**: Updated index to showcase both new guides
-- **Service Worker Cache**: Updated to v83
-- **3-Column Grid Enforcement**: All grids now capped at maximum 3 columns on desktop, 2 columns on tablet (@992px), 1 column on mobile (@768px)
-  - Services grids (five-col, exodus-services-grid): 3 cols max
-  - Languages grid: 3 cols max (was 6 columns)
-  - Stats grid: 3 cols max (was 4 columns)
-  - Why grid: 3 cols max (was 4 columns)
-  - Process steps: 3 cols max (was 4 columns)
-  - Reasons grid: 3 cols max (was 4 columns)
-  - Package grid: 3 cols max (was 4 columns)
-  - Attestation pricing: 3 cols max (was 4 columns)
-  - Extras grid: 3 cols max (was 6 columns)
-  - Footer grid: 3 cols max (was 4 columns)
-- **Sidebar Brand Update**: Added brand title "OnlineTranslation.ae" and tagline "Boutique Legal Translation" to mobile sidebar header across all 25+ pages
-- **Footer Dark Mode Fix**: Improved readability with higher contrast text (#c9d1d9 on #161b22), coral icons, and proper hover states
-- **Service Worker Cache**: Updated to v81
-
-## Earlier Changes (November 2025)
-- **Contact Form Integration**: Web3Forms configured to send to info@onlinetranslation.ae with WhatsApp redirect fallback (awaiting access key from user)
-- **Overlap Cards Fix**: Full-width coral background using CSS `isolation: isolate` to prevent navy strip bleed
-- **Why Choose Us Redesign**: Light background with white cards, 4px coral top border, gold icon circles (rgba(212, 165, 76, 0.12))
-- **Stats Bar Enhancement**: Labels now use gold color for proper visual hierarchy
-- **Header Overlap Fix**: Pages without breadcrumbs require 160px top padding to clear fixed header (~120px: 50px header-top + 70px header-main)
-- **Footer Redesign**: Compact footer with 70px emblem logo (60px mobile), 50px padding, smaller typography
-- **Navigation Spacing**: Fixed nav menu to prevent overlap (11px font, 8px padding, tighter gaps)
-- **3-Column Grid**: Updated all services grids to max 3 columns (desktop), 2 columns (tablet @992px), 1 column (mobile @768px)
-- **Unified Global Components**: All 25+ pages now have consistent Exodus-style header, full sidebar navigation, search overlay, and emblem footer
-  - 5 services inner pages (legal-translation, attestation, golden-visa-translation, certificate-translation, corporate-translation)
-  - 4 resources pages (index, faq, pricing-guide, document-checklist)
-  - 5 industries pages (index, legal, healthcare, real-estate, e-commerce)
-  - 7 locations pages (index, palm-jumeirah, jlt, difc, business-bay, abu-dhabi, sharjah)
-- **Font Consistency**: All pages use Montserrat/Open Sans (replaced Poppins/Roboto)
-- **OS-detect Stylesheets**: All inner pages include mobile-ios.css, mobile-android.css, desktop-macos.css, dark-mode.css
-
-## Documentation
-- **`docs/exodus-divi-modules.md`**: Reference document containing all Exodus Divi page templates, modules, and design patterns for building service/location/resource pages.
-- **`docs/OnlineTranslation-Strategy-Research.md`**: Comprehensive SEO strategy and competitive research including top 10 Dubai competitors, high-intent keywords, backlink opportunities, content gaps, Golden Visa market insights, and prioritized action items for NotebookLM upload.
+- **Google Docs**: Content accessed via manual sharing or document links (no direct integration).
+- **Web3Forms**: Configured for contact form submissions to info@onlinetranslation.ae with WhatsApp redirect fallback.

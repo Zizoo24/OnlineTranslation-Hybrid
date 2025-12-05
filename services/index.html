@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/porto-desktop.css">
     <link rel="stylesheet" href="../styles/sticky-mobile.css">
-    
+    <link rel="stylesheet" href="../styles/navigation-glassmorphism.css">
+    <link rel="stylesheet" href="../styles/mobile-action-bar.css">
     
     <link rel="stylesheet" href="../styles/mobile-ios.css">
     <link rel="stylesheet" href="../styles/mobile-android.css">
@@ -30,6 +31,7 @@
     <link rel="stylesheet" href="../styles/dark-mode.css">
     
     <script src="../scripts/os-detect.js"></script>
+    <script src="../scripts/navigation.js" defer></script>
     
     <script type="application/ld+json">
     {
@@ -983,6 +985,24 @@
         <button class="back-to-top" id="backToTop" aria-label="Back to top">
             <i class="fas fa-arrow-up"></i>
         </button>
+    </div>
+
+    <!-- Mobile Bottom Action Bar -->
+    <div class="mobile-action-bar">
+        <div class="mobile-action-bar-container">
+            <a href="https://wa.me/971508620217?text=I%20need%20translation%20services" class="mobile-action-btn mobile-action-btn--whatsapp" aria-label="Contact us on WhatsApp">
+                <span class="mobile-action-btn-icon"><i class="fab fa-whatsapp"></i></span>
+                <span class="mobile-action-btn-text">WhatsApp</span>
+            </a>
+            <a href="tel:+971508620217" class="mobile-action-btn mobile-action-btn--call" aria-label="Call us now">
+                <span class="mobile-action-btn-icon"><i class="fas fa-phone-alt"></i></span>
+                <span class="mobile-action-btn-text">Call</span>
+            </a>
+            <a href="https://wa.me/971508620217?text=I%20want%20to%20send%20documents%20for%20translation" class="mobile-action-btn mobile-action-btn--upload" aria-label="Send documents">
+                <span class="mobile-action-btn-icon"><i class="fas fa-file-upload"></i></span>
+                <span class="mobile-action-btn-text">Send Docs</span>
+            </a>
+        </div>
     </div>
 
     <script src="../scripts/main.js"></script>

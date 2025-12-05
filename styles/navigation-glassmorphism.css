@@ -1,0 +1,82 @@
+/* ========================================
+   GLASSMORPHISM NAVIGATION ENHANCEMENT
+   Improves readability on light backgrounds
+   ======================================== */
+
+/* Override existing header styles with improved glassmorphism */
+.header-desktop.exodus-header {
+    /* Enhanced glass effect - more opaque for better readability */
+    background: rgba(255, 255, 255, 0.75) !important;
+    backdrop-filter: blur(16px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04) !important;
+}
+
+/* Scrolled state - even stronger glass effect */
+.header-desktop.exodus-header.scrolled {
+    background: rgba(14, 43, 72, 0.95) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Ensure text is readable on glass background */
+.header-desktop.exodus-header:not(.scrolled) .nav-link {
+    color: #1a1a1a !important;
+    font-weight: 600;
+}
+
+.header-desktop.exodus-header:not(.scrolled) .logo-text {
+    color: #1a1a1a !important;
+}
+
+.header-desktop.exodus-header:not(.scrolled) .logo-tagline {
+    color: #555 !important;
+}
+
+/* Dropdown menu glassmorphism */
+.dropdown-menu {
+    background: rgba(255, 255, 255, 0.95) !important;
+    backdrop-filter: blur(20px) saturate(200%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(200%) !important;
+    border: 1px solid rgba(0, 0, 0, 0.08) !important;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12) !important;
+}
+
+/* Scrolled state - keep existing dark theme */
+.header-desktop.exodus-header.scrolled .nav-link,
+.header-desktop.exodus-header.scrolled .logo-text,
+.header-desktop.exodus-header.scrolled .logo-tagline {
+    color: #ffffff !important;
+}
+
+/* Smooth transitions */
+.header-desktop.exodus-header,
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text,
+.header-desktop.exodus-header .logo-tagline {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .header-desktop.exodus-header {
+        background: rgba(26, 26, 26, 0.75) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    
+    .header-desktop.exodus-header.scrolled {
+        background: rgba(14, 43, 72, 0.95) !important;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15) !important;
+    }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 1024px) {
+    .header-desktop.exodus-header {
+        backdrop-filter: blur(12px) saturate(180%) !important;
+        -webkit-backdrop-filter: blur(12px) saturate(180%) !important;
+    }
+}

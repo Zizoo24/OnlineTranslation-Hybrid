@@ -7,12 +7,18 @@
 
 ## ✅ COMPLETED PAGES
 
-### Hub Pages (1/7)
+### Hub Pages (2/7)
 1. ✅ **/legal-translation-dubai/** - Legal Translation Hub (2,800+ words)
    - Commit: 34ed04e
    - Structure: Hero + 3 service cards + 4-step process + 3 pricing tiers + 5 FAQ
    - Schema: Service markup included
    - Mobile: Action bar with legal-specific CTAs
+
+2. ✅ **/legal/contracts/** - Contracts Hub (2,600+ words)
+   - Commit: 9843a7c
+   - Structure: Hero + 6 contract cards + 4-step process + 3 pricing tiers + 5 FAQ
+   - Schema: Service markup included
+   - Mobile: Action bar with contract-specific CTAs
 
 ---
 

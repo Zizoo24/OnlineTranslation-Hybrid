@@ -4,83 +4,81 @@
    ============================================ */
 
 /* ==========================================
-   NAVIGATION - FORCE DARK TEXT
+   NAVIGATION - DARK GLASS WITH WHITE TEXT
    ========================================== */
 
-/* Override any white text in navigation */
-.header-desktop.exodus-header:not(.scrolled) .nav-link,
-.header-desktop.exodus-header:not(.scrolled) .logo-text,
-.header-desktop.exodus-header:not(.scrolled) .logo-suffix,
-.header-desktop.exodus-header:not(.scrolled) .logo-domain,
-.header-desktop.exodus-header:not(.scrolled) .logo-tagline,
-.header-desktop.exodus-header:not(.scrolled) .announcement-label {
-    color: #0E2B48 !important;
-}
-
-/* Scrolled state keeps existing dark navy background with white text - that's OK */
-.header-desktop.exodus-header.scrolled {
-    background: rgba(14, 43, 72, 0.98) !important;
-}
-
-.header-desktop.exodus-header.scrolled .nav-link,
-.header-desktop.exodus-header.scrolled .logo-text,
-.header-desktop.exodus-header.scrolled .logo-suffix,
-.header-desktop.exodus-header.scrolled .logo-domain {
+/* Dark glassmorphism navigation - white text throughout */
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text,
+.header-desktop.exodus-header .logo-suffix,
+.header-desktop.exodus-header .logo-domain {
     color: #ffffff !important;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
-.header-desktop.exodus-header.scrolled .logo-tagline {
-    color: rgba(255, 255, 255, 0.8) !important;
+.header-desktop.exodus-header .logo-tagline {
+    color: rgba(255, 255, 255, 0.85) !important;
+}
+
+/* Scrolled state - same white text, stronger shadow */
+.header-desktop.exodus-header.scrolled .nav-link,
+.header-desktop.exodus-header.scrolled .logo-text {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
 }
 
 /* ==========================================
-   DROPDOWN MENUS - FORCE DARK TEXT
+   DROPDOWN MENUS - DARK GLASS WITH WHITE TEXT
    ========================================== */
 
 .dropdown-menu,
 .nav-dropdown,
 .sub-menu {
-    background: rgba(255, 255, 255, 0.98) !important;
+    background: rgba(14, 43, 72, 0.95) !important;
     backdrop-filter: blur(24px) saturate(200%) !important;
     -webkit-backdrop-filter: blur(24px) saturate(200%) !important;
+    border: 1px solid rgba(255, 255, 255, 0.2) !important;
 }
 
 .dropdown-menu li a,
 .nav-dropdown li a,
 .sub-menu li a {
-    color: #1a1a1a !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-menu li a:hover,
 .nav-dropdown li a:hover,
 .sub-menu li a:hover {
-    color: #0E2B48 !important;
-    background: rgba(26, 95, 122, 0.1) !important;
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.15) !important;
 }
 
 /* ==========================================
-   MOBILE MENU - FORCE DARK TEXT
+   MOBILE MENU - DARK GLASS WITH WHITE TEXT
    ========================================== */
 
 .sidebar-menu,
 .mobile-menu,
 #menu-sidebar {
-    background: rgba(255, 255, 255, 0.98) !important;
+    background: rgba(14, 43, 72, 0.98) !important;
+    backdrop-filter: blur(20px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
 }
 
 .sidebar-nav a,
 .sidebar-menu a,
 .mobile-menu a {
-    color: #1a1a1a !important;
+    color: #ffffff !important;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .sidebar-brand-name,
 .sidebar-tagline {
-    color: #0E2B48 !important;
+    color: #ffffff !important;
 }
 
 .brand-suffix {
-    color: #0E2B48 !important;
+    color: #ffffff !important;
 }
 
 /* ==========================================
@@ -224,24 +222,24 @@ footer.light-footer a {
 }
 
 /* ==========================================
-   ENSURE NO TRANSPARENT BACKGROUNDS
+   ENSURE DARK GLASS BACKGROUND
    ========================================== */
 
-/* Remove any transparent backgrounds that cause issues */
+/* Ensure dark glassmorphism is applied */
 .header-desktop.exodus-header {
     /* Already handled by navigation-glassmorphism.css */
     /* This is just a safety net */
-    background: rgba(255, 255, 255, 0.90) !important;
+    background: rgba(14, 43, 72, 0.85) !important;
 }
 
 /* ==========================================
    TEXT SHADOWS FOR EXTRA READABILITY
    ========================================== */
 
-/* Add subtle text shadow to navigation for extra contrast */
-.header-desktop.exodus-header:not(.scrolled) .nav-link,
-.header-desktop.exodus-header:not(.scrolled) .logo-text {
-    text-shadow: 0 1px 2px rgba(255, 255, 255, 0.5);
+/* Dark shadow on white text for depth */
+.header-desktop.exodus-header .nav-link,
+.header-desktop.exodus-header .logo-text {
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 /* ==========================================
@@ -249,16 +247,16 @@ footer.light-footer a {
    ========================================== */
 
 @media (max-width: 1024px) {
-    /* Mobile menu text must be dark */
+    /* Mobile menu text is white on dark glass */
     .sidebar-menu a,
     .mobile-menu a {
-        color: #1a1a1a !important;
+        color: #ffffff !important;
     }
     
-    /* Mobile hamburger icon must be dark */
+    /* Mobile hamburger icon is white on dark glass */
     .hamburger-line,
     .menu-toggle-line {
-        background: #0E2B48 !important;
+        background: #ffffff !important;
     }
 }
 
@@ -267,14 +265,19 @@ footer.light-footer a {
    ========================================== */
 
 @media (prefers-color-scheme: dark) {
-    /* In dark mode, light text is appropriate */
-    .header-desktop.exodus-header:not(.scrolled) {
-        background: rgba(26, 26, 26, 0.90) !important;
+    /* In dark mode, use pure black glass */
+    .header-desktop.exodus-header {
+        background: rgba(10, 10, 10, 0.85) !important;
     }
     
-    .header-desktop.exodus-header:not(.scrolled) .nav-link,
-    .header-desktop.exodus-header:not(.scrolled) .logo-text {
+    .header-desktop.exodus-header.scrolled {
+        background: rgba(10, 10, 10, 0.95) !important;
+    }
+    
+    /* White text remains the same */
+    .header-desktop.exodus-header .nav-link,
+    .header-desktop.exodus-header .logo-text {
         color: #ffffff !important;
-        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+        text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
     }
 }

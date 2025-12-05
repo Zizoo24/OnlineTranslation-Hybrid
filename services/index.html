@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="../styles/sticky-mobile.css">
     <link rel="stylesheet" href="../styles/navigation-glassmorphism.css">
     <link rel="stylesheet" href="../styles/mobile-action-bar.css">
+    <link rel="stylesheet" href="../styles/services-enhanced.css">
     
     <link rel="stylesheet" href="../styles/mobile-ios.css">
     <link rel="stylesheet" href="../styles/mobile-android.css">
@@ -242,96 +243,137 @@
         <div class="sidebar-overlay" id="sidebarOverlay"></div>
 
         <main class="main-content">
-    <!-- HERO / INTRO -->
-    <section class="services-section" style="padding-top: 160px;">
-        <div class="container">
-            <div class="section-header center">
-                <span class="section-label">Our Services</span>
-                <h1 class="section-title">Translation Services in 43+ Languages</h1>
-                <p style="max-width: 760px; margin: 0 auto; color: var(--text-muted);">
-                    You do not need another large agency. You need someone who will quietly make sure your
-                    documents are accepted the first time. From Palm Jumeirah, OnlineTranslation.ae coordinates
-                    Ministry of Justice-licensed legal translation for Arabic, English, and a carefully selected
-                    network of other languages – without asking you to step away from your WhatsApp chat.
-                </p>
+    <!-- HERO SECTION -->
+    <section class="services-hero">
+        <div class="hero-badge">MOJ-Licensed • 43+ Languages</div>
+        <h1 class="hero-title">
+            <span class="title-prefix">Translation Services</span>
+            <span class="title-main">Built for Documents That Can't Fail</span>
+        </h1>
+        <p class="hero-subtitle">
+            From Palm Jumeirah, we coordinate Ministry of Justice-licensed legal translation for courts, immigration, and corporate matters—without you leaving WhatsApp.
+        </p>
+        
+        <div class="hero-cta-group">
+            <a href="https://wa.me/971508620217?text=I%20need%20translation%20services" class="btn-primary">
+                <span class="btn-icon">💬</span>
+                Send Your Documents
+            </a>
+            <a href="#services-grid" class="btn-secondary">See How It Works ↓</a>
+        </div>
+        
+        <!-- Trust indicators -->
+        <div class="trust-bar">
+            <div class="trust-item">
+                <strong>24hr</strong> Standard
             </div>
+            <div class="trust-item">
+                <strong>Same-Day</strong> Express
+            </div>
+            <div class="trust-item">
+                <strong>100%</strong> Acceptance
+            </div>
+        </div>
+    </section>
 
-            <div class="services-grid" style="margin-top: 48px;">
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
-                    <h3>Legal Translation</h3>
-                    <p>
-                        Court documents, contracts, pleadings, powers of attorney, and legal correspondence
-                        prepared for Dubai Courts, DIFC, ADGM, and other UAE forums – handled as part of a
-                        managed, document-clearing workflow rather than a one-off job.
+    <!-- SERVICE CARDS -->
+    <section class="services-section" id="services-grid" style="padding: 4rem 0;">
+        <div class="container">
+
+            <div class="services-grid-enhanced">
+                <article class="service-card-enhanced card-legal">
+                    <div class="card-icon-enhanced">⚖️</div>
+                    <h3 class="card-title-enhanced">Legal Translation</h3>
+                    <p class="card-description-enhanced">
+                        Court documents, contracts, pleadings, powers of attorney—prepared for Dubai Courts, DIFC, ADGM, and UAE forums.
                     </p>
-                    <a href="legal-translation/" class="service-link">
-                        View Legal Translation <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>Court-ready formatting</li>
+                        <li>Dual-language alignment</li>
+                        <li>MOJ-certified</li>
+                    </ul>
+                    <a href="legal-translation/" class="card-cta-enhanced">
+                        View Service <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
 
-                <article class="service-card accent">
-                    <div class="service-icon"><i class="fas fa-passport"></i></div>
-                    <h3>Visa &amp; Immigration Files</h3>
-                    <p>
-                        Birth, marriage, education, employment, police clearance, and financial documents
-                        for Golden Visa, residency renewals, family sponsorship, and work permits – aligned
-                        with free zone and immigration portal requirements.
+                <article class="service-card-enhanced card-visa">
+                    <div class="card-icon-enhanced">🛂</div>
+                    <h3 class="card-title-enhanced">Golden Visa & Immigration</h3>
+                    <p class="card-description-enhanced">
+                        Birth, marriage, education certificates for Golden Visa, residency renewals, family sponsorship—aligned with portal requirements.
                     </p>
-                    <a href="golden-visa-translation/" class="service-link">
-                        Golden Visa &amp; Immigration <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>Free zone compliant</li>
+                        <li>Name consistency checks</li>
+                        <li>Portal-ready formats</li>
+                    </ul>
+                    <a href="golden-visa-translation/" class="card-cta-enhanced">
+                        View Service <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
 
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-certificate"></i></div>
-                    <h3>Certificate Translation</h3>
-                    <p>
-                        Birth, marriage, divorce, degree, death, and medical certificates used by HR,
-                        licensing bodies, schools, and embassies – translated with close attention to names,
-                        dates, and stamps so they match your official records.
+                <article class="service-card-enhanced card-certificate">
+                    <div class="card-icon-enhanced">📜</div>
+                    <h3 class="card-title-enhanced">Certificate Translation</h3>
+                    <p class="card-description-enhanced">
+                        Birth, marriage, degree, medical certificates—translated with attention to names, dates, and stamps for HR, embassies, schools.
                     </p>
-                    <a href="certificate-translation/" class="service-link">
-                        Certificate Translation <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>Exact stamp replication</li>
+                        <li>Embassy accepted</li>
+                        <li>Fast turnaround</li>
+                    </ul>
+                    <a href="certificate-translation/" class="card-cta-enhanced">
+                        View Service <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
 
-                <article class="service-card accent">
-                    <div class="service-icon"><i class="fas fa-briefcase"></i></div>
-                    <h3>Corporate &amp; Banking Documents</h3>
-                    <p>
-                        MOAs, AOAs, shareholder resolutions, board minutes, financial statements, policies,
-                        and KYC packs for banks, investors, and regulators – prepared so Arabic and English
-                        versions stay aligned as one file, not two different documents.
+                <article class="service-card-enhanced card-corporate">
+                    <div class="card-icon-enhanced">🏢</div>
+                    <h3 class="card-title-enhanced">Corporate Translation</h3>
+                    <p class="card-description-enhanced">
+                        MOAs, resolutions, financial statements, KYC packs—prepared so Arabic and English versions stay aligned as one file.
                     </p>
-                    <a href="corporate-translation/" class="service-link">
-                        Corporate Translation <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>Bilingual consistency</li>
+                        <li>Bank-ready KYC</li>
+                        <li>Regulatory compliance</li>
+                    </ul>
+                    <a href="corporate-translation/" class="card-cta-enhanced">
+                        View Service <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
 
-                <article class="service-card">
-                    <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
-                    <h3>Court &amp; Litigation Work</h3>
-                    <p>
-                        Judgments, submissions, witness statements, expert reports, and exhibit bundles –
-                        organised so judges, clerks, and opposing counsel can track references between
-                        Arabic and English without guessing.
+                <article class="service-card-enhanced card-court">
+                    <div class="card-icon-enhanced">⚖️</div>
+                    <h3 class="card-title-enhanced">Court & Litigation</h3>
+                    <p class="card-description-enhanced">
+                        Judgments, submissions, witness statements, expert reports—organised for judges and counsel to track references.
                     </p>
-                    <a href="https://wa.me/971508620217" class="service-link">
-                        Share Court Documents <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>Court formatting standards</li>
+                        <li>Reference tracking</li>
+                        <li>Exhibit organization</li>
+                    </ul>
+                    <a href="https://wa.me/971508620217?text=I%20need%20court%20document%20translation" class="card-cta-enhanced">
+                        Share Documents <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
 
-                <article class="service-card accent">
-                    <div class="service-icon"><i class="fas fa-stethoscope"></i></div>
-                    <h3>Medical, Technical &amp; Digital Content</h3>
-                    <p>
-                        Medical reports, discharge summaries, technical manuals, internal policies, and
-                        digital content where wording has legal or compliance implications – translated
-                        for clarity rather than marketing language.
+                <article class="service-card-enhanced card-specialized">
+                    <div class="card-icon-enhanced">🏥</div>
+                    <h3 class="card-title-enhanced">Medical & Technical</h3>
+                    <p class="card-description-enhanced">
+                        Medical reports, technical manuals, policies where wording has legal or compliance implications—translated for clarity.
                     </p>
-                    <a href="https://wa.me/971508620217" class="service-link">
-                        Ask About a Specific File <i class="fas fa-arrow-right"></i>
+                    <ul class="card-features-enhanced">
+                        <li>DHA/MOH compliance</li>
+                        <li>Technical accuracy</li>
+                        <li>Regulatory standards</li>
+                    </ul>
+                    <a href="https://wa.me/971508620217?text=I%20need%20specialized%20translation" class="card-cta-enhanced">
+                        Ask About Your File <i class="fas fa-arrow-right"></i>
                     </a>
                 </article>
             </div>

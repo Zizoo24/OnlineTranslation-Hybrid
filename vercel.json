@@ -25,12 +25,132 @@
   ],
   "redirects": [
     {
-      "source": "/home",
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/dubai-marriage-certificate-translation-certified-translations-for-visa-and-legal-use-outside-the-uae",
+      "destination": "/personal/vital-records/marriage/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/website-localization-translation",
+      "destination": "/specialized/digital/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/urgent-translation-services",
+      "destination": "/services/legal-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/umm-al-sheif/medical-document-translation-services-for-jumeirah-street",
+      "destination": "/specialized/medical/",
+      "permanent": true
+    },
+    {
+      "source": "/our-locations",
+      "destination": "/locations/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/swedish-arabic-official-translation",
+      "destination": "/services/certificate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/umm-al-sheif",
+      "destination": "/locations/dubai/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/uk-birth-certificate-legal-translation-for-uae-visa-purposes",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/technical-translation",
+      "destination": "/specialized/technical/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/russian-to-arabic-translation-for-birth-certificates-visa-embassy-official",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/refund_returns",
+      "destination": "/terms.html",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translator-in-pocket",
       "destination": "/",
       "permanent": true
     },
     {
-      "source": "/index.php",
+      "source": "/academic-translation",
+      "destination": "/personal/academic/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/medical-translation-services",
+      "destination": "/specialized/medical/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/media-translation",
+      "destination": "/specialized/digital/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/financial-translation-services",
+      "destination": "/services/corporate-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation/family-documents-translation",
+      "destination": "/personal/vital-records/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/legal-translation",
+      "destination": "/services/legal-translation/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/languages",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/educational-certificate-translation",
+      "destination": "/personal/academic/degree/",
+      "permanent": true
+    },
+    {
+      "source": "/dubai-birth-certificate-translation",
+      "destination": "/personal/vital-records/birth/",
+      "permanent": true
+    },
+    {
+      "source": "/translation_agency_dubai/translation-services/certificate-translation-dxb/criminal-record-certificate-translation-dubai",
+      "destination": "/personal/immigration/pcc/",
+      "permanent": true
+    },
+    {
+      "source": "/about-2/cookie-policy-br",
+      "destination": "/privacy.html",
+      "permanent": true
+    },
+    {
+      "source": "/contact-dxb-translator",
+      "destination": "/contact.html",
+      "permanent": true
+    },
+    {
+      "source": "/to-arabic-translation-whatsapp-screenshots-english",
+      "destination": "/services/",
+      "permanent": true
+    },
+    {
+      "source": "/home",
       "destination": "/",
       "permanent": true
     },
@@ -56,11 +176,6 @@
     },
     {
       "source": "/terms-and-conditions",
-      "destination": "/terms.html",
-      "permanent": true
-    },
-    {
-      "source": "/terms-of-service",
       "destination": "/terms.html",
       "permanent": true
     }

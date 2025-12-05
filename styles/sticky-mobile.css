@@ -467,12 +467,14 @@
     padding: 20px 28px;
     background: none;
     border: none;
-    color: var(--text-light);
+    color: #ffffff;
     font-size: 16px;
+    -webkit-text-fill-color: #ffffff;
 }
 
 .search-box input::placeholder {
-    color: rgba(255,255,255,0.5);
+    color: rgba(255,255,255,0.6);
+    -webkit-text-fill-color: rgba(255,255,255,0.6);
 }
 
 .search-box input:focus {
